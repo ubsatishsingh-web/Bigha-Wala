@@ -1239,6 +1239,16 @@ export default function App() {
             <p className="text-xs leading-relaxed text-stone-500">
               यह वेबसाइट केवल सूचना के उद्देश्य से है। सरकारी काम, वैधानिक प्रमाण, तथा कानूनी पैमाइश के लिए हमेशा बिहार सरकार के आधिकारिक पोर्टल <a href="https://biharbhumi.bihar.gov.in" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline font-bold hover:text-orange-300 transition-colors">Bihar Bhumi Portal</a> देखें। BighaWala.com एक स्वतंत्र निजी शैक्षणिक उपक्रम है और यह किसी भी सरकारी विभाग या प्राधिकरण से संबद्ध नहीं है।
             </p>
+            {/* Links for AdSense and transparency */}
+            <div className="flex flex-wrap gap-x-4 gap-y-1 pt-2">
+              <a href="/disclaimer/" className="text-xs text-stone-400 hover:text-orange-400 underline transition-colors">अस्वीकरण (Disclaimer)</a>
+              <span className="text-stone-700 text-xs">•</span>
+              <a href="/privacy-policy/" className="text-xs text-stone-400 hover:text-orange-400 underline transition-colors">गोपनीयता नीति (Privacy Policy)</a>
+              <span className="text-stone-700 text-xs">•</span>
+              <a href="/disclaimer/#terms" className="text-xs text-stone-400 hover:text-orange-400 underline transition-colors">उपयोग की शर्तें (Terms of Use)</a>
+              <span className="text-stone-700 text-xs">•</span>
+              <a href="/disclaimer/#about" className="text-xs text-stone-400 hover:text-orange-400 underline transition-colors">हमारे बारे में (About Us)</a>
+            </div>
           </div>
           <div className="text-left md:text-right space-y-1">
             <p className="text-xs text-stone-500">

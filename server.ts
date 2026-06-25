@@ -1,7 +1,8 @@
 import express from "express";
 import path from "path";
+import fs from "fs";
 import dotenv from "dotenv";
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, GenerateContentParameters } from "@google/genai";
 import { createServer as createViteServer } from "vite";
 
 dotenv.config();
@@ -30,6 +31,29 @@ function getGeminiClient(): GoogleGenAI {
     });
   }
   return aiClient;
+}
+
+async function generateContentWithFallback(ai: GoogleGenAI, params: { contents: any; config?: any }) {
+  try {
+    // Try primary model first (gemini-3.5-flash)
+    return await ai.models.generateContent({
+      model: "gemini-3.5-flash",
+      contents: params.contents,
+      config: params.config,
+    });
+  } catch (error: any) {
+    console.warn("Primary model gemini-3.5-flash failed, attempting fallback to gemini-3.1-flash-lite. Error:", error.message || error);
+    try {
+      return await ai.models.generateContent({
+        model: "gemini-3.1-flash-lite",
+        contents: params.contents,
+        config: params.config,
+      });
+    } catch (fallbackError: any) {
+      console.error("Fallback model gemini-3.1-flash-lite also failed:", fallbackError);
+      throw fallbackError;
+    }
+  }
 }
 
 const SYSTEM_INSTRUCTION = `You are BighaWala Expert — an AI assistant specialized in Bihar land measurement, revenue records, property laws, and real estate.
@@ -88,8 +112,7 @@ Structure your response into these exact sections with clear bilingual headings,
 
 Always use simple, compassionate, and trustworthy language. Write in a friendly bilingual format (Hindi and English). Use bullet points, clear spacing, and clean markdown for high readability.`;
 
-    const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+    const response = await generateContentWithFallback(ai, {
       contents: explainerPrompt,
       config: {
         systemInstruction: EXPLAINER_SYSTEM_INSTRUCTION,
@@ -124,8 +147,7 @@ app.post("/api/chat", async (req, res) => {
     });
 
     const ai = getGeminiClient();
-    const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+    const response = await generateContentWithFallback(ai, {
       contents: formattedContents,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
@@ -142,6 +164,130 @@ app.post("/api/chat", async (req, res) => {
       isConfigMissing: !process.env.GEMINI_API_KEY,
     });
   }
+});
+
+// Serve robots.txt dynamically with correct content type
+app.get("/robots.txt", (req, res) => {
+  res.type("text/plain");
+  res.send(
+    `User-agent: *\nAllow: /\n\nSitemap: https://www.bighawala.com/sitemap.xml`
+  );
+});
+
+// Serve sitemap.xml dynamically with correct content type
+app.get("/sitemap.xml", (req, res) => {
+  res.type("application/xml");
+  res.send(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.bighawala.com/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.bighawala.com/bigha-calculator/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bighawala.com/dakhil-kharij-bihar/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bighawala.com/land-rate-patna/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bighawala.com/land-rates.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.bighawala.com/bhulekh-bihar/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bighawala.com/lpc-bihar/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bighawala.com/privacy-policy/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bighawala.com/disclaimer/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>`);
+});
+
+// Explicitly serve static legal pages to bypass SPA routing and ensure AdSense approval
+app.get(["/disclaimer", "/disclaimer/"], (req, res) => {
+  const prodPath = path.join(process.cwd(), "dist/disclaimer/index.html");
+  const devPath = path.join(process.cwd(), "public/disclaimer/index.html");
+  if (process.env.NODE_ENV === "production" && fs.existsSync(prodPath)) {
+    res.sendFile(prodPath);
+  } else {
+    res.sendFile(devPath);
+  }
+});
+
+app.get(["/privacy-policy", "/privacy-policy/"], (req, res) => {
+  const prodPath = path.join(process.cwd(), "dist/privacy-policy/index.html");
+  const devPath = path.join(process.cwd(), "public/privacy-policy/index.html");
+  if (process.env.NODE_ENV === "production" && fs.existsSync(prodPath)) {
+    res.sendFile(prodPath);
+  } else {
+    res.sendFile(devPath);
+  }
+});
+
+// Explicitly serve SEO-friendly static tool and guide pages directly from the workspace root
+app.get(["/bigha-calculator", "/bigha-calculator/"], (req, res) => {
+  res.sendFile(path.join(process.cwd(), "bigha-calculator.html"));
+});
+
+app.get(["/dakhil-kharij-bihar", "/dakhil-kharij-bihar/"], (req, res) => {
+  res.sendFile(path.join(process.cwd(), "dakhil-kharij.html"));
+});
+
+app.get(["/land-rate-patna", "/land-rate-patna/"], (req, res) => {
+  res.sendFile(path.join(process.cwd(), "land-rate-patna.html"));
+});
+
+app.get(["/land-rates", "/land-rates/", "/land-rates.html"], (req, res) => {
+  res.sendFile(path.join(process.cwd(), "land-rates.html"));
+});
+
+app.get(["/bhulekh-bihar", "/bhulekh-bihar/"], (req, res) => {
+  res.sendFile(path.join(process.cwd(), "bhulekh.html"));
+});
+
+app.get(["/lpc-bihar", "/lpc-bihar/", "/lpc-bihar.html"], (req, res) => {
+  res.sendFile(path.join(process.cwd(), "lpc-bihar.html"));
+});
+
+app.get(["/ask-expert", "/ask-expert/"], (req, res) => {
+  res.sendFile(path.join(process.cwd(), "ask-expert.html"));
+});
+
+app.get(["/document-explainer", "/document-explainer/"], (req, res) => {
+  res.sendFile(path.join(process.cwd(), "document-explainer.html"));
 });
 
 // Serve Frontend App
