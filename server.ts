@@ -289,6 +289,10 @@ app.get(["/document-explainer", "/document-explainer/"], (req, res) => {
   res.sendFile(path.join(process.cwd(), "document-explainer.html"));
 });
 
+app.get(["/setup-guide", "/setup-guide/", "/setup-guide.html"], (req, res) => {
+  res.sendFile(path.join(process.cwd(), "setup-guide.html"));
+});
+
 // Serve Frontend App
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {
