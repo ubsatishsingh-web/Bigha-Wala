@@ -491,6 +491,39 @@
           अगर काम करते समय कोई त्रुटि (Error) आती है, तो बिना घबराए निम्नलिखित समाधानों को अपनाएं:
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-700">
+          <div class="bg-white p-4 rounded-xl border border-rose-100 space-y-1.5 col-span-1 md:col-span-2">
+            <strong class="text-rose-700 text-sm sm:text-base flex items-center gap-1 block">
+              <span>🌐</span> ❌ DNS_PROBE_FINISHED_NXDOMAIN / This site can't be reached:
+            </strong>
+            <p class="leading-relaxed">
+              <strong>कारण (Why this happens):</strong> इसका मतलब है कि आपने डोमेन <code class="font-mono bg-slate-100 text-rose-600 px-1 rounded">bighawala.com</code> तो खरीद लिया है, लेकिन इंटरनेट के DNS सर्वर को यह नहीं पता कि इसे किस सर्वर से जोड़ना है। डोमेन का नाम और होस्टिंग सर्वर अभी आपस में जुड़े नहीं हैं।<br/>
+              <span class="text-slate-500 font-medium italic">Your domain is purchased, but the DNS records (A / CNAME) are not configured at your Domain Registrar, so the internet doesn't know where your hosting server is located.</span>
+            </p>
+            <p class="leading-relaxed mt-2 font-semibold text-slate-800">
+              <strong>समाधान स्टेप-बाय-स्टेप (Step-by-Step Solution):</strong>
+            </p>
+            <ol class="list-decimal pl-5 space-y-1.5 mt-1 text-xs">
+              <li>
+                <strong>Go to Domain Registrar:</strong> जहां से आपने डोमेन खरीदा है (जैसे GoDaddy, Hostinger, Namecheap, Google Domains/Squarespace) वहाँ लॉगिन करें।
+              </li>
+              <li>
+                <strong>Open DNS Settings / Zone Editor:</strong> अपने डोमेन के सामने दिए गए "DNS" या "Manage DNS" विकल्प पर क्लिक करें।
+              </li>
+              <li>
+                <strong>Add DNS Records (A & CNAME):</strong> गूगल क्लाउड द्वारा दिए गए DNS रिकॉर्ड्स को जोड़ें:
+                <ul class="list-disc pl-5 mt-1 space-y-1 text-slate-600">
+                  <li><strong>A Record:</strong> Name को <code class="font-mono bg-slate-100 text-slate-900 px-0.5 rounded">@</code> रखें और Points to में गूगल क्लाउड का दिए गए IP एड्रेस (जैसे: <code class="font-mono bg-slate-100 text-slate-900 px-0.5 rounded">216.239.32.21</code> या जो भी क्लाउड कंसोल में दिखे) डालें।</li>
+                  <li><strong>CNAME Record:</strong> Name को <code class="font-mono bg-slate-100 text-slate-900 px-0.5 rounded">www</code> रखें और Points to में <code class="font-mono bg-slate-100 text-slate-900 px-0.5 rounded">ghs.googlehosted.com.</code> डालें।</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Wait for Propagation (प्रतीक्षा करें):</strong> ये रिकॉर्ड जोड़ने के बाद 10 मिनट से लेकर 24 घंटे तक का समय लग सकता है। इसके बाद आपकी वेबसाइट चालू हो जाएगी!
+              </li>
+            </ol>
+            <p class="text-xs text-slate-500 italic mt-2">
+              💡 <strong>Note:</strong> जब तक आपका डोमेन चालू नहीं होता, तब तक आप AI Studio द्वारा दी गई अस्थाई लिंक (Development URL) का उपयोग करके अपनी वेबसाइट और एडमिन सेटअप गाइड खोल सकते हैं!
+            </p>
+          </div>
           <div class="bg-white p-4 rounded-xl border border-rose-100 space-y-1.5">
             <strong class="text-rose-700 block">❌ Search Console "Verification Failed":</strong>
             <p class="leading-relaxed">
