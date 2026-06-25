@@ -11,6 +11,22 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          bighaCalculator: path.resolve(__dirname, 'bigha-calculator.html'),
+          dakhilKharij: path.resolve(__dirname, 'dakhil-kharij.html'),
+          landRatePatna: path.resolve(__dirname, 'land-rate-patna.html'),
+          landRates: path.resolve(__dirname, 'land-rates.html'),
+          bhulekh: path.resolve(__dirname, 'bhulekh.html'),
+          lpcBihar: path.resolve(__dirname, 'lpc-bihar.html'),
+          askExpert: path.resolve(__dirname, 'ask-expert.html'),
+          documentExplainer: path.resolve(__dirname, 'document-explainer.html'),
+          setupGuide: path.resolve(__dirname, 'setup-guide.html'),
+        }
+      }
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.

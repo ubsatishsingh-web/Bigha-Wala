@@ -256,45 +256,62 @@ app.get(["/privacy-policy", "/privacy-policy/", "/privacy-policy/index.html"], (
   }
 });
 
-// Explicitly serve SEO-friendly static tool and guide pages directly from the workspace root
-app.get(["/index.html"], (req, res) => {
-  res.sendFile(path.join(process.cwd(), "index.html"));
+// Helper to serve HTML files correctly in both Dev and Prod
+function serveHtmlPage(req: express.Request, res: express.Response, fileName: string) {
+  const prodPath = path.join(process.cwd(), "dist", fileName);
+  const devPath = path.join(process.cwd(), fileName);
+  if (process.env.NODE_ENV === "production") {
+    if (fs.existsSync(prodPath)) {
+      res.sendFile(prodPath);
+    } else if (fs.existsSync(devPath)) {
+      res.sendFile(devPath);
+    } else {
+      res.status(404).send("Page not found / पेज नहीं मिला");
+    }
+  } else {
+    res.sendFile(devPath);
+  }
+}
+
+// Explicitly serve SEO-friendly static tool and guide pages directly from the workspace root or dist
+app.get(["/", "/index", "/index.html"], (req, res) => {
+  serveHtmlPage(req, res, "index.html");
 });
 
 app.get(["/bigha-calculator", "/bigha-calculator/", "/bigha-calculator.html"], (req, res) => {
-  res.sendFile(path.join(process.cwd(), "bigha-calculator.html"));
+  serveHtmlPage(req, res, "bigha-calculator.html");
 });
 
 app.get(["/dakhil-kharij", "/dakhil-kharij/", "/dakhil-kharij.html", "/dakhil-kharij-bihar", "/dakhil-kharij-bihar/"], (req, res) => {
-  res.sendFile(path.join(process.cwd(), "dakhil-kharij.html"));
+  serveHtmlPage(req, res, "dakhil-kharij.html");
 });
 
 app.get(["/land-rate-patna", "/land-rate-patna/", "/land-rate-patna.html"], (req, res) => {
-  res.sendFile(path.join(process.cwd(), "land-rate-patna.html"));
+  serveHtmlPage(req, res, "land-rate-patna.html");
 });
 
 app.get(["/land-rates", "/land-rates/", "/land-rates.html"], (req, res) => {
-  res.sendFile(path.join(process.cwd(), "land-rates.html"));
+  serveHtmlPage(req, res, "land-rates.html");
 });
 
 app.get(["/bhulekh", "/bhulekh/", "/bhulekh.html", "/bhulekh-bihar", "/bhulekh-bihar/"], (req, res) => {
-  res.sendFile(path.join(process.cwd(), "bhulekh.html"));
+  serveHtmlPage(req, res, "bhulekh.html");
 });
 
 app.get(["/lpc-bihar", "/lpc-bihar/", "/lpc-bihar.html"], (req, res) => {
-  res.sendFile(path.join(process.cwd(), "lpc-bihar.html"));
+  serveHtmlPage(req, res, "lpc-bihar.html");
 });
 
 app.get(["/ask-expert", "/ask-expert/", "/ask-expert.html"], (req, res) => {
-  res.sendFile(path.join(process.cwd(), "ask-expert.html"));
+  serveHtmlPage(req, res, "ask-expert.html");
 });
 
 app.get(["/document-explainer", "/document-explainer/", "/document-explainer.html"], (req, res) => {
-  res.sendFile(path.join(process.cwd(), "document-explainer.html"));
+  serveHtmlPage(req, res, "document-explainer.html");
 });
 
 app.get(["/setup-guide", "/setup-guide/", "/setup-guide.html"], (req, res) => {
-  res.sendFile(path.join(process.cwd(), "setup-guide.html"));
+  serveHtmlPage(req, res, "setup-guide.html");
 });
 
 // Serve Frontend App
