@@ -34,26 +34,25 @@ function getGeminiClient(): GoogleGenAI {
 }
 
 async function generateContentWithFallback(ai: GoogleGenAI, params: { contents: any; config?: any }) {
-  try {
-    // Try primary model first (gemini-3.5-flash)
-    return await ai.models.generateContent({
-      model: "gemini-3.5-flash",
-      contents: params.contents,
-      config: params.config,
-    });
-  } catch (error: any) {
-    console.warn("Primary model gemini-3.5-flash failed, attempting fallback to gemini-3.1-flash-lite. Error:", error.message || error);
+  const models = ["gemini-3.5-flash", "gemini-flash-latest", "gemini-3.1-flash-lite"];
+  let lastError: any = null;
+
+  for (const model of models) {
     try {
+      console.log(`Attempting generateContent with model: ${model}`);
       return await ai.models.generateContent({
-        model: "gemini-3.1-flash-lite",
+        model: model,
         contents: params.contents,
         config: params.config,
       });
-    } catch (fallbackError: any) {
-      console.error("Fallback model gemini-3.1-flash-lite also failed:", fallbackError);
-      throw fallbackError;
+    } catch (error: any) {
+      lastError = error;
+      console.warn(`Model ${model} failed, trying next fallback if available. Error:`, error.message || error);
     }
   }
+
+  console.error("All Gemini models failed. Last error:", lastError);
+  throw lastError || new Error("Failed to generate content with any model.");
 }
 
 const SYSTEM_INSTRUCTION = `You are BighaWala Expert — an AI assistant specialized in Bihar land measurement, revenue records, property laws, and real estate.
