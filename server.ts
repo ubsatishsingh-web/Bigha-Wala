@@ -236,7 +236,7 @@ app.get("/sitemap.xml", (req, res) => {
 });
 
 // Explicitly serve static legal pages to bypass SPA routing and ensure AdSense approval
-app.get(["/disclaimer", "/disclaimer/"], (req, res) => {
+app.get(["/disclaimer", "/disclaimer/", "/disclaimer/index.html"], (req, res) => {
   const prodPath = path.join(process.cwd(), "dist/disclaimer/index.html");
   const devPath = path.join(process.cwd(), "public/disclaimer/index.html");
   if (process.env.NODE_ENV === "production" && fs.existsSync(prodPath)) {
@@ -246,7 +246,7 @@ app.get(["/disclaimer", "/disclaimer/"], (req, res) => {
   }
 });
 
-app.get(["/privacy-policy", "/privacy-policy/"], (req, res) => {
+app.get(["/privacy-policy", "/privacy-policy/", "/privacy-policy/index.html"], (req, res) => {
   const prodPath = path.join(process.cwd(), "dist/privacy-policy/index.html");
   const devPath = path.join(process.cwd(), "public/privacy-policy/index.html");
   if (process.env.NODE_ENV === "production" && fs.existsSync(prodPath)) {
@@ -257,15 +257,19 @@ app.get(["/privacy-policy", "/privacy-policy/"], (req, res) => {
 });
 
 // Explicitly serve SEO-friendly static tool and guide pages directly from the workspace root
-app.get(["/bigha-calculator", "/bigha-calculator/"], (req, res) => {
+app.get(["/index.html"], (req, res) => {
+  res.sendFile(path.join(process.cwd(), "index.html"));
+});
+
+app.get(["/bigha-calculator", "/bigha-calculator/", "/bigha-calculator.html"], (req, res) => {
   res.sendFile(path.join(process.cwd(), "bigha-calculator.html"));
 });
 
-app.get(["/dakhil-kharij-bihar", "/dakhil-kharij-bihar/"], (req, res) => {
+app.get(["/dakhil-kharij", "/dakhil-kharij/", "/dakhil-kharij.html", "/dakhil-kharij-bihar", "/dakhil-kharij-bihar/"], (req, res) => {
   res.sendFile(path.join(process.cwd(), "dakhil-kharij.html"));
 });
 
-app.get(["/land-rate-patna", "/land-rate-patna/"], (req, res) => {
+app.get(["/land-rate-patna", "/land-rate-patna/", "/land-rate-patna.html"], (req, res) => {
   res.sendFile(path.join(process.cwd(), "land-rate-patna.html"));
 });
 
@@ -273,7 +277,7 @@ app.get(["/land-rates", "/land-rates/", "/land-rates.html"], (req, res) => {
   res.sendFile(path.join(process.cwd(), "land-rates.html"));
 });
 
-app.get(["/bhulekh-bihar", "/bhulekh-bihar/"], (req, res) => {
+app.get(["/bhulekh", "/bhulekh/", "/bhulekh.html", "/bhulekh-bihar", "/bhulekh-bihar/"], (req, res) => {
   res.sendFile(path.join(process.cwd(), "bhulekh.html"));
 });
 
@@ -281,11 +285,11 @@ app.get(["/lpc-bihar", "/lpc-bihar/", "/lpc-bihar.html"], (req, res) => {
   res.sendFile(path.join(process.cwd(), "lpc-bihar.html"));
 });
 
-app.get(["/ask-expert", "/ask-expert/"], (req, res) => {
+app.get(["/ask-expert", "/ask-expert/", "/ask-expert.html"], (req, res) => {
   res.sendFile(path.join(process.cwd(), "ask-expert.html"));
 });
 
-app.get(["/document-explainer", "/document-explainer/"], (req, res) => {
+app.get(["/document-explainer", "/document-explainer/", "/document-explainer.html"], (req, res) => {
   res.sendFile(path.join(process.cwd(), "document-explainer.html"));
 });
 
