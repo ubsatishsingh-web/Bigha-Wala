@@ -314,6 +314,18 @@ app.get(["/setup-guide", "/setup-guide/", "/setup-guide.html"], (req, res) => {
   serveHtmlPage(req, res, "setup-guide.html");
 });
 
+app.get(["/contact", "/contact/", "/contact.html"], (req, res) => {
+  serveHtmlPage(req, res, "contact.html");
+});
+
+app.get(["/jamabandi", "/jamabandi/", "/jamabandi.html"], (req, res) => {
+  serveHtmlPage(req, res, "jamabandi.html");
+});
+
+app.get(["/registry-bihar", "/registry-bihar/", "/registry-bihar.html"], (req, res) => {
+  serveHtmlPage(req, res, "registry-bihar.html");
+});
+
 // Serve Frontend App
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {

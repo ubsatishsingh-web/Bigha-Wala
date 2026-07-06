@@ -24,6 +24,9 @@ export default defineConfig(() => {
           askExpert: path.resolve(__dirname, 'ask-expert.html'),
           documentExplainer: path.resolve(__dirname, 'document-explainer.html'),
           setupGuide: path.resolve(__dirname, 'setup-guide.html'),
+          contact: path.resolve(__dirname, 'contact.html'),
+          jamabandi: path.resolve(__dirname, 'jamabandi.html'),
+          registryBihar: path.resolve(__dirname, 'registry-bihar.html'),
         }
       }
     },
