@@ -232,6 +232,24 @@ app.get("/sitemap.xml", (req, res) => {
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.bighawala.com/circle-rate-bihar.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bighawala.com/kisan-credit-card-bihar.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bighawala.com/pm-awas-yojana-bihar.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>`);
 });
 
@@ -292,6 +310,18 @@ app.get(["/land-rate-patna", "/land-rate-patna/", "/land-rate-patna.html"], (req
 
 app.get(["/land-rates", "/land-rates/", "/land-rates.html"], (req, res) => {
   serveHtmlPage(req, res, "land-rates.html");
+});
+
+app.get(["/circle-rate-bihar", "/circle-rate-bihar/", "/circle-rate-bihar.html"], (req, res) => {
+  serveHtmlPage(req, res, "circle-rate-bihar.html");
+});
+
+app.get(["/kisan-credit-card-bihar", "/kisan-credit-card-bihar/", "/kisan-credit-card-bihar.html"], (req, res) => {
+  serveHtmlPage(req, res, "kisan-credit-card-bihar.html");
+});
+
+app.get(["/pm-awas-yojana-bihar", "/pm-awas-yojana-bihar/", "/pm-awas-yojana-bihar.html"], (req, res) => {
+  serveHtmlPage(req, res, "pm-awas-yojana-bihar.html");
 });
 
 app.get(["/bhulekh", "/bhulekh/", "/bhulekh.html", "/bhulekh-bihar", "/bhulekh-bihar/"], (req, res) => {

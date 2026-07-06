@@ -28,6 +28,9 @@ export default defineConfig(() => {
           jamabandi: path.resolve(__dirname, 'jamabandi.html'),
           registryBihar: path.resolve(__dirname, 'registry-bihar.html'),
           about: path.resolve(__dirname, 'about.html'),
+          circleRateBihar: path.resolve(__dirname, 'circle-rate-bihar.html'),
+          kisanCreditCardBihar: path.resolve(__dirname, 'kisan-credit-card-bihar.html'),
+          pmAwasYojanaBihar: path.resolve(__dirname, 'pm-awas-yojana-bihar.html'),
         }
       }
     },
