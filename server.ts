@@ -326,6 +326,10 @@ app.get(["/registry-bihar", "/registry-bihar/", "/registry-bihar.html"], (req, r
   serveHtmlPage(req, res, "registry-bihar.html");
 });
 
+app.get(["/about", "/about/", "/about.html"], (req, res) => {
+  serveHtmlPage(req, res, "about.html");
+});
+
 // Serve Frontend App
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About BighaWala | Bihar Ka Trusted Land Information Platform</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="BighaWala.com Bihar ka #1 land information platform hai. Bigha calculator, Dakhil Kharij, Bhulekh, LPC — sab kuch free mein." />
+    <meta name="keywords" content="bigha wala about, bihar land information website, bigha wala team, bihar bhumi jankari" />
+    <meta name="robots" content="index, follow" />
+    <link class="canonical" href="https://www.bighawala.com/about.html" />
+
+    <!-- Google Fonts: Noto Sans Devanagari for Hindi, Poppins for English -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryGreen: '#2E7D32',
+              accentSaffron: '#FF6F00',
+              customGreenHover: '#1B5E20',
+              customSaffronHover: '#E65100',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'Noto Sans Devanagari', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1T8BNYBTE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z1T8BNYBTE');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577953323229534"
+     crossorigin="anonymous"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .custom-saffron-gradient {
+        background: linear-gradient(135deg, #FF6F00 0%, #FFA000 100%);
+      }
+      .custom-green-gradient {
+        background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+      }
+      .hero-gradient {
+        background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 40%, #E65100 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col selection:bg-orange-100 selection:text-orange-900">
+
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200/80 shadow-sm backdrop-blur-md bg-white/95">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <!-- Logo and Tagline -->
+        <a href="index.html" class="flex items-center gap-3 group" id="logo-link">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 border-2 border-primaryGreen flex items-center justify-center text-2xl shadow-sm group-hover:scale-105 transition-transform">
+            🏡
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 flex items-center gap-1 leading-none">
+              <span class="text-accentSaffron">Bigha</span><span class="text-slate-800">Wala</span><span class="text-primaryGreen">.com</span>
+            </div>
+            <div class="text-[10px] text-primaryGreen font-black uppercase tracking-wider mt-1">
+              बिहार की जमीन की हर जानकारी
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden lg:flex items-center gap-1 font-bold text-sm text-slate-600">
+          <a href="index.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">मुख्य पृष्ठ (Home)</a>
+          <a href="bigha-calculator.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">बीघा कैलकुलेटर</a>
+          <a href="jamabandi.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">जमाबंदी पंजी</a>
+          <a href="registry-bihar.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">रजिस्ट्री गाइड</a>
+          <a href="dakhil-kharij.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">दाखिल खारिज</a>
+          <a href="land-rates.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">सरकारी रेट</a>
+          <a href="bhulekh.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">भूलेख बिहार</a>
+          <a href="about.html" class="px-3 py-2 rounded-xl text-primaryGreen bg-emerald-50/60 transition-all">हमारे बारे में</a>
+          <a href="ask-expert.html" class="ml-2 bg-accentSaffron hover:bg-customSaffronHover text-white px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-1 text-xs">
+            <span>💬 Ask Expert</span>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Menu">
+          <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-drawer" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner">
+        <div class="px-4 pt-3 pb-6 space-y-2 font-bold text-slate-700">
+          <a href="index.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">मुख्य पृष्ठ (Home)</a>
+          <a href="bigha-calculator.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">बीघा कैलकुलेटर (Bigha Calculator)</a>
+          <a href="jamabandi.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमाबंदी पंजी (Jamabandi Bihar)</a>
+          <a href="registry-bihar.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">रजिस्ट्री गाइड (Registry Guide)</a>
+          <a href="dakhil-kharij.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">दाखिल खारिज गाइड (Mutation Guide)</a>
+          <a href="land-rates.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमीन सरकारी रेट (Land Rates)</a>
+          <a href="bhulekh.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">भूलेख बिहार (Bhulekh Bihar)</a>
+          <a href="about.html" class="block px-4 py-3 rounded-xl text-primaryGreen bg-emerald-50">हमारे बारे में (About Us)</a>
+          <a href="ask-expert.html" class="block px-4 py-3 rounded-xl text-center bg-accentSaffron hover:bg-customSaffronHover text-white shadow-sm mt-4">
+            💬 Expert से पूछें (Ask Expert)
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-gradient text-white py-12 sm:py-16 px-4 relative overflow-hidden">
+      <!-- Traditional Design Backdrop Elements -->
+      <div class="absolute -top-12 -left-12 w-64 h-64 rounded-full bg-white/5 blur-2xl"></div>
+      <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-orange-500/10 blur-3xl"></div>
+
+      <div class="max-w-4xl mx-auto text-center space-y-4 relative z-10">
+        <span class="inline-block bg-orange-500/20 text-orange-200 border border-orange-400/30 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+          👋 BighaWala.com के बारे में जानें
+        </span>
+        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          BighaWala.com के बारे में | About Us
+        </h1>
+        <p class="text-sm sm:text-base text-emerald-100 max-w-2xl mx-auto font-medium">
+          बिहार का सबसे लोकप्रिय, विश्वसनीय और 100% मुफ्त भूमि सूचना एवं मापक मंच। बिहार के आम लोगों को जागरूक करने और भूमि प्रक्रियाओं को आसान बनाने का एक अनूठा प्रयास।
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-4xl mx-auto px-4 -mt-8 sm:-mt-10 mb-16 relative z-20 space-y-12">
+      
+      <!-- SECTION 1 — OUR STORY -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2" id="our-story">
+          <span class="text-primaryGreen">📖</span> हमारी कहानी — Why BighaWala Was Created
+        </h2>
+        <div class="text-sm sm:text-base text-slate-600 leading-relaxed space-y-4 font-medium">
+          <p>
+            <strong>BighaWala.com की शुरुआत एक साधारण सोच से हुई थी।</strong> बिहार में जमीन-जायदाद से जुड़ी सही, सटीक और कानूनी जानकारी एक आम आदमी तक पहुंचाना हमेशा से बहुत जटिल और थका देने वाला कार्य रहा है। यद्यपि सरकार के अपने आधिकारिक ऑनलाइन पोर्टल्स उपलब्ध हैं, किंतु उनकी भाषा, जटिल संरचना और तकनीकी शब्दजाल के कारण गांव के सीधे-साधे किसान और आम लोग उन्हें आसानी से नहीं समझ पाते। परिणाम स्वरूप, उन्हें छोटे-छोटे कार्यों के लिए दलालों, एजेंटों और वकीलों के चक्कर काटने पड़ते हैं और भारी फीस चुकानी पड़ती है।
+          </p>
+          <p>
+            इस गंभीर समस्या के निवारण और बिहार के नागरिकों को आत्मनिर्भर बनाने के उद्देश्य से ही <strong>BighaWala.com</strong> का निर्माण किया गया है। यह पूरी तरह से बिहार के आम लोगों की अपनी भाषा <strong>हिंदी (Hindi)</strong> में तैयार किया गया एक निष्पक्ष, व्यावहारिक और निःशुल्क सूचना केंद्र है।
+          </p>
+          <div class="p-5 bg-emerald-50 rounded-2xl border border-emerald-100/80 space-y-3">
+            <h4 class="text-sm sm:text-base font-black text-primaryGreen flex items-center gap-1.5">
+              <span>🚀</span> आज BighaWala.com पर क्या-क्या मिलता है?
+            </h4>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-slate-700 font-bold pl-1">
+              <li class="flex items-center gap-2">
+                <span class="text-primaryGreen">⚡</span> Bigha/Katha/Dhur/Dismil Calculator
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primaryGreen">⚡</span> Dakhil Kharij (दाखिल-खारिज) Complete Guide
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primaryGreen">⚡</span> Bhulekh aur Jamabandi (जमाबंदी पंजी देखें) Guide
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primaryGreen">⚡</span> LPC (भूमि स्वामित्व प्रमाण पत्र) Apply Method
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primaryGreen">⚡</span> Zameen Ki Kimat (सर्किल रेट) 2026 List
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primaryGreen">⚡</span> AI Expert से सीधे बातचीत और निःशुल्क सहायता
+              </li>
+            </ul>
+          </div>
+          <p>
+            हमारा एकमात्र पावन मिशन बिहार के हर जमीन मालिक, क्रेता और विक्रेता को उसके अधिकारों और सरकारी प्रक्रियाओं की सही जानकारी देना है—बिना किसी हिडन चार्ज या फीस के।
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 2 — WHAT WE OFFER -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2" id="what-we-offer">
+          <span class="text-primaryGreen">🛠️</span> हम क्या Offer करते हैं (Features)
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 font-bold -mt-4">BighaWala.com पर आपको बिहार भूमि प्रबंधन से जुड़े ये अत्याधुनिक टूल्स और गाइड्स मिलते हैं:</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-semibold text-slate-700 text-xs sm:text-sm">
+          <!-- Card 1 -->
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/20 transition-all space-y-2">
+            <span class="text-2xl block">🧮</span>
+            <strong class="text-slate-900 block text-sm sm:text-base font-extrabold">Free Bigha Calculator</strong>
+            <p class="text-slate-600 leading-relaxed font-medium">
+              बिहार के सभी क्षेत्रीय पैमानों—बीघा, कट्ठा, धूर, डिसमिल, और स्क्वायर फीट को एक-दूसरे में तुरंत और जिला स्तर की लग्गी (Laggi) के अनुसार कनवर्ट करें।
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/20 transition-all space-y-2">
+            <span class="text-2xl block">📋</span>
+            <strong class="text-slate-900 block text-sm sm:text-base font-extrabold">Complete Land Guides</strong>
+            <p class="text-slate-600 leading-relaxed font-medium">
+              दाखिल खारिज (Mutation), एलपीसी (LPC), जमीन रजिस्ट्री (Registry), और जमाबंदी पंजी को सुधारने की जटिल प्रक्रिया स्टेप-बाय-स्टेप सरल हिंदी में सीखें।
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/20 transition-all space-y-2">
+            <span class="text-2xl block">🗺️</span>
+            <strong class="text-slate-900 block text-sm sm:text-base font-extrabold">Bhulekh Help</strong>
+            <p class="text-slate-600 leading-relaxed font-medium">
+              अपना खाता, खसरा नंबर, पुराना खतियान और भू-नक्शा (Bhu-Naksha) सरकारी वेबसाइट से ऑनलाइन डाउनलोड और सुरक्षित करने में संपूर्ण गाइडेंस प्राप्त करें।
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/20 transition-all space-y-2">
+            <span class="text-2xl block">💰</span>
+            <strong class="text-slate-900 block text-sm sm:text-base font-extrabold">Land Rates 2026</strong>
+            <p class="text-slate-600 leading-relaxed font-medium">
+              बिहार के सभी 38 जिलों के प्रमुख शहरों, अंचलों और पंचायतों में जमीन की न्यूनतम सरकारी कीमत (MVR सर्किल रेट) की सटीक जानकारी पाएं।
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/20 transition-all space-y-2">
+            <span class="text-2xl block">🤖</span>
+            <strong class="text-slate-900 block text-sm sm:text-base font-extrabold">AI Expert Chatbot</strong>
+            <p class="text-slate-600 leading-relaxed font-medium">
+              आपके पास भूमि से जुड़े जो भी उलझे हुए सवाल हैं, उन्हें हमारे 24/7 लाइव एआई चैटबॉट से सीधे हिंदी या हिंग्लिश में पूछें और तुरंत सही जवाब प्राप्त करें।
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/20 transition-all space-y-2">
+            <span class="text-2xl block">📞</span>
+            <strong class="text-slate-900 block text-sm sm:text-base font-extrabold">Free WhatsApp Help</strong>
+            <p class="text-slate-600 leading-relaxed font-medium">
+              हमारे समर्पित मोबाइल नंबर <a href="https://wa.me/919835102324" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-extrabold underline hover:text-emerald-600">9835102324</a> पर सीधे संपर्क करके जमीन की उलझनों पर व्यक्तिगत और मित्रवत मार्गदर्शन प्राप्त करें।
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3 — OUR MISSION AND VISION -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
+          <span class="text-primaryGreen">🎯</span> 3. हमारा Mission aur Vision (लक्ष्य एवं विजन)
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Mission Box -->
+          <div class="bg-emerald-800 text-emerald-50 rounded-2xl p-6 border border-emerald-700 custom-green-gradient space-y-3 shadow-sm">
+            <h3 class="text-base sm:text-lg font-black text-white flex items-center gap-2">
+              <span>🎯</span> Mission (हमारा मुख्य लक्ष्य)
+            </h3>
+            <p class="text-xs sm:text-sm text-emerald-100 font-bold leading-relaxed">
+              बिहार के सुदूर ग्रामीण क्षेत्रों के अंतिम छोर तक रहने वाले प्रत्येक परिवार तक जमीन-जायदाद की सही और कानूनी जानकारी निःशुल्क, सरल हिंदी भाषा में और आधुनिक तकनीक की मदद से सुलभ कराना।
+            </p>
+          </div>
+
+          <!-- Vision Box -->
+          <div class="bg-orange-800 text-orange-50 rounded-2xl p-6 border border-orange-700 custom-saffron-gradient space-y-3 shadow-sm">
+            <h3 class="text-base sm:text-lg font-black text-white flex items-center gap-2">
+              <span>🔭</span> Vision (हमारा दूरगामी विजन)
+            </h3>
+            <p class="text-xs sm:text-sm text-orange-100 font-bold leading-relaxed">
+              बिहार का प्रत्येक जमीन मालिक अपने अधिकारों के प्रति जागरूक हो, अंचल कार्यालयों की जटिल सरकारी प्रक्रियाओं को स्वयं समझ सके और उसे किसी भी स्तर पर दलालों या बिचौलियों पर निर्भर न रहना पड़े।
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4 — WHY TRUST US -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2" id="why-trust-us">
+          <span class="text-primaryGreen">🤝</span> 4. BighaWala पर भरोसा क्यों करें? (Why Trust Us)
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 font-bold -mt-4">लाखों बिहारी भाई-बहन हमारे इस प्रयास पर क्यों भरोसा कर रहे हैं:</p>
+
+        <div class="space-y-4">
+          <!-- Trust Point 1 -->
+          <div class="flex gap-3 items-start">
+            <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-black shrink-0 text-xs">
+              ✓
+            </div>
+            <div class="text-xs sm:text-sm text-slate-600 font-medium">
+              <strong class="text-slate-900 block text-sm font-extrabold">Accurate & Verified Information</strong>
+              BighaWala.com पर साझा की जाने वाली सभी प्रक्रियाएं, नियम और कानूनी गाइडलाइंस बिहार सरकार के राजस्व एवं भूमि सुधार विभाग तथा पंजीकरण विभाग के नियमों के अनुसार पूरी तरह से सत्यापित और सटीक हैं।
+            </div>
+          </div>
+
+          <!-- Trust Point 2 -->
+          <div class="flex gap-3 items-start">
+            <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-black shrink-0 text-xs">
+              ✓
+            </div>
+            <div class="text-xs sm:text-sm text-slate-600 font-medium">
+              <strong class="text-slate-900 block text-sm font-extrabold">Hindi First (सरल हिंदी भाषा)</strong>
+              हम अंग्रेजी या जटिल कानूनी शब्दों की जगह शुद्ध और ग्रामीण स्तर पर समझी जाने वाली सरल हिंदी और स्थानीय शब्दों (जैसे केवाला, दाखिल-खारिज, चौहद्दी, खतियान) का प्रयोग करते हैं ताकि कोई भी व्यक्ति बिना किसी सहायता के समझ सके।
+            </div>
+          </div>
+
+          <!-- Trust Point 3 -->
+          <div class="flex gap-3 items-start">
+            <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-black shrink-0 text-xs">
+              ✓
+            </div>
+            <div class="text-xs sm:text-sm text-slate-600 font-medium">
+              <strong class="text-slate-900 block text-sm font-extrabold">Always 100% Free (हमेशा पूर्णतः मुफ्त)</strong>
+              इस मंच पर उपलब्ध किसी भी कैलकुलेटर का उपयोग करने, गाइड पढ़ने या सहायता लेने के लिए कोई शुल्क नहीं लिया जाता है। हमारा उद्देश्य व्यवसाय नहीं, बल्कि समाज की निःस्वार्थ सेवा है।
+            </div>
+          </div>
+
+          <!-- Trust Point 4 -->
+          <div class="flex gap-3 items-start">
+            <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-black shrink-0 text-xs">
+              ✓
+            </div>
+            <div class="text-xs sm:text-sm text-slate-600 font-medium">
+              <strong class="text-slate-900 block text-sm font-extrabold">Regularly Updated (नियमित अपडेट)</strong>
+              हम 2026 के नवीनतम नियमों, लगान दरों, सर्किल रेट और भूलेख सुधार अभियानों से जुड़ी ताजा खबरों के अनुसार अपनी सभी सामग्री को तुरंत अपडेट करते हैं।
+            </div>
+          </div>
+
+          <!-- Trust Point 5 -->
+          <div class="flex gap-3 items-start">
+            <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-black shrink-0 text-xs">
+              ✓
+            </div>
+            <div class="text-xs sm:text-sm text-slate-600 font-medium">
+              <strong class="text-slate-900 block text-sm font-extrabold">AI Powered Assistance (अत्याधुनिक तकनीकी मदद)</strong>
+              हमने आर्टिफिशियल इंटेलिजेंस (AI) तकनीकों का समावेश किया है, जिससे उपयोगकर्ता अपनी भाषा में कभी भी, रात के 12 बजे भी तत्काल सही कानूनी प्रक्रियाओं का जवाब पा सकते हैं।
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5 — COVERAGE -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2" id="coverage">
+          <span class="text-primaryGreen">🗺️</span> 5. हम Bihar के किन जिलों को Cover करते हैं?
+        </h2>
+        <p class="text-sm text-slate-600 leading-relaxed font-semibold">
+          BighaWala.com बिहार राज्य के अंतर्गत आने वाले सभी <strong>38 जिलों (Districts)</strong> को पूर्णतः कवर करता है। इन सभी जिलों की अपनी विशिष्ट लग्गी (Laggi) इकाइयों के पैमानों का पूरा डेटाबेस हमारे कैलकुलेटर में फीड है:
+        </p>
+
+        <!-- Districts Badge Pills -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Patna</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Gaya</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Muzaffarpur</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Darbhanga</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Bhagalpur</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Nalanda</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Vaishali</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Sitamarhi</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Madhubani</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Samastipur</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Begusarai</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Munger</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Purnia</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Araria</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Supaul</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Saharsa</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Khagaria</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">East Champaran</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">West Champaran</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Gopalganj</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Siwan</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Saran</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Bhojpur</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Buxar</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Rohtas</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Kaimur</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Aurangabad</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Nawada</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Jehanabad</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Arwal</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Sheikhpura</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Lakhisarai</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Jamui</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Banka</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Madhepura</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Kishanganj</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Katihar</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-950 border border-emerald-100 shadow-sm hover:scale-105 transition-all">Sheohar</span>
+        </div>
+      </section>
+
+      <!-- SECTION 6 — CONTACT US -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6" id="contact-us">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
+          <span class="text-primaryGreen">📞</span> 6. हमसे संपर्क करें (Contact Us)
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 font-bold -mt-4">यदि आपके पास कोई प्रश्न, प्रतिक्रिया या सहयोग का प्रस्ताव है, तो बेझिझक हमसे संपर्क करें:</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-4 font-semibold text-xs sm:text-sm text-slate-700">
+            <div class="flex items-center gap-3 p-4 bg-emerald-50/50 rounded-2xl border border-emerald-100/50">
+              <span class="text-xl shrink-0">📱</span>
+              <div>
+                <p class="text-xs text-slate-500 font-bold uppercase">WhatsApp Number</p>
+                <a href="https://wa.me/919835102324" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-black text-base hover:underline">9835102324</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-4 bg-emerald-50/50 rounded-2xl border border-emerald-100/50">
+              <span class="text-xl shrink-0">📧</span>
+              <div>
+                <p class="text-xs text-slate-500 font-bold uppercase">Email Address</p>
+                <a href="mailto:info@bighawala.com" class="text-emerald-700 font-black text-base hover:underline">info@bighawala.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-4 bg-emerald-50/50 rounded-2xl border border-emerald-100/50">
+              <span class="text-xl shrink-0">🌐</span>
+              <div>
+                <p class="text-xs text-slate-500 font-bold uppercase">Official Website</p>
+                <a href="https://www.bighawala.com" class="text-emerald-700 font-black text-base hover:underline">www.bighawala.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 bg-orange-50 border border-orange-200/60 rounded-2xl flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <span class="text-2xl">⏰</span>
+              <strong class="text-orange-950 text-sm sm:text-base block font-extrabold">Working Hours (कार्य समय)</strong>
+              <p class="text-xs sm:text-sm text-orange-900 font-semibold leading-relaxed">
+                हम सोमवार से शनिवार, सुबह 9:00 बजे से शाम 6:00 बजे तक आपके व्हाट्सएप मैसेजेस और ईमेल का जवाब देने के लिए तत्पर रहते हैं।
+              </p>
+            </div>
+            <!-- WhatsApp Button -->
+            <a 
+              href="https://wa.me/919835102324" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm py-3 px-4 rounded-xl shadow-md text-center block transition-all hover:shadow-lg active:scale-95"
+            >
+              💬 WhatsApp पर संपर्क करें
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7 — DISCLAIMER NOTE -->
+      <section class="bg-rose-50 border border-rose-200/80 rounded-3xl p-6 sm:p-8 space-y-4">
+        <h2 class="text-lg sm:text-xl font-black text-rose-950 flex items-center gap-2">
+          <span>⚠️</span> 7. Disclaimer Note (महत्वपूर्ण अस्वीकरण)
+        </h2>
+        <div class="text-xs sm:text-sm text-rose-900 font-semibold leading-relaxed space-y-3">
+          <p>
+            BighaWala.com एक स्वतंत्र निजी सूचनात्मक मंच है। इस वेबसाइट पर दी गई सभी जानकारियां, कैलकुलेशन और कानूनी दिशा-निर्देश केवल आपके <strong>सामान्य ज्ञान और मार्गदर्शन (General Guidance)</strong> के लिए निःशुल्क प्रस्तुत किए गए हैं।
+          </p>
+          <p>
+            किसी भी प्रकार के अंतिम कानूनी, वित्तीय अथवा जमीन खरीद-फरोख्त के निर्णयों से पहले किसी अधिकृत राजस्व अधिकारी, निबंधन विभाग, योग्य वकील या मान्यता प्राप्त पेशेवर से सलाह अवश्य लें। किसी भी सरकारी कार्य, शुल्क भुगतान अथवा अद्यतन खतियानी डेटा के लिए हमेशा बिहार सरकार के राजस्व एवं भूमि सुधार विभाग के आधिकारिक वेब पोर्टल का ही उपयोग करें।
+          </p>
+          <p class="pt-2 border-t border-rose-200/50">
+            👉 पूर्ण और विस्तृत अस्वीकरण पढ़ने के लिए यहां क्लिक करें: <a href="disclaimer/index.html" class="underline text-orange-700 font-extrabold hover:text-orange-600">disclaimer.html (Full Disclaimer)</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- HELPFUL LINKS BOX -->
+      <div class="bg-slate-100 border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4">
+        <h3 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-1.5">
+          <span>🔗</span> क्विक लिंक्स (Helpful Resources)
+        </h3>
+        <p class="text-xs text-slate-500 font-bold -mt-2">बिहार भूमि के अन्य महत्वपूर्ण विषयों पर हमारी मार्गदर्शिकाएं यहां से पढ़ें:</p>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 font-bold text-xs sm:text-sm">
+          <a href="bigha-calculator.html" class="p-3 bg-white rounded-xl border border-slate-200 hover:border-emerald-200 text-slate-700 hover:text-emerald-800 transition-all flex items-center gap-1.5 shadow-xs">
+            <span>🧮</span> Bigha Calculator
+          </a>
+          <a href="dakhil-kharij.html" class="p-3 bg-white rounded-xl border border-slate-200 hover:border-emerald-200 text-slate-700 hover:text-emerald-800 transition-all flex items-center gap-1.5 shadow-xs">
+            <span>📋</span> Dakhil Kharij Guide
+          </a>
+          <a href="bhulekh.html" class="p-3 bg-white rounded-xl border border-slate-200 hover:border-emerald-200 text-slate-700 hover:text-emerald-800 transition-all flex items-center gap-1.5 shadow-xs">
+            <span>🗺️</span> Bhulekh Bihar
+          </a>
+          <a href="land-rates.html" class="p-3 bg-white rounded-xl border border-slate-200 hover:border-emerald-200 text-slate-700 hover:text-emerald-800 transition-all flex items-center gap-1.5 shadow-xs">
+            <span>💰</span> Land Rates 2026
+          </a>
+          <a href="lpc-bihar.html" class="p-3 bg-white rounded-xl border border-slate-200 hover:border-emerald-200 text-slate-700 hover:text-emerald-800 transition-all flex items-center gap-1.5 shadow-xs">
+            <span>📑</span> LPC Guide
+          </a>
+          <a href="jamabandi.html" class="p-3 bg-white rounded-xl border border-slate-200 hover:border-emerald-200 text-slate-700 hover:text-emerald-800 transition-all flex items-center gap-1.5 shadow-xs">
+            <span>📖</span> Jamabandi Guide
+          </a>
+          <a href="registry-bihar.html" class="p-3 bg-white rounded-xl border border-slate-200 hover:border-emerald-200 text-slate-700 hover:text-emerald-800 transition-all flex items-center gap-1.5 shadow-xs">
+            <span>📜</span> Registry Guide
+          </a>
+          <a href="ask-expert.html" class="p-3 bg-white rounded-xl border border-slate-200 hover:border-emerald-200 text-slate-700 hover:text-emerald-800 transition-all flex items-center gap-1.5 shadow-xs">
+            <span>🤖</span> Ask AI Expert
+          </a>
+          <a href="contact.html" class="p-3 bg-white rounded-xl border border-slate-200 hover:border-emerald-200 text-slate-700 hover:text-emerald-800 transition-all flex items-center gap-1.5 shadow-xs col-span-2 sm:col-span-1">
+            <span>📞</span> Contact Us
+          </a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-12 px-4 sm:px-6 lg:px-8 mt-auto">
+      <div class="max-w-7xl mx-auto space-y-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-slate-800">
+          <div class="space-y-2 max-w-2xl">
+            <p class="text-white font-black text-xl flex items-center gap-2" id="footer-logo">
+              <span>🏡</span> BighaWala.com
+            </p>
+            <p class="text-xs leading-relaxed text-slate-500">
+              Disclaimer (अस्वीकरण): यह वेबसाइट केवल शैक्षणिक, सूचनात्मक और उपयोगिता उद्देश्यों के लिए है। किसी भी कानूनी विवाद, संपत्ति खरीद या अधिकारिक सत्यापन के लिए हमेशा बिहार सरकार के राजस्व एवं भूमि सुधार विभाग के अधिकारिक पोर्टल <a href="https://biharbhumi.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="text-orange-400 underline font-extrabold hover:text-orange-300 transition-colors">biharbhumi.bihar.gov.in</a> पर जाएँ।
+            </p>
+          </div>
+          <div class="text-left md:text-right space-y-1 shrink-0">
+            <p class="text-xs text-slate-500">
+              विकसित भारत - समृद्ध बिहार भूमि अभियान © 2025
+            </p>
+            <p class="text-sm font-black text-orange-400 tracking-wider">
+              BighaWala.com
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-between items-center gap-4 text-xs font-bold">
+          <div class="flex flex-wrap gap-x-5 gap-y-2">
+            <a href="index.html" class="hover:text-orange-400 transition-colors">Home (मुख्य पृष्ठ)</a>
+            <span class="text-slate-800">•</span>
+            <a href="bigha-calculator.html" class="hover:text-orange-400 transition-colors">Calculator</a>
+            <span class="text-slate-800">•</span>
+            <a href="jamabandi.html" class="hover:text-orange-400 transition-colors">जमाबंदी</a>
+            <span class="text-slate-800">•</span>
+            <a href="registry-bihar.html" class="hover:text-orange-400 transition-colors">रजिस्ट्री गाइड</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html" class="hover:text-orange-400 transition-colors">Disclaimer (अस्वीकरण)</a>
+            <span class="text-slate-800">•</span>
+            <a href="privacy-policy/index.html" class="hover:text-orange-400 transition-colors">Privacy Policy (गोपनीयता नीति)</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html#terms" class="hover:text-orange-400 transition-colors">Terms of Use</a>
+            <span class="text-slate-800">•</span>
+            <a href="about.html" class="hover:text-orange-400 transition-colors">About Us (हमारे बारे में)</a>
+          </div>
+          <div class="text-slate-500">
+            AdSense compliant & Secure SSL 🔒
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MOBILE MENU INTERACTIVE SCRIPT -->
+    <script>
+      const menuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      menuToggle.addEventListener('click', () => {
+        const isHidden = mobileDrawer.classList.contains('hidden');
+        if (isHidden) {
+          mobileDrawer.classList.remove('hidden');
+          hamburgerIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          mobileDrawer.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>

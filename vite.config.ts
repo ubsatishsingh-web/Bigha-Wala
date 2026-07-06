@@ -27,6 +27,7 @@ export default defineConfig(() => {
           contact: path.resolve(__dirname, 'contact.html'),
           jamabandi: path.resolve(__dirname, 'jamabandi.html'),
           registryBihar: path.resolve(__dirname, 'registry-bihar.html'),
+          about: path.resolve(__dirname, 'about.html'),
         }
       }
     },
