@@ -318,6 +318,14 @@ app.get(["/bigha-calculator", "/bigha-calculator/", "/bigha-calculator.html"], (
   serveHtmlPage(req, res, "bigha-calculator.html");
 });
 
+app.get(["/zameen-moolyankan", "/zameen-moolyankan/", "/zameen-moolyankan.html"], (req, res) => {
+  serveHtmlPage(req, res, "zameen-moolyankan.html");
+});
+
+app.get(["/bihar-land-quiz", "/bihar-land-quiz/", "/bihar-land-quiz.html"], (req, res) => {
+  serveHtmlPage(req, res, "bihar-land-quiz.html");
+});
+
 app.get(["/dakhil-kharij", "/dakhil-kharij/", "/dakhil-kharij.html", "/dakhil-kharij-bihar", "/dakhil-kharij-bihar/"], (req, res) => {
   serveHtmlPage(req, res, "dakhil-kharij.html");
 });

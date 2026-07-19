@@ -1,6 +1,6 @@
 {
   "name": "BighaWala",
-  "description": "बिहार की जमीन की मापी और सरकारी जानकारी (Bigha, Katha, Dhur Calculator and Bihar Land Records Guide)",
+  "description": "बिहार की जमीन की मापी, सरकारी सर्किल रेट और ऑनलाइन जमीन मूल्यांकन (Bigha, Katha, Dhur and Land Valuation Calculator 2026)",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
