@@ -68,7 +68,7 @@
     <header class="sticky top-0 z-50 bg-white border-b border-slate-200/80 shadow-sm backdrop-blur-md bg-white/95">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <!-- Logo and Tagline -->
-        <a href="index.html" class="flex items-center gap-3 group">
+        <a href="index.html" class="flex items-center gap-3 group" id="logo-link">
           <div class="w-12 h-12 rounded-2xl bg-emerald-50 border-2 border-primaryGreen flex items-center justify-center text-2xl shadow-sm group-hover:scale-105 transition-transform">
             🏡
           </div>
@@ -83,17 +83,17 @@
         </a>
 
         <!-- Desktop Navigation Menu -->
-        <nav class="hidden lg:flex items-center gap-1 font-bold text-sm text-slate-600">
-          <a href="index.html" class="px-3.5 py-2 rounded-xl text-primaryGreen bg-emerald-50 transition-all">मुख्य पृष्ठ (Home)</a>
-          <a href="bigha-calculator.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">बीघा कैलकुलेटर</a>
-          <a href="jamabandi.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">जमाबंदी पंजी देखें</a>
-          <a href="registry-bihar.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">रजिस्ट्री गाइड</a>
-          <a href="dakhil-kharij.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">दाखिल खारिज गाइड</a>
-          <a href="land-rates.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">जमीन सरकारी रेट</a>
-          <a href="bhulekh.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">भूलेख बिहार</a>
-          <a href="about.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">हमारे बारे में</a>
-          <a href="ask-expert.html" class="ml-2 bg-accentSaffron hover:bg-customSaffronHover text-white px-4.5 py-2.5 rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-1 text-xs">
-            <span>💬 Ask Expert</span>
+        <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1 font-bold lg:text-[11px] xl:text-[12px] 2xl:text-sm text-slate-600" id="desktop-nav">
+          <a href="index.html" class="text-primaryGreen bg-emerald-50 px-2 xl:px-2.5 py-1.5 rounded-xl transition-all font-black border border-emerald-100/50 shrink-0">मुख्य पृष्ठ (Home)</a>
+          <a href="apna-khata-dekhe.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">अपना खाता देखें</a>
+          <a href="bigha-calculator.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">बीघा कैलकुलेटर</a>
+          <a href="bhulekh.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">भूलेख बिहार</a>
+          <a href="dakhil-kharij.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">दाखिल खारिज</a>
+          <a href="jamabandi.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">जमाबंदी</a>
+          <a href="lpc-bihar.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">LPC Bihar</a>
+          <a href="land-rates.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">जमीन का रेट</a>
+          <a href="ask-expert.html" class="ml-1 bg-accentSaffron hover:bg-customSaffronHover text-white px-2.5 py-1.5 xl:px-3.5 xl:py-2 rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-1 text-[11px] xl:text-xs shrink-0 font-bold">
+            <span>💬 Ask Expert 🤖</span>
           </a>
         </nav>
 
@@ -111,16 +111,16 @@
       <!-- Mobile Navigation Drawer -->
       <div id="mobile-drawer" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner animate-fade-in">
         <div class="px-4 pt-3 pb-6 space-y-2 font-bold text-slate-700">
-          <a href="index.html" class="block px-4 py-3 rounded-xl text-primaryGreen bg-emerald-50">मुख्य पृष्ठ (Home)</a>
+          <a href="index.html" class="block px-4 py-3 rounded-xl text-primaryGreen bg-emerald-50 font-black">मुख्य पृष्ठ (Home)</a>
+          <a href="apna-khata-dekhe.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">अपना खाता देखें (Apna Khata)</a>
           <a href="bigha-calculator.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">बीघा कैलकुलेटर (Bigha Calculator)</a>
-          <a href="jamabandi.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमाबंदी पंजी देखें (Jamabandi Bihar)</a>
-          <a href="registry-bihar.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">रजिस्ट्री गाइड (Registry Guide)</a>
-          <a href="dakhil-kharij.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">दाखिल खारिज गाइड (Mutation Guide)</a>
-          <a href="land-rates.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमीन सरकारी रेट (Land Rates)</a>
           <a href="bhulekh.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">भूलेख बिहार (Bhulekh Bihar)</a>
-          <a href="about.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">हमारे बारे में (About Us)</a>
-          <a href="ask-expert.html" class="block px-4 py-3 rounded-xl text-center bg-accentSaffron hover:bg-customSaffronHover text-white shadow-sm mt-4">
-            💬 Expert से पूछें (Ask Expert)
+          <a href="dakhil-kharij.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">दाखिल खारिज (Mutation Guide)</a>
+          <a href="jamabandi.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमाबंदी पंजी देखें (Jamabandi)</a>
+          <a href="lpc-bihar.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">LPC Bihar (LPC Guide)</a>
+          <a href="land-rates.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमीन का रेट (Land Rates)</a>
+          <a href="ask-expert.html" class="block px-4 py-3 rounded-xl text-center bg-accentSaffron hover:bg-customSaffronHover text-white shadow-sm mt-4 font-black ">
+            💬 Ask Expert 🤖
           </a>
         </div>
       </div>
