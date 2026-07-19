@@ -262,6 +262,12 @@ app.get("/sitemap.xml", (req, res) => {
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://www.bighawala.com/apna-khata-dekhe.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>`);
 });
 
@@ -342,6 +348,10 @@ app.get(["/pm-awas-yojana-bihar", "/pm-awas-yojana-bihar/", "/pm-awas-yojana-bih
 
 app.get(["/jamin-ka-rate-bihar", "/jamin-ka-rate-bihar/", "/jamin-ka-rate-bihar.html"], (req, res) => {
   serveHtmlPage(req, res, "jamin-ka-rate-bihar.html");
+});
+
+app.get(["/apna-khata-dekhe", "/apna-khata-dekhe/", "/apna-khata-dekhe.html"], (req, res) => {
+  serveHtmlPage(req, res, "apna-khata-dekhe.html");
 });
 
 app.get(["/bhulekh", "/bhulekh/", "/bhulekh.html", "/bhulekh-bihar", "/bhulekh-bihar/"], (req, res) => {

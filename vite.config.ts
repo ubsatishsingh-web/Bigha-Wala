@@ -33,6 +33,7 @@ export default defineConfig(() => {
           kisanCreditCardBihar: path.resolve(__dirname, 'kisan-credit-card-bihar.html'),
           pmAwasYojanaBihar: path.resolve(__dirname, 'pm-awas-yojana-bihar.html'),
           jaminKaRateBihar: path.resolve(__dirname, 'jamin-ka-rate-bihar.html'),
+          apnaKhataDekhe: path.resolve(__dirname, 'apna-khata-dekhe.html'),
         }
       }
     },
