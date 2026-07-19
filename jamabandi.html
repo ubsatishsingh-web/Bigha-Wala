@@ -6,15 +6,15 @@
     <title>Jamabandi Bihar 2026 | जमाबंदी नकल ऑनलाइन | BighaWala.com</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Bihar mein Jamabandi Nakal online kaise nikalen 2026? ROR, Khatiyan download karne ka poora tarika Hindi mein." />
-    <meta name="keywords" content="jamabandi bihar, jamabandi nakal bihar, ror bihar, khatiyan bihar, jamabandi online bihar 2026, bihar land record nakal" />
+    <meta name="description" content="Bihar mein Jamabandi Nakal online kaise nikalen 2026? ROR, Khatyan download karne ka poora tarika Hindi mein. Free guide." />
+    <meta name="keywords" content="jamabandi bihar 2026, jamabandi nakal bihar, ror bihar, khatyan bihar, jamabandi online bihar 2026, bihar land record nakal, jamabandi kaise dekhe bihar, bihar jamabandi download" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.bighawala.com/jamabandi.html" />
 
-    <!-- Google Fonts: Noto Sans Devanagari for Hindi, Poppins for English -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -63,10 +63,10 @@
       .accordion-content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease-out;
+        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       .accordion-active .accordion-content {
-        max-height: 500px; /* larger allowance for detailed answers */
+        max-height: 500px;
       }
       .accordion-active .accordion-icon {
         transform: rotate(180deg);
@@ -94,20 +94,21 @@
         </a>
 
         <!-- Desktop Navigation Menu -->
-        <nav class="hidden lg:flex items-center gap-1 font-bold text-sm text-slate-600">
-          <a href="index.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">मुख्य पृष्ठ (Home)</a>
-          <a href="bigha-calculator.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">बीघा कैलकुलेटर</a>
-          <a href="jamabandi.html" class="px-3.5 py-2 rounded-xl text-primaryGreen bg-emerald-50/60 hover:bg-slate-50 transition-all">जमाबंदी पंजी देखें</a>
-          <a href="dakhil-kharij.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">दाखिल खारिज गाइड</a>
-          <a href="land-rates.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">जमीन सरकारी रेट</a>
-          <a href="bhulekh.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">भूलेख बिहार</a>
-          <a href="contact.html" class="px-3.5 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">संपर्क करें</a>
-          <a href="ask-expert.html" class="ml-2 bg-accentSaffron hover:bg-customSaffronHover text-white px-4.5 py-2.5 rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-1 text-xs">
+        <nav class="hidden lg:flex items-center gap-1 font-bold text-sm text-slate-600" id="desktop-nav">
+          <a href="index.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">मुख्य पृष्ठ (Home)</a>
+          <a href="bigha-calculator.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">बीघा कैलकुलेटर</a>
+          <a href="jamabandi.html" class="px-3 py-2 rounded-xl text-primaryGreen bg-emerald-50 transition-all">जमाबंदी पंजी देखें</a>
+          <a href="registry-bihar.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">रजिस्ट्री गाइड</a>
+          <a href="dakhil-kharij.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">दाखिल खारिज गाइड</a>
+          <a href="land-rates.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">जमीन सरकारी रेट</a>
+          <a href="bhulekh.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">भूलेख बिहार</a>
+          <a href="about.html" class="px-3 py-2 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all">हमारे बारे में</a>
+          <a href="ask-expert.html" class="ml-2 bg-accentSaffron hover:bg-customSaffronHover text-white px-4 py-2 rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-1 text-xs">
             <span>💬 Ask Expert</span>
           </a>
         </nav>
 
-        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <!-- Mobile Menu Toggle Button -->
         <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Menu">
           <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -118,16 +119,17 @@
         </button>
       </div>
 
-      <!-- Mobile Navigation Drawer -->
+      <!-- Mobile Drawer Menu -->
       <div id="mobile-drawer" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner">
         <div class="px-4 pt-3 pb-6 space-y-2 font-bold text-slate-700">
           <a href="index.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">मुख्य पृष्ठ (Home)</a>
           <a href="bigha-calculator.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">बीघा कैलकुलेटर (Bigha Calculator)</a>
           <a href="jamabandi.html" class="block px-4 py-3 rounded-xl text-primaryGreen bg-emerald-50">जमाबंदी पंजी देखें (Jamabandi Bihar)</a>
+          <a href="registry-bihar.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">रजिस्ट्री गाइड (Registry Guide)</a>
           <a href="dakhil-kharij.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">दाखिल खारिज गाइड (Mutation Guide)</a>
           <a href="land-rates.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमीन सरकारी रेट (Land Rates)</a>
           <a href="bhulekh.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">भूलेख बिहार (Bhulekh Bihar)</a>
-          <a href="contact.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">संपर्क करें (Contact Us)</a>
+          <a href="about.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">हमारे बारे में (About Us)</a>
           <a href="ask-expert.html" class="block px-4 py-3 rounded-xl text-center bg-accentSaffron hover:bg-customSaffronHover text-white shadow-sm mt-4">
             💬 Expert से पूछें (Ask Expert)
           </a>
@@ -137,701 +139,901 @@
 
     <!-- HERO SECTION -->
     <section class="hero-gradient text-white py-12 sm:py-16 px-4 relative overflow-hidden">
-      <!-- Traditional Design Backdrop Elements -->
       <div class="absolute -top-12 -left-12 w-64 h-64 rounded-full bg-white/5 blur-2xl"></div>
       <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-orange-500/10 blur-3xl"></div>
 
       <div class="max-w-4xl mx-auto text-center space-y-4 relative z-10">
         <span class="inline-block bg-orange-500/20 text-orange-200 border border-orange-400/30 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
-          📄 बिहार भूमि अभिलेख 2026 (Bihar Land Records Portal)
+          🗺️ बिहार भूमि जमाबंदी अभिलेख 2026
         </span>
-        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight" id="page-title">
           Jamabandi Bihar 2026 | जमाबंदी नकल ऑनलाइन कैसे निकालें?
         </h1>
-        <p class="text-sm sm:text-base text-emerald-100 max-w-2xl mx-auto font-medium">
-          बिहार में अपनी जमीन का जमाबंदी पंजी (Register II), पुराना खतियान और अधिकार अभिलेख (ROR) ऑनलाइन देखने और डाउनलोड करने का सबसे आसान और सटीक तरीका।
+        <p class="text-sm sm:text-base text-emerald-100 max-w-2xl mx-auto font-semibold">
+          बिहार के किसी भी जिले की जमीन की जमाबंदी नकल ऑनलाइन देखने, डाउनलोड करने, खतियान तथा अधिकार अभिलेख (ROR) प्राप्त करने का संपूर्ण नियमबद्ध विवरण।
         </p>
 
         <!-- Social Share Button (WhatsApp) -->
         <div class="pt-4 flex justify-center">
-          <button 
-            onclick="shareOnWhatsApp()" 
-            class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center gap-2 active:scale-95"
+          <a 
+            href="https://api.whatsapp.com/send?text=Bihar%20mein%20Jamabandi%20Nakal%20online%202026%20%E2%80%94%20Free%20guide%3A%20BighaWala.com%2Fjamabandi" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center gap-2 active:scale-95"
+            id="whatsapp-share-top"
           >
-            <span>🔗 दोस्तों को शेयर करें</span>
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.588 2.019 14.12 1.01 11.516 1.01c-5.44 0-9.866 4.371-9.87 9.8c-.001 1.768.487 3.49 1.415 5.022L2.096 19.8l4.185-1.094c.162.088.324.176.49.255z" />
-            </svg>
-          </button>
+            <span>🔗 दोस्तों को शेयर करें (WhatsApp)</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- MAIN CONTAINER -->
-    <main class="max-w-4xl mx-auto px-4 -mt-8 sm:-mt-10 mb-16 relative z-20 space-y-12">
-      
-      <!-- IMPORTANT INFO BOX -->
-      <div class="bg-emerald-800 text-emerald-50 rounded-3xl border border-emerald-700/80 p-6 shadow-xl custom-green-gradient">
-        <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-          <div class="w-14 h-14 shrink-0 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-3xl">
-            ✅
-          </div>
-          <div class="space-y-1">
-            <h3 class="text-base sm:text-lg font-black text-white leading-tight">
-              आधिकारिक सरकारी पोर्टल (Official Government Portal)
+    <!-- TWO PORTAL BOXES AT TOP & CLARIFICATION BOX -->
+    <section class="max-w-4xl mx-auto px-4 mt-8 w-full space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Box 1 (Green) -->
+        <div class="bg-emerald-50 border-2 border-emerald-500/30 rounded-3xl p-6 flex flex-col justify-between space-y-4 shadow-sm" id="portal-box-1">
+          <div class="space-y-2">
+            <h3 class="text-lg font-black text-emerald-950 flex items-center gap-2">
+              <span>📋</span> Khatyan / Apna Khata देखने के लिए:
             </h3>
-            <p class="text-xs sm:text-sm text-emerald-100 font-bold">
-              Jamabandi Nakal ke liye official portal: <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="underline text-yellow-300 font-black hover:text-yellow-200 transition-colors">bhulekh.bihar.gov.in</a> — बिल्कुल मुफ्त सरकारी सेवा
+            <p class="text-xs text-slate-600 font-semibold">
+              अपना खाता, खसरा, रकबा यहाँ देखें। यह मुख्य रूप से पुराना मूल अधिकार अभिलेख (ROR) है।
             </p>
           </div>
+          <div class="pt-2">
+            <a href="https://land.bihar.gov.in/Ror2025/RoR.aspx" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm px-5 py-3.5 rounded-xl shadow-md hover:scale-[1.01] transition-transform w-full text-center">
+              🟢 KHATYAN PORTAL खोलें
+            </a>
+          </div>
+          <p class="text-[11px] text-emerald-800 font-bold text-center">
+            land.bihar.gov.in/Ror2025/RoR.aspx
+          </p>
+        </div>
+
+        <!-- Box 2 (Saffron) -->
+        <div class="bg-orange-50 border-2 border-orange-500/30 rounded-3xl p-6 flex flex-col justify-between space-y-4 shadow-sm" id="portal-box-2">
+          <div class="space-y-2">
+            <h3 class="text-lg font-black text-orange-950 flex items-center gap-2">
+              <span>📝</span> Jamabandi | Dakhil Kharij | LPC के लिए:
+            </h3>
+            <p class="text-xs text-slate-600 font-semibold">
+              जमाबंदी नकल, दाखिल खारिज, एलपीसी यहाँ मिलेगा। यह अद्यतन (Updated) भूमि रिकॉर्ड है।
+            </p>
+          </div>
+          <div class="pt-2">
+            <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white font-black text-sm px-5 py-3.5 rounded-xl shadow-md hover:scale-[1.01] transition-transform w-full text-center">
+              🟠 BIHAR BHUMI PORTAL खोलें
+            </a>
+          </div>
+          <p class="text-[11px] text-orange-800 font-bold text-center">
+            biharbhumi.bihar.gov.in/Biharbhumi/
+          </p>
         </div>
       </div>
 
+      <!-- Clarification Box (Amber) -->
+      <div class="bg-amber-50 border-2 border-amber-500/30 rounded-3xl p-6 space-y-3 shadow-xs" id="clarification-box">
+        <h4 class="text-sm sm:text-base font-black text-amber-950 flex items-center gap-2">
+          ⚠️ Bihar mein do alag portals hain —
+        </h4>
+        <div class="text-xs sm:text-sm text-amber-900 font-bold space-y-2 leading-relaxed">
+          <p>
+            1️⃣ <strong class="text-slate-900">Khatyan/Apna Khata:</strong> <a href="https://land.bihar.gov.in/Ror2025/RoR.aspx" target="_blank" class="underline text-emerald-800 break-all font-black">land.bihar.gov.in/Ror2025/RoR.aspx</a>
+          </p>
+          <p>
+            2️⃣ <strong class="text-slate-900">Jamabandi/Dakhil Kharij/LPC:</strong> <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" class="underline text-orange-800 break-all font-black">biharbhumi.bihar.gov.in/Biharbhumi/</a>
+          </p>
+          <p class="text-xs text-amber-950/80 pt-1 border-t border-amber-500/10 font-extrabold">
+            ✨ Dono portals free hain aur dono alag-alag uddeshyon ke liye kaam karte hain।
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN GRID CONTAINER -->
+    <main class="max-w-4xl mx-auto px-4 mt-8 mb-16 space-y-10 w-full text-[16px]">
+
       <!-- SECTION 1 — Jamabandi Kya Hoti Hai? -->
-      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-4">
-        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
-          <span class="text-primaryGreen">📝</span> Jamabandi Kya Hoti Hai? (जमाबंदी क्या है?)
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4" id="section-1">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+          <span class="text-primaryGreen">📔</span> 1. Jamabandi Kya Hoti Hai? (जमाबंदी क्या होती है?)
         </h2>
-        <div class="text-sm sm:text-base text-slate-600 leading-relaxed space-y-4 font-medium">
+        <div class="text-sm sm:text-base text-slate-600 leading-relaxed space-y-4 font-semibold">
           <p>
-            <strong>जमाबंदी (Jamabandi / Record of Rights - ROR)</strong> बिहार सरकार के राजस्व विभाग द्वारा रखा जाने वाला एक अत्यंत महत्वपूर्ण दस्तावेज है। इसे आम बोलचाल की भाषा में <strong>Register II (रजिस्टर 2)</strong>, <strong>ROR</strong> या <strong>खतियान</strong> के अंतर्गत आने वाला अधिकार अभिलेख भी कहा जाता है। इसमें भूमि के स्वामित्व (Ownership), क्षेत्रफल, चौहद्दी और कर (Lagaan) के विवरण दर्ज होते हैं। 
+            <strong>जमाबंदी (Jamabandi / Record of Rights - ROR)</strong> को बिहार में जमीन का सबसे महत्वपूर्ण सरकारी दस्तावेज माना जाता है। इसे कुछ क्षेत्रों में <strong>Khatyan (खतियान)</strong> के रूप में भी जाना जाता है क्योंकि यह अधिकार अभिलेख का जीवंत रूप है। यह दस्तावेज राजस्व एवं भूमि सुधार विभाग द्वारा प्रत्येक राजस्व गाँव (मौजा) के अनुसार Register-II (पंजी-2) में रखा जाता है।
           </p>
           <p>
-            यह दस्तावेज दर्शाता है कि वर्तमान में उस विशिष्ट जमीन का असली हकदार या मालिक कौन है। जमाबंदी में मुख्य रूप से <strong>मालिक का नाम, खाता संख्या, खेसरा संख्या (प्लॉट नंबर), रकबा (जमीन का साइज जैसे बीघा, कट्ठा, धूर), और जमीन का प्रकार</strong> दर्ज होता है।
+            इसमें मुख्यतः भूमि के वर्तमान वास्तविक मालिक (रैयत) का नाम, खाता संख्या, खेसरा (प्लॉट) संख्या, कुल रकबा (बीघा, कट्ठा, धूर में), जमीन का प्रकार तथा सालाना चुकाया जाने वाला लगान कर दर्ज होता है।
           </p>
-          
-          <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-2xl space-y-2 mt-4">
-            <strong class="text-amber-800 text-sm sm:text-base block">आपको जमाबंदी नकल की आवश्यकता कब पड़ती है?</strong>
-            <ul class="list-disc pl-5 text-xs sm:text-sm text-amber-950 space-y-1 font-bold">
-              <li>जमीन खरीदने (Buy) या बेचने (Sell) के समय मालिकाना हक की पुष्टि करने के लिए।</li>
-              <li>बैंक से कृषि लोन (KCC) या होम लोन प्राप्त करने के लिए।</li>
-              <li>जमीन के आपसी विवाद या कोर्ट-कचहरी (Court Cases) के मामलों में कानूनी सबूत के तौर पर।</li>
-              <li>सरकारी योजनाओं (जैसे पीएम किसान सम्मान निधि, सूखा राहत) का लाभ लेने के लिए।</li>
-              <li>दाखिल-खारिज (Dakhil Kharij / Mutation) की नई अर्जी देने के वक्त पुराने दस्तावेज के रूप में।</li>
+          <div class="bg-slate-50 border border-slate-100 rounded-2xl p-5 space-y-3 text-xs sm:text-sm text-slate-700">
+            <h4 class="text-slate-900 font-black">📝 जमाबंदी नकल की आवश्यकता निम्नलिखित मुख्य अवसरों पर पड़ती है:</h4>
+            <ul class="list-disc pl-5 space-y-2 text-slate-600">
+              <li><strong>जमीन की खरीद-बिक्री (Sale/Purchase):</strong> मालिकाना हक की सही पुष्टि करने के लिए।</li>
+              <li><strong>बैंक लोन (Bank Loan / KCC):</strong> बिना जमाबंदी के कोई भी बैंक कृषि ऋण स्वीकृत नहीं करता।</li>
+              <li><strong>अदालती मामले (Court Cases):</strong> भूमि विवादों में सबसे प्रमुख कानूनी दस्तावेज प्रमाण।</li>
+              <li><strong>दाखिल खारिज (Dakhil Kharij):</strong> नया म्यूटेशन आवेदन करने के लिए पुराना आधार रिकॉर्ड।</li>
+              <li><strong>सरकारी योजनाएँ (Government Schemes):</strong> पीएम-किसान या सूखा राहत लाभ प्राप्त करने हेतु।</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- SECTION 2 — Jamabandi mein kya kya hota hai? -->
-      <section class="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden">
+      <!-- SECTION 2 — Jamabandi Mein Kya Kya Hota Hai? -->
+      <section class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden" id="section-2">
         <div class="bg-slate-50 px-6 py-5 border-b border-slate-200">
-          <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
-            <span class="text-accentSaffron">📋</span> Jamabandi mein kya kya hota hai? (जमाबंदी पंजी के मुख्य अंग)
+          <h2 class="text-xl font-black text-slate-900 flex items-center gap-2">
+            <span class="text-primaryGreen">📋</span> 2. Jamabandi Mein Kya Kya Hota Hai? (जमाबंदी में क्या जानकारी मिलती है?)
           </h2>
-          <p class="text-xs text-slate-500 font-bold mt-1">जमाबंदी नकल के मुख्य कॉलम और उनका आसान अर्थ हिंदी और अंग्रेजी में समझें:</p>
+          <p class="text-xs text-slate-500 font-bold mt-1">जमाबंदी पंजी में दर्ज मुख्य कॉलम और उनका विवरण:</p>
         </div>
-        
+
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse text-xs sm:text-sm">
             <thead>
-              <tr class="bg-emerald-50 text-emerald-900 font-black border-b border-emerald-100">
-                <th class="p-4 sm:p-5">कॉलम का नाम (Column Name)</th>
-                <th class="p-4 sm:p-5">मतलब (Meaning & Detail)</th>
+              <tr class="bg-slate-100 border-b border-slate-200 font-bold text-slate-800">
+                <th class="p-4">कॉलम / शब्द (Column)</th>
+                <th class="p-4">सरल हिंदी अर्थ (Meaning)</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-slate-100 font-semibold text-slate-700">
-              <tr class="hover:bg-slate-50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-slate-900">Khata Number (खाता संख्या)</td>
-                <td class="p-4 sm:p-5 text-slate-600">यह आपका लैंड अकाउंट नंबर है जिसके अंतर्गत आपके सारे भूखंड (Plots) आते हैं।</td>
+            <tbody class="font-semibold text-slate-700 divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 text-slate-900 font-bold">Khata Number</td>
+                <td class="p-4">Land account number (भूमि खाता संख्या जिसके अंतर्गत जमीन दर्ज होती है)</td>
               </tr>
-              <tr class="bg-slate-50/50 hover:bg-slate-50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-slate-900">Khesra Number (खेसरा संख्या)</td>
-                <td class="p-4 sm:p-5 text-slate-600">इसे प्लॉट नंबर या सर्वे नंबर भी कहते हैं। यह जमीन के एक विशिष्ट टुकड़े का नक्शा नंबर होता है।</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 text-slate-900 font-bold">Khesra Number</td>
+                <td class="p-4">Plot/survey number (जमीन का विशिष्ट प्लॉट नंबर जो नक्शे पर आधारित होता है)</td>
               </tr>
-              <tr class="hover:bg-slate-50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-slate-900">Raqba (रकबा)</td>
-                <td class="p-4 sm:p-5 text-slate-600">जमीन का वास्तविक क्षेत्रफल। इसे अमूमन एकड़, डेसिमल या बीघा/कट्ठा/धूर में लिखा जाता है।</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 text-slate-900 font-bold">Raqba</td>
+                <td class="p-4">Land size (जमीन का कुल क्षेत्रफल, जैसे बीघा/कट्ठा/धूर या एकड़ में)</td>
               </tr>
-              <tr class="bg-slate-50/50 hover:bg-slate-50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-slate-900">Malik ka Naam (रैयत/मालिक का नाम)</td>
-                <td class="p-4 sm:p-5 text-slate-600">उस जमीन के वर्तमान वास्तविक स्वामी या रैयत का नाम जो कर (Lagaan) चुकाने के लिए उत्तरदायी है।</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 text-slate-900 font-bold">Malik ka Naam</td>
+                <td class="p-4">Owner name (वह व्यक्ति जिसके नाम पर वर्तमान में जमीन का मालिकाना हक दर्ज है)</td>
               </tr>
-              <tr class="hover:bg-slate-50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-slate-900">Pita/Pati ka Naam (पिता/पति का नाम)</td>
-                <td class="p-4 sm:p-5 text-slate-600">मालिक की सही पहचान सुनिश्चित करने के लिए पिता या पति का नाम।</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 text-slate-900 font-bold">Pita/Pati Naam</td>
+                <td class="p-4">Father/Husband name (मालिक के पिता या पति का नाम)</td>
               </tr>
-              <tr class="bg-slate-50/50 hover:bg-slate-50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-slate-900">Jameen ka Prakar (भूमि की श्रेणी)</td>
-                <td class="p-4 sm:p-5 text-slate-600">जमीन का प्रकार जैसे: धान, भीठ, बासगीत (residential), व्यावसायिक या कृषि योग्य।</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 text-slate-900 font-bold">Jameen ka Prakar</td>
+                <td class="p-4">Land type (भूमि की श्रेणी जैसे कृषि योग्य, व्यावसायिक या बासगीत/residential)</td>
               </tr>
-              <tr class="hover:bg-slate-50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-slate-900">Lagaan (लगान/सालाना रसीद दर)</td>
-                <td class="p-4 sm:p-5 text-slate-600">सरकार को दिया जाने वाला वार्षिक भू-राजस्व टैक्स का दर या लगान।</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 text-slate-900 font-bold">Lagaan</td>
+                <td class="p-4">Land tax amount (सालाना दिया जाने वाला सरकारी टैक्स दर)</td>
               </tr>
-              <tr class="bg-slate-50/50 hover:bg-slate-50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-slate-900">Bojh (भार/ऋण विवरण)</td>
-                <td class="p-4 sm:p-5 text-slate-600">यदि जमीन किसी बैंक में बंधक है या उसपर कोई ऋण लिया गया है, तो उसका संक्षिप्त विवरण।</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 text-slate-900 font-bold">Bojh</td>
+                <td class="p-4">Any loan/mortgage on land (जमीन पर कोई बैंक लोन या सरकारी भार तो नहीं है)</td>
               </tr>
-              <tr class="hover:bg-slate-50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-slate-900">Dakhil Kharij (दाखिल-खारिज विवरण)</td>
-                <td class="p-4 sm:p-5 text-slate-600">जमीन के म्यूटेशन की तारीख, शुद्धि पत्र संख्या और केस नंबर का इतिहास।</td>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 text-slate-900 font-bold">Dakhil Kharij</td>
+                <td class="p-4">Mutation history (केस संख्या, तारीख और शुद्धिपत्र का विवरण)</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <!-- SECTION 3 — Online Jamabandi Nakal Kaise Nikalen -->
-      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6">
-        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
-          <span class="text-primaryGreen">🌐</span> Online Jamabandi Nakal Kaise Nikalen? (स्टेप-बाय-स्टेप गाइड)
+      <!-- SECTION 3 — Jamabandi Online Kaise Nikalen -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" id="section-3">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+          <span class="text-primaryGreen">🛠️</span> 3. Jamabandi Online Kaise Nikalen (जमाबंदी नकल ऑनलाइन कैसे निकालें?)
         </h2>
-        <p class="text-xs sm:text-sm text-slate-500 font-bold">बिहार सरकार के पोर्टल से केवल 2 मिनट में डिजिटल जमाबंदी कॉपी डाउनलोड करें:</p>
-        
-        <div class="space-y-4">
-          <!-- Step 1 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              1
-            </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              सबसे पहले बिहार भूमि की आधिकारिक वेबसाइट <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline">bhulekh.bihar.gov.in</a> या <a href="https://biharbhumi.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline">biharbhumi.bihar.gov.in</a> को खोलें।
+
+        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 text-center space-y-3">
+          <p class="font-extrabold text-emerald-950 text-sm sm:text-base">जमाबंदी पंजी (Register-II) देखने के लिए नीचे दिए गए बटन पर क्लिक करें:</p>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm sm:text-base px-8 py-4 rounded-xl shadow-md hover:scale-[1.01] transition-transform w-full sm:w-auto">
+            <span>🟢 Bihar Bhumi Portal Kholen 🔗</span>
+          </a>
+        </div>
+
+        <div class="space-y-6 pt-2">
+          <!-- Steps 1 to 11 -->
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-500 text-primaryGreen flex items-center justify-center font-black text-sm shrink-0">1</span>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 1: Website Kholen</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                अपने ब्राउज़र में <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" class="text-emerald-700 underline font-black">biharbhumi.bihar.gov.in/Biharbhumi/</a> ओपन करें।
+              </p>
             </div>
           </div>
 
-          <!-- Step 2 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              2
-            </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              होमपेज पर मौजूद <strong class="text-emerald-700">"जमाबंदी पंजी देखें" (View Jamabandi Register)</strong> वाले विकल्प पर क्लिक करें।
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              3
-            </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              अब एक नया पेज खुलेगा। वहाँ सबसे पहले अपना <strong class="text-slate-900">District (जिला)</strong> सेलेक्ट करें और "Proceed" पर क्लिक करें।
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-500 text-primaryGreen flex items-center justify-center font-black text-sm shrink-0">2</span>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 2: Jamabandi Option Chunein</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                होमपेज पर बने हुए <strong class="text-slate-900">"जमाबंदी पंजी देखें" (Jamabandi Panjee)</strong> विकल्प पर क्लिक करें।
+              </p>
             </div>
           </div>
 
-          <!-- Step 4 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              4
-            </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              इसके बाद अपना <strong class="text-slate-900">Anchal (अंचल/ब्लॉक)</strong> ड्रॉपडाउन सूची से सेलेक्ट करें।
-            </div>
-          </div>
-
-          <!-- Step 5 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              5
-            </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              अपने अंचल के अनुसार सही <strong class="text-slate-900">Halka (हल्का)</strong> का चयन करें (हल्का यानी पंचायत का समूह)।
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-500 text-primaryGreen flex items-center justify-center font-black text-sm shrink-0">3</span>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 3: District Select Karein</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                नये खुले हुए पेज पर अपना जिला (District) का चयन करें।
+              </p>
             </div>
           </div>
 
-          <!-- Step 6 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              6
-            </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              सूची में से अपना <strong class="text-slate-900">Mauja (मौज/गाँव)</strong> चुनें। ध्यान रहे गाँव के नाम के साथ थाना नंबर भी लिखा होता है।
-            </div>
-          </div>
-
-          <!-- Step 7 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              7
-            </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              जमाबंदी खोजने के लिए अपनी सुविधा अनुसार कोई एक सर्च विकल्प चुनें:
-              <ul class="list-disc pl-5 mt-2 space-y-1.5 text-xs sm:text-sm text-slate-600 font-bold">
-                <li><strong class="text-emerald-700">Option A:</strong> Khata number (खाता संख्या) डालकर खोजें।</li>
-                <li><strong class="text-emerald-700">Option B:</strong> Khesra number (खेसरा/प्लॉट संख्या) डालकर खोजें।</li>
-                <li><strong class="text-emerald-700">Option C:</strong> Owner name (रैयत के नाम) से खोजें (हिंदी/अंग्रेजी में)।</li>
-                <li><strong class="text-emerald-700">Option D:</strong> जमाबंदी संख्या या कंप्यूटर जमाबंदी संख्या डालकर खोजें।</li>
-              </ul>
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-500 text-primaryGreen flex items-center justify-center font-black text-sm shrink-0">4</span>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 4: Anchal Chunein</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                अपना अंचल (Block) सेलेक्ट करें और 'Proceed' बटन को दबाएं।
+              </p>
             </div>
           </div>
 
-          <!-- Step 8 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              8
-            </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              दिए गए साधारण मैथ कैप्चा कोड (जैसे 4 + 3 = 7) को भरें और नीचे दिए गए <strong class="text-emerald-700">"Search"</strong> बटन को दबाएं।
-            </div>
-          </div>
-
-          <!-- Step 9 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              9
-            </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              सर्च परिणाम नीचे एक तालिका के रूप में दिखाई देंगे। अपने नाम और खता नंबर के अनुसार सही रो (Row) खोजें।
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-500 text-primaryGreen flex items-center justify-center font-black text-sm shrink-0">5</span>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 5: Halka Chunein</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                ड्रॉपडाउन सूची में से अपना सही हल्का (Halka - पंचायत) चुनें।
+              </p>
             </div>
           </div>
 
-          <!-- Step 10 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              10
-            </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              नाम के बगल में नीले या हरे रंग के आंख वाले आइकन <strong class="text-slate-900">"Nakal Dekhen" / "देखें"</strong> पर क्लिक करें।
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-500 text-primaryGreen flex items-center justify-center font-black text-sm shrink-0">6</span>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 6: Mauja Select Karein</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                अपने गाँव या मौजा (Mauja) का चयन करें (थाना संख्या के साथ)।
+              </p>
             </div>
           </div>
 
-          <!-- Step 11 -->
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-sm font-black text-emerald-800">
-              11
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-500 text-primaryGreen flex items-center justify-center font-black text-sm shrink-0">7</span>
+            <div class="space-y-2 w-full">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 7: Search Tarika Chunein</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                दिए गए विकल्पों में से किसी एक को सेलेक्ट करें:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-slate-50 p-4 rounded-xl text-xs font-bold text-slate-700">
+                <p>🔢 Option A: Khata number se search</p>
+                <p>📍 Option B: Khesra number se search</p>
+                <p>👤 Option C: Owner name se search</p>
+              </div>
             </div>
-            <div class="pt-1 text-sm sm:text-base font-bold text-slate-800">
-              आपकी स्क्रीन पर डिजिटल जमाबंदी पंजी (Register II) खुल जाएगी। इसे भविष्य के लिए <strong class="text-slate-900">"Print"</strong> कर लें या <strong class="text-slate-900">PDF</strong> में सुरक्षित सेव कर लें।
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-500 text-primaryGreen flex items-center justify-center font-black text-sm shrink-0">8</span>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 8: Search Button Dabayein</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                दिखाई दे रहे कैप्चा कोड (साधारण गणित जोड़/घटाव) को भरकर **"Search"** बटन पर क्लिक करें।
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-500 text-primaryGreen flex items-center justify-center font-black text-sm shrink-0">9</span>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 9: List Mein Se Select Karein</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                नीचे प्रदर्शित परिणामों की सूची में से अपने नाम और खता का सत्यापन करें।
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-500 text-primaryGreen flex items-center justify-center font-black text-sm shrink-0">10</span>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 10: Nakal Dekhen Par Click Karein</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                सही रो (Row) के अंत में बने नीले आंख वाले बटन **"देखें" (Nakal Dekhen)** पर क्लिक करें।
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-8 h-8 rounded-full bg-emerald-800 text-white flex items-center justify-center font-black text-sm shrink-0">11</span>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Step 11: PDF Save & Print</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-semibold">
+                आपकी डिजिटल जमाबंदी नकल स्क्रीन पर प्रस्तुत होगी। इसे अपने फ़ोन या कंप्यूटर में सेव (PDF) कर प्रिंट कर लें।
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SECTION 4 — Certified Jamabandi Nakal Kaise Milegi? -->
-      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6">
-        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
-          <span class="text-accentSaffron">🏛️</span> Certified Jamabandi Nakal Kaise Milegi? (प्रमाणित नकल प्रक्रिया)
+      <!-- SECTION 4 — Khatyan Kaise Dekhen? -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" id="section-4">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+          <span class="text-primaryGreen">🗺️</span> 4. Khatyan Kaise Dekhen? (खतियान कैसे देखें?)
         </h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 space-y-3">
-            <h3 class="text-base font-black text-slate-900 flex items-center gap-1.5">
-              <span class="text-emerald-600">📱</span> Online Nakal (वेबसाइट वाली कॉपी)
-            </h3>
-            <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 font-bold list-disc pl-5">
-              <li>यह पूर्णतः मुफ्त (Free) और तुरंत मिल जाती है।</li>
-              <li>इसका उपयोग केवल जानकारी, रेफरेंस या दाखिल-खारिज आवेदन के लिए होता है।</li>
-              <li>इसपर राजस्व अधिकारी की कोई भौतिक मुहर या दस्तखत नहीं होते हैं।</li>
-              <li class="text-rose-600">इसे कोर्ट या बैंक में अंतिम प्रमाण के रूप में स्वीकार नहीं किया जाता।</li>
-            </ul>
-          </div>
 
-          <div class="bg-emerald-50 p-5 rounded-2xl border border-emerald-200 space-y-3">
-            <h3 class="text-base font-black text-emerald-900 flex items-center gap-1.5">
-              <span class="text-emerald-700">🔒</span> Certified Nakal (प्रमाणित सरकारी कॉपी)
-            </h3>
-            <ul class="space-y-1.5 text-xs sm:text-sm text-emerald-950 font-bold list-disc pl-5">
-              <li>इसमें अंचल अधिकारी (CO) या राजस्व कर्मचारी का आधिकारिक मुहर और हस्ताक्षर होते हैं।</li>
-              <li>इसे बैंक लोन, बंटवारे के केस या अदालती विवादों में अंतिम कानूनी साक्ष्य माना जाता है।</li>
-              <li class="text-emerald-800">यह पूरी तरह प्राधिकृत एवं सुरक्षित सरकारी दस्तावेज है।</li>
-            </ul>
-          </div>
+        <!-- Important note box (blue) -->
+        <div class="bg-blue-50 border border-blue-200 text-blue-900 rounded-2xl p-5 text-xs sm:text-sm font-bold space-y-2">
+          <p>
+            📌 <strong>Khatyan aur Jamabandi mein thoda fark hai:</strong> <br/>
+            खतियान भूमि का सर्वेक्षण रिकॉर्ड है जो स्थायी प्रकृति का होता है। जबकि जमाबंदी अद्यतन मालिक का रिकॉर्ड है।
+          </p>
+          <p>
+            खतियान देखने के लिए बिल्कुल **ALAG portal** का उपयोग करना होता है: <br/>
+            👉 <a href="https://land.bihar.gov.in/Ror2025/RoR.aspx" target="_blank" class="underline text-blue-700 break-all">land.bihar.gov.in/Ror2025/RoR.aspx</a>
+          </p>
         </div>
 
-        <div class="bg-orange-50 border border-orange-200 rounded-2xl p-5 sm:p-6 space-y-3">
-          <h3 class="text-base sm:text-lg font-black text-orange-950">
-            Certified (प्रमाणित) जमाबंदी नकल पाने की विधि:
-          </h3>
-          <ol class="list-decimal pl-5 text-xs sm:text-sm text-orange-900 font-bold space-y-2">
-            <li>सर्वप्रथम अपने संबंधित <strong class="text-slate-900">Anchal Office (अंचल कार्यालय / CO Office)</strong> में जाएं।</li>
-            <li>वहां के सिंगल विंडो काउंटर या आरटीपीएस (RTPS) काउंटर से "जमाबंदी नकल प्रपत्र" प्राप्त करें या सादे कागज पर आवेदन पत्र लिखें।</li>
-            <li>आवेदन पत्र पर मांगे गए विवरण (खाता, खेसरा, मौजा, हल्का) भरें और ₹10 से ₹50 मूल्य का <strong class="text-slate-900">Court Fee Stamp (कोर्ट फीस टिकट)</strong> चिपकाएं।</li>
-            <li>आवेदन काउंटर पर जमा करें। वहां से आपको एक रसीद (Receiving) मिलेगी जिसमें डिलीवरी की तारीख दी होगी।</li>
-            <li>सामान्यतः <strong class="text-slate-900">3 से 7 कार्य दिवसों (Working Days)</strong> के भीतर आपको मुहर लगी प्रमाणित जमाबंदी नकल मिल जाएगी।</li>
-          </ol>
+        <div class="text-center pt-2">
+          <a href="https://land.bihar.gov.in/Ror2025/RoR.aspx" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black text-sm sm:text-base px-8 py-4 rounded-xl shadow-md hover:scale-[1.01] transition-transform w-full sm:w-auto">
+            <span>🌐 Khatyan Portal Kholen 🔗</span>
+          </a>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-base font-extrabold text-slate-900">Khatyan देखने के चरण:</h3>
+          
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">1</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 1:</strong> सबसे पहले आधिकारिक खतियान लिंक <a href="https://land.bihar.gov.in/Ror2025/RoR.aspx" target="_blank" class="text-blue-700 underline font-black">land.bihar.gov.in/Ror2025/RoR.aspx</a> पर जाएं।
+            </p>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">2</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 2:</strong> प्रदर्शित नक्शे या सूची से अपना सही जिला (District) चुनें।
+            </p>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">3</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 3:</strong> अपना अंचल (Anchal), हल्का (Halka) और मौजा (Mauja - गाँव) चुनें।
+            </p>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">4</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 4:</strong> खाता नंबर (Khata) अथवा रैयत के नाम से खोजने का विकल्प चुनें।
+            </p>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-blue-800 text-white flex items-center justify-center font-bold text-xs shrink-0">5</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 5:</strong> परिणाम स्क्रीन पर दिखने के बाद **"खतियान देखें"** पर क्लिक करें और रिकॉर्ड डाउनलोड करें।
+            </p>
+          </div>
         </div>
       </section>
 
-      <!-- SECTION 5 — Jamabandi se Kya Pata Chalta Hai? -->
-      <section class="space-y-6">
-        <h2 class="text-xl sm:text-2xl font-black text-slate-900 text-center md:text-left flex items-center justify-center md:justify-start gap-2">
-          <span class="text-primaryGreen">🔍</span> Jamabandi se Kya Pata Chalta Hai? (6 बड़े लाभ)
+      <!-- SECTION 5 — Certified Jamabandi Nakal Kaise Milegi? -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" id="section-5">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+          <span class="text-primaryGreen">🏛️</span> 5. Certified Jamabandi Nakal Kaise Milegi? (Certified नकल कैसे मिलेगी?)
+        </h2>
+
+        <!-- Difference Box -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Online Nakal -->
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 flex items-center gap-1.5">
+              <span>📱</span> Online Nakal (डिजिटल कॉपी)
+            </h3>
+            <ul class="space-y-1 text-xs text-slate-600 font-semibold">
+              <li class="flex items-center gap-1.5"><span class="text-emerald-600">✅</span> Free (बिलकुल मुफ्त)</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-600">✅</span> Instant (तुरंत डाउनलोड)</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-600">✅</span> Reference ke liye (केवल जानकारी हेतु)</li>
+              <li class="flex items-center gap-1.5"><span class="text-rose-600">❌</span> Court/bank mein directly valid nahi</li>
+            </ul>
+          </div>
+
+          <!-- Certified Nakal -->
+          <div class="bg-emerald-50/50 p-5 rounded-2xl border border-emerald-100 space-y-3">
+            <h3 class="text-sm sm:text-base font-black text-emerald-950 flex items-center gap-1.5">
+              <span>📜</span> Certified Nakal (प्रमाणित कॉपी)
+            </h3>
+            <ul class="space-y-1 text-xs text-emerald-900 font-semibold">
+              <li class="flex items-center gap-1.5"><span class="text-emerald-600">✅</span> Official stamp ke saath</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-600">✅</span> Court aur bank mein valid</li>
+              <li class="flex items-center gap-1.5"><span class="text-emerald-600">✅</span> Legally acceptable (संवैधानिक)</li>
+              <li class="flex items-center gap-1.5"><span class="text-orange-600">❌</span> Kuch din lagta hai (3-7 Din)</li>
+              <li class="flex items-center gap-1.5"><span class="text-orange-600">❌</span> Thodi fees lagti hai (Court stamp)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          <h3 class="text-base font-extrabold text-slate-900">Certified copy प्राप्त करने के चरण:</h3>
+          
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-xs shrink-0">1</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 1:</strong> अपने संबंधित **अंचल कार्यालय (Anchal Office - Block)** में जाएं।
+            </p>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-xs shrink-0">2</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 2:</strong> सिंगल विंडो काउंटर या आरटीपीएस (RTPS) काउंटर से आवेदन फॉर्म लें (बिल्कुल मुफ्त)।
+            </p>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-xs shrink-0">3</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 3:</strong> फॉर्म में अपनी जमीन के सही विवरण जैसे खाता, खेसरा, मौजा, और रैयत का नाम भरें।
+            </p>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-xs shrink-0">4</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 4:</strong> फॉर्म पर **₹10 से ₹50** मूल्य का कोर्ट फी स्टांप (Court fee stamp) चिपकाएं।
+            </p>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-xs shrink-0">5</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 5:</strong> अंचल कार्यालय के संबंधित पटल पर फॉर्म जमा करें और रसीद (Receiving) प्राप्त करें।
+            </p>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center font-bold text-xs shrink-0">6</span>
+            <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+              <strong>Step 6:</strong> जमा करने के **3 से 7 दिनों** में मुहर एवं दस्तखत युक्त असली प्रमाणित नकल प्राप्त करें।
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6 — Jamabandi Se Kya Pata Chalta Hai? -->
+      <section class="space-y-6" id="section-6">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+          <span class="text-primaryGreen">💡</span> 6. Jamabandi Se Kya Pata Chalta Hai? (जमाबंदी से क्या पता चलता है?)
         </h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <!-- Card 1 -->
-          <div class="bg-white border border-emerald-100 rounded-3xl p-5 shadow-sm hover:shadow-md transition-all space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-xl">🔍</div>
-            <h3 class="text-sm sm:text-base font-black text-slate-900">Malik Ka Satya</h3>
-            <p class="text-xs text-slate-500 font-bold leading-relaxed">
-              Zameen ka asli malik kaun hai — iski 100% sahi jankari bina kisi shaq ke verify karein.
+          <div class="bg-blue-50/50 p-5 rounded-2xl border border-blue-100 hover:border-blue-200 hover:bg-blue-50 transition-all space-y-2">
+            <span class="text-2xl">🔍</span>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900">Zameen ka asli malik</h3>
+            <p class="text-xs text-slate-600 font-semibold leading-relaxed">
+              जमीन किसके नाम पर है, इसके मालिकाना हक को बिना किसी संशय के तुरंत वेरीफाई करें।
             </p>
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-white border border-orange-100 rounded-3xl p-5 shadow-sm hover:shadow-md transition-all space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center text-xl">📏</div>
-            <h3 class="text-sm sm:text-base font-black text-slate-900">Exact Land Area</h3>
-            <p class="text-xs text-slate-500 font-bold leading-relaxed">
-              Zameen ka total area kitna hai, bigha/katha/dhur mein nikalne ka aadhar yahi banta hai.
+          <div class="bg-emerald-50/50 p-5 rounded-2xl border border-emerald-100 hover:border-emerald-200 hover:bg-emerald-50 transition-all space-y-2">
+            <span class="text-2xl">📏</span>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900">Exact land size</h3>
+            <p class="text-xs text-slate-600 font-semibold leading-relaxed">
+              जमीन का सटीक रकबा बीघा, कट्ठा या धूर में आधिकारिक तौर पर जानें।
             </p>
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-white border border-blue-100 rounded-3xl p-5 shadow-sm hover:shadow-md transition-all space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-xl">🏦</div>
-            <h3 class="text-sm sm:text-base font-black text-slate-900">Bank Loan Proof</h3>
-            <p class="text-xs text-slate-500 font-bold leading-relaxed">
-              Sarkari ya private bank se Krishi Loan ya Mortgage lene ke liye jamabandi sabse mahatvapurna hai.
+          <div class="bg-purple-50/50 p-5 rounded-2xl border border-purple-100 hover:border-purple-200 hover:bg-purple-50 transition-all space-y-2">
+            <span class="text-2xl">🏦</span>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900">Bank Loan Proof</h3>
+            <p class="text-xs text-slate-600 font-semibold leading-relaxed">
+              बैंक से कृषि लोन (KCC) या होम लोन प्राप्त करने के लिए अधिकार प्रमाण।
             </p>
           </div>
 
           <!-- Card 4 -->
-          <div class="bg-white border border-rose-100 rounded-3xl p-5 shadow-sm hover:shadow-md transition-all space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center text-xl">⚖️</div>
-            <h3 class="text-sm sm:text-base font-black text-slate-900">Court Cases Evidence</h3>
-            <p class="text-xs text-slate-500 font-bold leading-relaxed">
-              Bhumi vivad ke samay nyayalaya (Court) mein malikana haq saabit karne ke liye sanyukt ror kaam aata hai.
+          <div class="bg-amber-50/50 p-5 rounded-2xl border border-amber-100 hover:border-amber-200 hover:bg-amber-50 transition-all space-y-2">
+            <span class="text-2xl">⚖️</span>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900">Court Case Evidence</h3>
+            <p class="text-xs text-slate-600 font-semibold leading-relaxed">
+              आपसी बँटवारे या सीमा विवाद संबंधी कोर्ट केस में मजबूत कानूनी साक्ष्य।
             </p>
           </div>
 
           <!-- Card 5 -->
-          <div class="bg-white border border-purple-100 rounded-3xl p-5 shadow-sm hover:shadow-md transition-all space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center text-xl">🔄</div>
-            <h3 class="text-sm sm:text-base font-black text-slate-900">Mutation Base</h3>
-            <p class="text-xs text-slate-500 font-bold leading-relaxed">
-              Dakhil Kharij karwane ke liye purane malik ke naam ki sahi jamabandi raseed dekhna jaroori hai.
+          <div class="bg-rose-50/50 p-5 rounded-2xl border border-rose-100 hover:border-rose-200 hover:bg-rose-50 transition-all space-y-2">
+            <span class="text-2xl">🔄</span>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900">Dakhil Kharij Base</h3>
+            <p class="text-xs text-slate-600 font-semibold leading-relaxed">
+              नवीन दाखिल-खारिज (म्यूटेशन) की स्थिति और पूर्व इतिहास का मिलान।
             </p>
           </div>
 
           <!-- Card 6 -->
-          <div class="bg-white border border-amber-100 rounded-3xl p-5 shadow-sm hover:shadow-md transition-all space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-xl">🚫</div>
-            <h3 class="text-sm sm:text-base font-black text-slate-900">No Encumbrance</h3>
-            <p class="text-xs text-slate-500 font-bold leading-relaxed">
-              Zameen par koi purana sarkari ya bank bojh ya court stay toh nahi hai, iski janch asani se karein.
+          <div class="bg-orange-50/50 p-5 rounded-2xl border border-orange-100 hover:border-orange-200 hover:bg-orange-50 transition-all space-y-2">
+            <span class="text-2xl">🚫</span>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900">No loan/bojh check</h3>
+            <p class="text-xs text-slate-600 font-semibold leading-relaxed">
+              जमीन पर कोई सरकारी कर्ज, बंधक या प्रभार (Encumbrance) है या नहीं, यह जांचें।
             </p>
           </div>
         </div>
       </section>
 
-      <!-- SECTION 6 — Jamabandi mein Galti Ho Toh Kya Karein? -->
-      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-6">
-        <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
-          <span class="text-accentSaffron">⚠️</span> Jamabandi mein Galti Ho Toh Kya Karein? (त्रुटि सुधार)
-        </h2>
-        <p class="text-xs sm:text-sm text-slate-500 font-bold">यदि आपकी ऑनलाइन जमाबंदी में कोई जानकारी गलत दिख रही है, तो निम्नलिखित समाधानों को अपनाएं:</p>
+      <!-- SECTION 7 — Jamabandi Mein Galti Ho Toh? (Accordion) -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" id="section-7">
+        <div class="border-b border-slate-100 pb-3">
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
+            <span class="text-accentSaffron">⚠️</span> 7. Jamabandi Mein Galti Ho Toh? (जमाबंदी में गलती हो तो क्या करें?)
+          </h2>
+          <p class="text-xs text-slate-500 font-bold mt-1">परेशानी और उसके सटीक समाधान की विस्तृत सूची:</p>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Error 1 -->
-          <div class="border border-slate-200 rounded-2xl p-5 space-y-2">
-            <span class="inline-block bg-rose-50 text-rose-700 text-xs font-black px-2.5 py-1 rounded-lg">Error 1</span>
-            <h3 class="text-base font-black text-slate-900">Naam ya Pita ka naam galat hai</h3>
-            <p class="text-xs sm:text-sm text-slate-600 font-medium">
-              <strong>समाधान (Solution):</strong> अपने अंचल कार्यालय (CO Office) में <strong>"परिमार्जन" (Parimarjan Portal)</strong> के माध्यम से सुधार का आवेदन ऑनलाइन करें या सीधे लिखित आवेदन दें।
-            </p>
-            <p class="text-xs text-slate-400 font-bold">📄 Documents: Aadhar Card, Purani Jamabandi/Khata Raseed, Affidavit.</p>
+        <div class="space-y-3">
+          <!-- Accordion 1 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="error-acc-1">
+            <button onclick="toggleErrorAccordion(1)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>1. Naam ya Pita ka Naam galat hai (नाम या पिता का नाम गलत होना)</span>
+              <span class="transition-transform duration-300" id="error-icon-1">▼</span>
+            </button>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="error-content-1">
+              <p><strong>समाधान (Solution):</strong> अंचल कार्यालय में **परिमार्जन पोर्टल (Parimarjan Portal)** के माध्यम से सुधार का ऑनलाइन आवेदन दें, या सीधे लिखित आवेदन दें।</p>
+              <p class="font-bold text-slate-800">📄 आवश्यक दस्तावेज: आधार कार्ड, केवाला (Registry Deed) प्रति, पुरानी जमाबंदी या manual लगान रसीद और शपथ पत्र (Affidavit)।</p>
+              <p><strong>Official Portal:</strong> <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" class="text-emerald-700 underline font-black">biharbhumi.bihar.gov.in/Biharbhumi/</a></p>
+            </div>
           </div>
 
-          <!-- Error 2 -->
-          <div class="border border-slate-200 rounded-2xl p-5 space-y-2">
-            <span class="inline-block bg-rose-50 text-rose-700 text-xs font-black px-2.5 py-1 rounded-lg">Error 2</span>
-            <h3 class="text-base font-black text-slate-900">Zameen ka size (Raqba) galat hai</h3>
-            <p class="text-xs sm:text-sm text-slate-600 font-medium">
-              <strong>समाधान (Solution):</strong> यदि रकबा कम या ज्यादा दिख रहा है, तो अंचल अमीन या जिला सर्वे ऑफिस से जमीन का दोबारा मापन करवाकर नक्शा व खतियान के अनुसार सुधार करवाएं।
-            </p>
-            <p class="text-xs text-slate-400 font-bold">📄 Documents: Old Jamabandi Copy, Field survey map, Mutation order copy.</p>
+          <!-- Accordion 2 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="error-acc-2">
+            <button onclick="toggleErrorAccordion(2)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>2. Zameen ka size galat hai (रकबा या क्षेत्रफल में त्रुटि)</span>
+              <span class="transition-transform duration-300" id="error-icon-2">▼</span>
+            </button>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="error-content-2">
+              <p><strong>समाधान (Solution):</strong> यदि ऑनलाइन रकबा कम या अधिक दर्ज हो गया है, तो आपको जिला सर्वे कार्यालय या अंचल अमीन द्वारा पुनः सर्वेक्षण कराकर खतियान एवं नक्शे के अनुसार सुधार हेतु आवेदन करना होगा।</p>
+              <p class="font-bold text-slate-800">📄 आवश्यक दस्तावेज: पुराना खतियान, लगान रसीद, रजिस्ट्री कॉपी तथा शुद्धिपत्र (Correction slip)।</p>
+            </div>
           </div>
 
-          <!-- Error 3 -->
-          <div class="border border-slate-200 rounded-2xl p-5 space-y-2">
-            <span class="inline-block bg-rose-50 text-rose-700 text-xs font-black px-2.5 py-1 rounded-lg">Error 3</span>
-            <h3 class="text-base font-black text-slate-900">Purana malik ka naam hai</h3>
-            <p class="text-xs sm:text-sm text-slate-600 font-medium">
-              <strong>समाधान (Solution):</strong> जमीन रजिस्ट्री होने के बाद तुरंत <strong>म्यूटेशन (दाखिल-खारिज)</strong> के लिए ऑनलाइन आवेदन करें। अधिक जानकारी के लिए हमारा गाइड पढ़ें।
-            </p>
-            <a href="dakhil-kharij.html" class="inline-block text-xs text-emerald-600 hover:underline font-extrabold">🔗 दाखिल खारिज गाइड देखें →</a>
+          <!-- Accordion 3 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="error-acc-3">
+            <button onclick="toggleErrorAccordion(3)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>3. Purana malik ka naam hai (केवाला होने के बाद भी पुराना रैयत दिखना)</span>
+              <span class="transition-transform duration-300" id="error-icon-3">▼</span>
+            </button>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-3" id="error-content-3">
+              <p><strong>समाधान (Solution):</strong> जमीन रजिस्ट्री कराने के तुरंत बाद **म्यूटेशन (दाखिल-खारिज)** कराना अनिवार्य होता है। जब तक दाखिल-खारिज स्वीकृत नहीं होगा, तब तक पुराना नाम ही प्रदर्शित होता रहेगा।</p>
+              <p class="font-bold text-slate-800">📄 आवश्यक दस्तावेज: केवाला (रजिस्ट्री कॉपी) की पूरी स्कैन पीडीएफ, पुराने मालिक का जमाबंदी ब्यौरा।</p>
+              <p><strong>Portal:</strong> <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" class="text-emerald-700 underline font-black">biharbhumi.bihar.gov.in/Biharbhumi/</a></p>
+              <a href="dakhil-kharij.html" class="inline-block text-xs bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1.5 rounded-xl font-bold">🔗 दाखिल खारिज गाइड देखें →</a>
+            </div>
           </div>
 
-          <!-- Error 4 -->
-          <div class="border border-slate-200 rounded-2xl p-5 space-y-2">
-            <span class="inline-block bg-rose-50 text-rose-700 text-xs font-black px-2.5 py-1 rounded-lg">Error 4</span>
-            <h3 class="text-base font-black text-slate-900">Zameen online show nahi ho rahi</h3>
-            <p class="text-xs sm:text-sm text-slate-600 font-medium">
-              <strong>समाधान (Solution):</strong> हल्का या मौजा सही ढंग से चुने हैं यह सुनिश्चित करें। कई बार पुरानी जमीन का कंप्यूटरीकरण बाकी होता है, ऐसी स्थिति में अंचल कार्यालय से संपर्क करें।
-            </p>
-            <p class="text-xs text-slate-400 font-bold">📄 Documents: Registry Deed (केवाला), Manual Khata/Register II copy.</p>
+          <!-- Accordion 4 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="error-acc-4">
+            <button onclick="toggleErrorAccordion(4)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>4. Zameen show nahi ho rahi (सर्च करने पर नो रिकॉर्ड आना)</span>
+              <span class="transition-transform duration-300" id="error-icon-4">▼</span>
+            </button>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="error-content-4">
+              <p><strong>समाधान (Solution):</strong> सबसे पहले जांचें कि आपने हल्का (Halka) या मौजा (Mauja) का चयन बिल्कुल सही किया है। कई पुरानी जमीनों का कंप्यूटरीकरण अभी बाकी है। ऐसी स्थिति में मैनुअल जमाबंदी लेकर अंचल कार्यालय में परिमार्जन के लिए संपर्क करें।</p>
+              <p class="font-bold text-slate-800">📄 आवश्यक दस्तावेज: रजिस्ट्री पेपर (केवाला), मैनुअल रसीद या पुराना रजिस्टर-2 पन्ना संख्या विवरण।</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- SECTION 7 — Jamabandi aur Dakhil Kharij ka Connection -->
-      <section class="bg-gradient-to-br from-emerald-900 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-4">
-        <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
-          <span class="text-yellow-400">🔗</span> Jamabandi aur Dakhil Kharij ka Connection (म्यूटेशन संबंध)
+      <!-- SECTION 8 — Jamabandi aur Dakhil Kharij Connection -->
+      <section class="bg-gradient-to-br from-emerald-900 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6" id="section-8">
+        <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2 border-b border-emerald-800 pb-3">
+          <span class="text-orange-400">🔗</span> 8. Jamabandi aur Dakhil Kharij Connection (जमाबंदी और दाखिल खारिज का Connection)
         </h2>
-        <div class="text-xs sm:text-sm text-emerald-100 leading-relaxed space-y-3 font-medium">
+        
+        <div class="text-sm sm:text-base text-emerald-100 leading-relaxed space-y-4 font-semibold">
           <p>
-            जमाबंदी और दाखिल-खारिज (Dakhil Kharij) के बीच बहुत गहरा संबंध है। सरल शब्दों में कहें तो <strong>जमाबंदी आपकी जमीन का आधार रिकॉर्ड है</strong>, जबकि <strong>दाखिल-खारिज उस रिकॉर्ड को अपडेट करने की प्रक्रिया है।</strong>
+            जमाबंदी (Jamabandi) और दाखिल-खारिज (Dakhil Kharij) के बीच बहुत सीधा और गहरा संबंध है। सरल शब्दों में:
           </p>
-          <p>
-            जब आप कोई जमीन खरीदते हैं, तो केवल रजिस्ट्री कराने से जमाबंदी में आपका नाम दर्ज नहीं होता। रजिस्ट्री के बाद आपको <strong>दाखिल-खारिज (Mutation)</strong> के लिए आवेदन करना होता है। इस प्रक्रिया में अंचल अधिकारी (CO) पुराने मालिक का नाम जमाबंदी से हटाता है (खारिज करता है) और आपका नाम जोड़ता है (दाखिल करता है)।
+          <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+            <li><strong>Jamabandi = BASE record है:</strong> यह अंचल कार्यालय के Register-II में संकलित वर्तमान जमीनी रिकॉर्ड है।</li>
+            <li><strong>नयी जमाबंदी खुद नहीं बनती:</strong> जमीन खरीदने (रजिस्ट्री होने) के बाद ऑटोमेटिकली आपके नाम पर नयी जमाबंदी नहीं खुलती।</li>
+            <li><strong>Dakhil Kharij (Mutation) करने से नाम बदलता है:</strong> दाखिल-खारिज कराने पर सरकारी रिकॉर्ड में से पुराने मालिक का नाम खारिज (हटा) दिया जाता है और आपका नाम दाखिल (जोड़) दिया जाता है।</li>
+            <li><strong>म्यूटेशन के बाद नया नंबर:</strong> म्यूटेशन की प्रक्रिया सफल होने के बाद आपको एक "शुद्धि पत्र" (Correction slip) प्राप्त होता है, और नयी जमाबंदी में आपका नाम विधिवत दर्ज हो जाता है।</li>
+          </ul>
+          <p class="text-xs text-yellow-300 font-extrabold bg-white/5 p-4 rounded-xl border border-white/10">
+            💡 इसलिए रजिस्ट्री के तुरंत बाद दाखिल-खारिज कराना और अपना नाम जमाबंदी पंजी में दर्ज कराना अत्यंत आवश्यक है, अन्यथा आप सरकारी रिकॉर्ड के अनुसार मालिक नहीं माने जाएंगे।
           </p>
-          <p class="font-bold text-yellow-300">
-            जब म्यूटेशन की प्रक्रिया पूरी हो जाती है, तभी अंचल कार्यालय द्वारा आपके नाम से "नई जमाबंदी" (New Jamabandi Register Entry) सृजित की जाती है। इसके बाद ही आप अपने नाम की सरकारी रसीद कटवा सकते हैं।
-          </p>
-          <div class="pt-2">
-            <a href="dakhil-kharij.html" class="inline-block bg-accentSaffron hover:bg-customSaffronHover text-white font-extrabold px-6 py-3 rounded-2xl shadow-md hover:shadow-lg transition-all text-xs">
-              👉 दाखिल खारिज (Mutation) की पूरी प्रक्रिया हिंदी में समझें
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3">
+            <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs sm:text-sm px-5 py-3.5 rounded-xl shadow-md transition-all text-center">
+              👉 Jamabandi Dekhen 🔗
+            </a>
+            <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-orange-600 hover:bg-customSaffronHover text-white font-black text-xs sm:text-sm px-5 py-3.5 rounded-xl shadow-md transition-all text-center">
+              👉 Dakhil Kharij Apply Apply 🔗
+            </a>
+          </div>
+          <div class="text-center">
+            <a href="dakhil-kharij.html" class="inline-block text-xs text-orange-200 underline font-black hover:text-orange-100">
+              दाखिल खारिज की संपूर्ण विवरण गाइड यहाँ पढ़ें →
             </a>
           </div>
         </div>
       </section>
 
-      <!-- SECTION 8 — District Wise Jamabandi Search -->
-      <section class="space-y-6">
-        <div class="text-center md:text-left">
-          <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center justify-center md:justify-start gap-2">
-            <span class="text-primaryGreen">🗺️</span> District Wise Jamabandi Search (जिले के अनुसार खोजें)
+      <!-- SECTION 9 — District Wise Jamabandi -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" id="section-9">
+        <div class="border-b border-slate-100 pb-3">
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
+            <span class="text-primaryGreen">📍</span> 9. District Wise Jamabandi (जिलेवार जमाबंदी देखें)
           </h2>
-          <p class="text-xs sm:text-sm text-slate-500 font-bold mt-1">अपने जिले के बॉक्स पर क्लिक करें और सीधे बिहार सरकार की आधिकारिक जमाबंदी पंजी वेबसाइट पर जाएं:</p>
+          <p class="text-xs text-slate-500 font-bold mt-1">बिहार के सभी 38 जिलों के लिंक। अपने संबंधित जिले पर क्लिक करें:</p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-          <!-- 38 Districts -->
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">पटना (Patna)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">गया (Gaya)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">मुजफ्फरपुर (Muzaffarpur)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">दरभंगा (Darbhanga)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">भागलपुर (Bhagalpur)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">नालंदा (Nalanda)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">वैशाली (Vaishali)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">सीतामढ़ी (Sitamarhi)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">मधुबनी (Madhubani)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">समस्तीपुर (Samastipur)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">बेगूसराय (Begusarai)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">मुंगेर (Munger)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">पूर्णिया (Purnia)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">अररिया (Araria)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">सुपौल (Supaul)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">सहरसा (Saharsa)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">खगड़िया (Khagaria)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">पूर्वी चंपारण (East Champaran)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">पश्चिमी चंपारण (West Champaran)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">गोपालगंज (Gopalganj)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">सीवान (Siwan)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">सारण (Saran)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">भोजपुर (Bhojpur)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">बक्सर (Buxar)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">रोहतास (Rohtas)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">कैमूर (Kaimur)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">औरंगाबाद (Aurangabad)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">नवादा (Nawada)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">जहानाबाद (Jehanabad)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">अरवल (Arwal)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">शेखपुरा (Sheikhpura)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">लखीसराय (Lakhisarai)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">जमुई (Jamui)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">बांका (Banka)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">मधेपुरा (Madhepura)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">किशनगंज (Kishanganj)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 text-emerald-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">कटिहार (Katihar)</a>
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="bg-orange-50 border border-orange-100 hover:bg-orange-100 text-orange-900 font-bold text-center py-2.5 px-2 rounded-xl text-xs sm:text-sm transition-all shadow-xs truncate">शिवहर (Sheohar)</a>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs font-bold">
+          <!-- District Cards (All 38 Districts) -->
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Patna Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Gaya Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Muzaffarpur Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Darbhanga Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Bhagalpur Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Nalanda Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Vaishali Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Sitamarhi Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Madhubani Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Samastipur Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Begusarai Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Munger Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Purnia Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Araria Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Supaul Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Saharsa Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Khagaria Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">East Champaran Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">West Champaran Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Gopalganj Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Siwan Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Saran Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Bhojpur Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Buxar Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Rohtas Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Kaimur Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Aurangabad Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Nawada Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Jehanabad Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Arwal Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Sheikhpura Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Lakhisarai Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Jamui Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Banka Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Madhepura Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Kishanganj Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Katihar Ki Jamabandi</a>
+          <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="p-3 bg-emerald-50/50 hover:bg-emerald-50 border border-emerald-100 rounded-xl text-center text-emerald-900 transition-all hover:scale-[1.01]">Sheohar Ki Jamabandi</a>
         </div>
       </section>
 
-      <!-- SECTION 9 — FAQ -->
-      <section class="space-y-6">
-        <div class="text-center md:text-left">
-          <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center justify-center md:justify-start gap-2">
-            <span class="text-primaryGreen">❓</span> Aksar Pooche Jaane Wale Sawaal
+      <!-- SECTION 10 — FAQ (Accordion) -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" id="section-10">
+        <div class="border-b border-slate-100 pb-3">
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
+            <span class="text-primaryGreen">❓</span> 10. Frequently Asked Questions (FAQ - जमाबंदी संबंधी प्रश्न)
           </h2>
-          <p class="text-xs sm:text-sm text-slate-500 font-bold mt-1">अक्सर पूछे जाने वाले कुछ सामान्य प्रश्नों के त्वरित उत्तर:</p>
+          <p class="text-xs text-slate-500 font-bold mt-1">आपके द्वारा सबसे ज़्यादा पूछे जाने वाले 12 मुख्य सवाल और उनके प्रामाणिक उत्तर:</p>
         </div>
 
-        <div class="space-y-4">
-          <!-- Q1 -->
-          <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden transition-all duration-300 cursor-pointer" onclick="toggleAccordion(this)">
-            <button class="w-full text-left px-5 py-4 font-black text-slate-900 text-sm sm:text-base flex justify-between items-center gap-3">
-              <span>Q: Jamabandi aur Khatiyan mein kya fark hai?</span>
-              <span class="accordion-icon text-slate-400 font-normal transition-transform duration-300">▼</span>
+        <div class="space-y-3">
+          <!-- FAQ 1 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-1">
+            <button onclick="toggleFaqAccordion(1)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q1: Jamabandi online kaise dekhen Bihar mein 2026?</span>
+              <span class="transition-transform duration-300" id="faq-icon-1">▼</span>
             </button>
-            <div class="accordion-content bg-slate-50 border-t border-slate-100">
-              <div class="p-5 text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
-                A: खतियान (Khatiyan) जमीन का मूल और ऐतिहासिक अधिकार पत्र होता है जो सर्वे के दौरान तैयार किया जाता है। जबकि जमाबंदी (Jamabandi) एक चालू रजिस्टर (Register II) है, जिसमें खरीद-बिक्री या उत्तराधिकार के अनुसार नाम लगातार अपडेट (दाखिल-खारिज) किए जाते हैं।
-              </div>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-1">
+              <p>
+                <strong>उत्तर:</strong> बिहार में ऑनलाइन जमाबंदी देखने के लिए सबसे पहले बिहार भूमि के आधिकारिक पोर्टल <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" class="text-emerald-700 underline font-black">biharbhumi.bihar.gov.in/Biharbhumi/</a> पर जाएं। वहां "जमाबंदी पंजी देखें" पर क्लिक करें। फिर अपने जिला, अंचल, हल्का और मौजा का चयन कर खाता नंबर, खेसरा नंबर या रैयत के नाम से सर्च कर अपनी डिजिटल जमाबंदी देख सकते हैं।
+              </p>
             </div>
           </div>
 
-          <!-- Q2 -->
-          <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden transition-all duration-300 cursor-pointer" onclick="toggleAccordion(this)">
-            <button class="w-full text-left px-5 py-4 font-black text-slate-900 text-sm sm:text-base flex justify-between items-center gap-3">
-              <span>Q: Online Jamabandi court mein valid hai?</span>
-              <span class="accordion-icon text-slate-400 font-normal transition-transform duration-300">▼</span>
+          <!-- FAQ 2 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-2">
+            <button onclick="toggleFaqAccordion(2)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q2: Jamabandi ke liye official website kya hai?</span>
+              <span class="transition-transform duration-300" id="faq-icon-2">▼</span>
             </button>
-            <div class="accordion-content bg-slate-50 border-t border-slate-100">
-              <div class="p-5 text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
-                A: नहीं। ऑनलाइन डाउनलोड की गई साधारण कॉपी केवल व्यक्तिगत सूचना और रिफरेन्स के लिए है। न्यायालय (Court) या सरकारी बैंक लोन के लिए आपको अंचल कार्यालय (CO Office) से मुहर लगी "प्रमाणित नकल" (Certified Copy) ही जमा करनी होगी।
-              </div>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-2">
+              <p>
+                <strong>उत्तर:</strong> जमाबंदी, दाखिल खारिज और एलपीसी (LPC) के लिए असली सरकारी आधिकारिक वेबसाइट **biharbhumi.bihar.gov.in/Biharbhumi/** है। कृपया ध्यान दें कि bhulekh.bihar.gov.in नाम की कोई भी साइट आधिकारिक नहीं है या बंद हो चुकी है। हमेशा असली वेबसाइट का ही उपयोग करें।
+              </p>
             </div>
           </div>
 
-          <!-- Q3 -->
-          <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden transition-all duration-300 cursor-pointer" onclick="toggleAccordion(this)">
-            <button class="w-full text-left px-5 py-4 font-black text-slate-900 text-sm sm:text-base flex justify-between items-center gap-3">
-              <span>Q: Jamabandi mein apna naam kaise add karein?</span>
-              <span class="accordion-icon text-slate-400 font-normal transition-transform duration-300">▼</span>
+          <!-- FAQ 3 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-3">
+            <button onclick="toggleFaqAccordion(3)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q3: Jamabandi aur Khatyan mein kya fark hai?</span>
+              <span class="transition-transform duration-300" id="faq-icon-3">▼</span>
             </button>
-            <div class="accordion-content bg-slate-50 border-t border-slate-100">
-              <div class="p-5 text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
-                A: यदि आपने जमीन खरीदी है, तो आपको केवाला (Deed) के आधार पर दाखिल-खारिज (Mutation) के लिए ऑनलाइन आवेदन करना होगा। दाखिल-खारिज स्वीकृत होने पर आपका नाम जमाबंदी पंजी में स्वतः जुड़ जाएगा।
-              </div>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-3">
+              <p>
+                <strong>उत्तर:</strong> **Khatyan (खतियान / Apna Khata)** भूमि का मूल सर्वेक्षण अभिलेख है, जो स्थायी प्रकृति का होता है (इसे <a href="https://land.bihar.gov.in/Ror2025/RoR.aspx" target="_blank" class="text-blue-700 underline font-black">land.bihar.gov.in/Ror2025/RoR.aspx</a> पर देखा जाता है)। वहीं दूसरी ओर **Jamabandi** (Register II) जमीन का लाइव और परिवर्तनीय रिकॉर्ड है, जो दाखिल-खारिज के अनुसार निरंतर अपडेट होता है।
+              </p>
             </div>
           </div>
 
-          <!-- Q4 -->
-          <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden transition-all duration-300 cursor-pointer" onclick="toggleAccordion(this)">
-            <button class="w-full text-left px-5 py-4 font-black text-slate-900 text-sm sm:text-base flex justify-between items-center gap-3">
-              <span>Q: Kya mobile se Jamabandi nikal sakte hain?</span>
-              <span class="accordion-icon text-slate-400 font-normal transition-transform duration-300">▼</span>
+          <!-- FAQ 4 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-4">
+            <button onclick="toggleFaqAccordion(4)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q4: Online Jamabandi court mein valid hai?</span>
+              <span class="transition-transform duration-300" id="faq-icon-4">▼</span>
             </button>
-            <div class="accordion-content bg-slate-50 border-t border-slate-100">
-              <div class="p-5 text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
-                A: बिल्कुल! आप अपने स्मार्टफोन पर क्रोम (Chrome) या किसी अन्य ब्राउज़र में <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline">bhulekh.bihar.gov.in</a> खोलकर ऊपर बताए गए 11 स्टेप्स के जरिए आसानी से जमाबंदी नकल पीडीएफ में डाउनलोड कर सकते हैं।
-              </div>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-4">
+              <p>
+                <strong>उत्तर:</strong> नहीं, बिना हस्ताक्षर और मुहर वाली साधारण ऑनलाइन डाउनलोड की हुई कॉपी केवल आपकी जानकारी और सामान्य म्यूटेशन फॉर्म भरने के लिए ही मान्य है। कोर्ट-कचहरी या बैंक में अधिकारिक साक्ष्य के रूप में उपयोग करने के लिए आपको अंचल कार्यालय से मुहर लगी **Certified Jamabandi Nakal** लेनी होगी।
+              </p>
             </div>
           </div>
 
-          <!-- Q5 -->
-          <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden transition-all duration-300 cursor-pointer" onclick="toggleAccordion(this)">
-            <button class="w-full text-left px-5 py-4 font-black text-slate-900 text-sm sm:text-base flex justify-between items-center gap-3">
-              <span>Q: Jamabandi kitne purani hoti hai?</span>
-              <span class="accordion-icon text-slate-400 font-normal transition-transform duration-300">▼</span>
+          <!-- FAQ 5 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-5">
+            <button onclick="toggleFaqAccordion(5)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q5: Jamabandi mein apna naam kaise add karein?</span>
+              <span class="transition-transform duration-300" id="faq-icon-5">▼</span>
             </button>
-            <div class="accordion-content bg-slate-50 border-t border-slate-100">
-              <div class="p-5 text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
-                A: जमाबंदी का रिकॉर्ड अत्यंत पुराना हो सकता है, जो कि राजाओं या जमींदारी प्रथा के समय से लेकर आधुनिक डिजिटल दौर (2026) तक लगातार हस्तांतरित होता आया है। खतियान बनने के बाद से प्रत्येक दाखिल-खारिज के साथ इसका रिकॉर्ड बदलता जाता है।
-              </div>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-5">
+              <p>
+                <strong>उत्तर:</strong> जमाबंदी में अपना नाम जोड़ने के लिए, जमीन की रजिस्ट्री संपन्न होने के बाद आपको ऑनलाइन **दाखिल-खारिज (Dakhil Kharij)** के लिए आवेदन करना होगा। अंचल अधिकारी द्वारा प्रक्रिया मंजूर करने पर पुरानी जमाबंदी से विक्रेता का नाम हटेगा और आपका नाम जुड़ जाएगा।
+              </p>
             </div>
           </div>
 
-          <!-- Q6 -->
-          <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden transition-all duration-300 cursor-pointer" onclick="toggleAccordion(this)">
-            <button class="w-full text-left px-5 py-4 font-black text-slate-900 text-sm sm:text-base flex justify-between items-center gap-3">
-              <span>Q: Free mein certified Jamabandi kaise milegi?</span>
-              <span class="accordion-icon text-slate-400 font-normal transition-transform duration-300">▼</span>
+          <!-- FAQ 6 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-6">
+            <button onclick="toggleFaqAccordion(6)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q6: Kya mobile se Jamabandi nikal sakte hain?</span>
+              <span class="transition-transform duration-300" id="faq-icon-6">▼</span>
             </button>
-            <div class="accordion-content bg-slate-50 border-t border-slate-100">
-              <div class="p-5 text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
-                A: सरकारी स्तर पर पूर्णतः मुफ्त 'प्रमाणित' नकल नहीं मिलती है, क्योंकि इसपर ₹10-₹50 मूल्य का सरकारी कोर्ट फीस टिकट लगाना कानूनी अनिवार्य है। हालांकि, ऑनलाइन डिजिटल नकल देखना बिल्कुल मुफ्त है।
-              </div>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-6">
+              <p>
+                <strong>उत्तर:</strong> हाँ, आप अपने स्मार्टफोन के क्रोम (Chrome) या सफारी (Safari) ब्राउज़र में सीधे <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" class="text-emerald-700 underline font-black">biharbhumi.bihar.gov.in/Biharbhumi/</a> लिंक खोलकर अपनी पूरी जमाबंदी सूची और नकल डाउनलोड कर पीडीएफ के रूप में सुरक्षित कर सकते हैं।
+              </p>
             </div>
           </div>
 
-          <!-- Q7 -->
-          <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden transition-all duration-300 cursor-pointer" onclick="toggleAccordion(this)">
-            <button class="w-full text-left px-5 py-4 font-black text-slate-900 text-sm sm:text-base flex justify-between items-center gap-3">
-              <span>Q: Jamabandi nakal ke liye kitni fees lagti hai?</span>
-              <span class="accordion-icon text-slate-400 font-normal transition-transform duration-300">▼</span>
+          <!-- FAQ 7 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-7">
+            <button onclick="toggleFaqAccordion(7)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q7: Free mein certified Jamabandi kaise milegi?</span>
+              <span class="transition-transform duration-300" id="faq-icon-7">▼</span>
             </button>
-            <div class="accordion-content bg-slate-50 border-t border-slate-100">
-              <div class="p-5 text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
-                A: ऑनलाइन देखने की फीस शून्य (₹0) है। अंचल कार्यालय (Block) से प्रमाणित प्रति निकालने के लिए केवल सरकारी कोर्ट फीस टिकट के ₹10 से ₹50 तक का खर्च आता है।
-              </div>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-7">
+              <p>
+                <strong>उत्तर:</strong> प्रमाणित प्रति पाने के लिए अंचल कार्यालय (Block) के आरटीपीएस काउंटर पर सादे कागज पर आवेदन दें। यह पूर्णतः सरकारी और नियमानुकूल सेवा है। इसमें केवल आवश्यक मामूली स्टांप शुल्क ही लगता है। किसी भी बिचौलिये या दलाल को अतिरिक्त पैसे न दें।
+              </p>
             </div>
           </div>
 
-          <!-- Q8 -->
-          <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden transition-all duration-300 cursor-pointer" onclick="toggleAccordion(this)">
-            <button class="w-full text-left px-5 py-4 font-black text-slate-900 text-sm sm:text-base flex justify-between items-center gap-3">
-              <span>Q: Ek plot ki kitni Jamabandi ho sakti hain?</span>
-              <span class="accordion-icon text-slate-400 font-normal transition-transform duration-300">▼</span>
+          <!-- FAQ 8 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-8">
+            <button onclick="toggleFaqAccordion(8)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q8: Jamabandi nakal ke liye kitni fees lagti hai?</span>
+              <span class="transition-transform duration-300" id="faq-icon-8">▼</span>
             </button>
-            <div class="accordion-content bg-slate-50 border-t border-slate-100">
-              <div class="p-5 text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
-                A: सामान्यतः एक भूखंड या प्लॉट (खेसरा) की एक ही मुख्य जमाबंदी होती है। लेकिन यदि उस प्लॉट को कई हिस्सों में बांटकर अलग-अलग लोगों को बेचा गया है और उन सभी ने अपना दाखिल-खारिज करवा लिया है, तो उस एक प्लॉट की कई उप-जमाबंदियां (म्यूटेशन के बाद अलग खाता रसीद) सृजित हो सकती हैं।
-              </div>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-8">
+              <p>
+                <strong>उत्तर:</strong> ऑनलाइन देखना और पीडीएफ डाउनलोड करना पूरी तरह से **निःशुल्क (Free - ₹0)** है। अंचल कार्यालय (Block) से मुहर और हस्ताक्षर युक्त प्रमाणित प्रति निकालने के लिए केवल ₹10 से ₹50 का कानूनी कोर्ट फी स्टांप शुल्क लगता है।
+              </p>
             </div>
           </div>
 
-          <!-- Q9 -->
-          <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden transition-all duration-300 cursor-pointer" onclick="toggleAccordion(this)">
-            <button class="w-full text-left px-5 py-4 font-black text-slate-900 text-sm sm:text-base flex justify-between items-center gap-3">
-              <span>Q: Jamabandi mein Bojh (loan) show ho raha hai — kya karein?</span>
-              <span class="accordion-icon text-slate-400 font-normal transition-transform duration-300">▼</span>
+          <!-- FAQ 9 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-9">
+            <button onclick="toggleFaqAccordion(9)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q9: Purani zameen jiska record nahi — kya karein?</span>
+              <span class="transition-transform duration-300" id="faq-icon-9">▼</span>
             </button>
-            <div class="accordion-content bg-slate-50 border-t border-slate-100">
-              <div class="p-5 text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
-                A: यदि आपने बैंक लोन पूरी तरह चुका दिया है, तो बैंक से 'No Dues Certificate' (एनओसी) प्राप्त करें। उसे अपने अंचल अधिकारी (CO) के पास जमा करके जमाबंदी पंजी से भार/ऋण का नाम हटाने का लिखित आवेदन पत्र प्रस्तुत करें।
-              </div>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-9">
+              <p>
+                <strong>उत्तर:</strong> यदि आपकी पुरानी पुश्तैनी जमीन का ऑनलाइन रिकॉर्ड प्रदर्शित नहीं हो रहा है, तो आपको अपनी पुरानी रजिस्ट्री डीड (केवाला) और पूर्व लगान रसीद के साथ **परिमार्जन** आवेदन अंचल कार्यालय में करना चाहिए ताकि रिकॉर्ड डिजिटल डेटाबेस में अपलोड किया जा सके।
+              </p>
             </div>
           </div>
 
-          <!-- Q10 -->
-          <div class="bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden transition-all duration-300 cursor-pointer" onclick="toggleAccordion(this)">
-            <button class="w-full text-left px-5 py-4 font-black text-slate-900 text-sm sm:text-base flex justify-between items-center gap-3">
-              <span>Q: Purani zameen jiska record nahi hai — kya karein?</span>
-              <span class="accordion-icon text-slate-400 font-normal transition-transform duration-300">▼</span>
+          <!-- FAQ 10 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-10">
+            <button onclick="toggleFaqAccordion(10)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q10: Jamabandi mein Bojh show ho raha — kya karein?</span>
+              <span class="transition-transform duration-300" id="faq-icon-10">▼</span>
             </button>
-            <div class="accordion-content bg-slate-50 border-t border-slate-100">
-              <div class="p-5 text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
-                A: यदि बहुत पुरानी जमीन ऑनलाइन नहीं मिल रही है, तो अपने जिला अभिलेखागार (District Collectorate Archives) में जाकर पुराना मैनुअल रजिस्टर II या सर्वे खतियान निकलवाएं। उस फिजिकल कॉपी के आधार पर अंचल अधिकारी को ऑनलाइन रिकॉर्ड दर्ज करने का आवेदन दें।
-              </div>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-10">
+              <p>
+                <strong>उत्तर:</strong> यदि जमाबंदी में "बोझ" (Encumbrance) प्रदर्शित हो रहा है, तो इसका अर्थ है कि जमीन पर कोई पूर्व ऋण या बंधक है। ऋण चुकता होने के बाद बैंक से **एनओसी (No Objection Certificate)** प्राप्त कर अंचल कार्यालय में सुधार हेतु प्रस्तुत करें।
+              </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- HELPFUL LINKS BOX -->
-      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-md space-y-4">
-        <h3 class="text-lg font-black text-slate-950 flex items-center gap-2">
-          <span class="text-primaryGreen">🔗</span> महत्वपूर्ण कड़ियाँ (Helpful Official Links)
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm font-bold">
-          <a href="https://bhulekh.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:text-emerald-700 transition-all">
-            <span>🌐</span>
-            <div>
-              <p>जमाबंदी / भूलेख पोर्टल</p>
-              <p class="text-[10px] text-slate-400 font-normal">bhulekh.bihar.gov.in</p>
+          <!-- FAQ 11 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-11">
+            <button onclick="toggleFaqAccordion(11)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q11: Khatyan dekhne ke liye kaunsa portal use karein?</span>
+              <span class="transition-transform duration-300" id="faq-icon-11">▼</span>
+            </button>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-11">
+              <p>
+                <strong>उत्तर:</strong> खतियान और अपना खाता देखने के लिए केवल विशिष्ट पोर्टल <a href="https://land.bihar.gov.in/Ror2025/RoR.aspx" target="_blank" class="text-blue-700 underline font-black">land.bihar.gov.in/Ror2025/RoR.aspx</a> का ही प्रयोग करें। यह जमाबंदी पोर्टल से पूरी तरह भिन्न है।
+              </p>
             </div>
-          </a>
-          <a href="https://bhunaksha.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:text-emerald-700 transition-all">
-            <span>🗺️</span>
-            <div>
-              <p>भू-नक्शा बिहार (Map)</p>
-              <p class="text-[10px] text-slate-400 font-normal">bhunaksha.bihar.gov.in</p>
+          </div>
+
+          <!-- FAQ 12 -->
+          <div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300" id="faq-acc-12">
+            <button onclick="toggleFaqAccordion(12)" class="w-full px-5 py-4 text-left font-extrabold text-sm sm:text-base text-slate-900 bg-slate-50/50 hover:bg-slate-50 flex justify-between items-center transition-colors">
+              <span>Q12: Jamabandi download nahi ho rahi — kya karein?</span>
+              <span class="transition-transform duration-300" id="faq-icon-12">▼</span>
+            </button>
+            <div class="hidden px-5 py-4 text-xs sm:text-sm text-slate-600 leading-relaxed bg-white border-t border-slate-100 space-y-2" id="faq-content-12">
+              <p>
+                <strong>उत्तर:</strong> कभी-कभी सर्वर पर अधिक लोड होने के कारण या ब्राउज़र का पॉप-अप ब्लॉक होने से डाउनलोड में समस्या आती है। अपने ब्राउज़र सेटिंग्स में पॉप-अप (Popup) को अनुमति दें, अथवा सर्वर के खाली रहने वाले समय (सुबह या रात) में पुनः प्रयास करें।
+              </p>
             </div>
-          </a>
-          <a href="https://biharbhumi.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:text-emerald-700 transition-all">
-            <span>🏢</span>
-            <div>
-              <p>बिहार भूमि मुख्य द्वार</p>
-              <p class="text-[10px] text-slate-400 font-normal">biharbhumi.bihar.gov.in</p>
-            </div>
-          </a>
-          <a href="https://biharbhumi.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 rounded-xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:text-emerald-700 transition-all">
-            <span>🔄</span>
-            <div>
-              <p>दाखिल खारिज (Mutation)</p>
-              <p class="text-[10px] text-slate-400 font-normal">biharbhumi.bihar.gov.in</p>
-            </div>
-          </a>
+          </div>
         </div>
       </section>
 
-      <!-- CONTACT HELP BOX (Saffron Highlight) -->
-      <section class="bg-orange-600 text-white rounded-3xl p-6 sm:p-8 shadow-xl custom-saffron-gradient flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="space-y-2 text-center md:text-left">
-          <h3 class="text-xl sm:text-2xl font-black text-white">
-            कोई समस्या है? हमसे पूछें!
+      <!-- HELP BOXES & SOCIALS -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Helpful Links Box -->
+        <div class="bg-slate-900 text-white rounded-3xl p-6 space-y-4" id="helpful-links-box">
+          <h3 class="text-lg font-black text-white border-b border-slate-800 pb-2">
+            🔗 Bihar Land Services — Official Portals:
           </h3>
-          <p class="text-sm text-orange-100 font-semibold">
-            बिहार भूमि रिकॉर्ड्स, म्यूटेशन, या एलपीसी से जुड़ी किसी भी समस्या के समाधान के लिए सीधे व्हाट्सएप पर संपर्क करें।
-          </p>
-          <p class="text-base font-black text-white">
-            📞 WhatsApp: 9835102324
-          </p>
+          <ul class="space-y-3 text-xs sm:text-sm font-bold">
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-500">▶</span>
+              <a href="https://land.bihar.gov.in/Ror2025/RoR.aspx" target="_blank" class="hover:text-emerald-400 transition-colors underline break-all">Khatyan/Apna Khata: land.bihar.gov.in/Ror2025/RoR.aspx</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-orange-500">▶</span>
+              <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" class="hover:text-orange-400 transition-colors underline break-all">Jamabandi/Dakhil Kharij/LPC: biharbhumi.bihar.gov.in/Biharbhumi/</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-blue-500">▶</span>
+              <a href="https://nibandhan.bihar.gov.in" target="_blank" class="hover:text-blue-400 transition-colors underline break-all">Registry Portal: nibandhan.bihar.gov.in</a>
+            </li>
+          </ul>
         </div>
-        <div class="shrink-0 w-full md:w-auto">
-          <a 
-            href="https://wa.me/919835102324?text=Namaskar%20BighaWala!%20Mujhe%20Jamabandi%20ke%20vishay%20mein%20salah%20chahiye." 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="block w-full text-center bg-white hover:bg-orange-50 text-orange-600 font-extrabold px-8 py-4 rounded-2xl shadow-lg transition-all text-sm sm:text-base min-h-[48px]"
-          >
-            WhatsApp par Poochein 💬
-          </a>
+
+        <!-- WhatsApp Help Box (Saffron) -->
+        <div class="bg-orange-500 text-white rounded-3xl p-6 space-y-4 flex flex-col justify-between" id="whatsapp-help-box">
+          <div class="space-y-2">
+            <h3 class="text-lg font-black text-white flex items-center gap-1.5">
+              <span>💬</span> Jamabandi mein koi problem?
+            </h3>
+            <p class="text-xs sm:text-sm font-bold text-orange-50 leading-relaxed">
+              जमाबंदी नकल, सुधार, खतियान या अन्य किसी समस्या के समाधान हेतु हमारे विशेषज्ञ से सलाह लें।
+            </p>
+            <p class="text-sm font-black text-yellow-300">
+              WhatsApp: 9835102324
+            </p>
+          </div>
+          <div class="pt-2">
+            <a href="https://wa.me/919835102324" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-black text-sm px-6 py-3.5 rounded-xl shadow w-full text-center">
+              <span>WhatsApp par Poochein 💬</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERNAL LINKS — "यह भी पढ़ें" -->
+      <section class="bg-emerald-50 border border-emerald-100 rounded-3xl p-6 sm:p-8 space-y-4" id="internal-links-box">
+        <h3 class="text-base sm:text-lg font-black text-slate-900">
+          📚 यह भी पढ़ें (Important Resources)
+        </h3>
+        <div class="flex flex-wrap gap-3 text-xs sm:text-sm font-bold">
+          <a href="apna-khata-dekhe.html" class="bg-white border border-slate-200 px-4 py-2.5 rounded-xl text-slate-700 hover:text-primaryGreen hover:border-primaryGreen transition-all shadow-xs">Apna Khata Dekhe →</a>
+          <a href="dakhil-kharij.html" class="bg-white border border-slate-200 px-4 py-2.5 rounded-xl text-slate-700 hover:text-primaryGreen hover:border-primaryGreen transition-all shadow-xs">Dakhil Kharij Guide →</a>
+          <a href="lpc-bihar.html" class="bg-white border border-slate-200 px-4 py-2.5 rounded-xl text-slate-700 hover:text-primaryGreen hover:border-primaryGreen transition-all shadow-xs">LPC Bihar →</a>
+          <a href="bhulekh.html" class="bg-white border border-slate-200 px-4 py-2.5 rounded-xl text-slate-700 hover:text-primaryGreen hover:border-primaryGreen transition-all shadow-xs">Bhulekh Bihar →</a>
+          <a href="bigha-calculator.html" class="bg-white border border-slate-200 px-4 py-2.5 rounded-xl text-slate-700 hover:text-primaryGreen hover:border-primaryGreen transition-all shadow-xs">Bigha Calculator →</a>
         </div>
       </section>
 
@@ -846,12 +1048,12 @@
               <span>🏡</span> BighaWala.com
             </p>
             <p class="text-xs leading-relaxed text-slate-500">
-              Disclaimer (अस्वीकरण): यह वेबसाइट केवल शैक्षणिक, सूचनात्मक और उपयोगिता उद्देश्यों के लिए है। किसी भी कानूनी विवाद, संपत्ति खरीद या अधिकारिक सत्यापन के लिए हमेशा बिहार सरकार के राजस्व एवं भूमि सुधार विभाग के अधिकारिक पोर्टल <a href="https://biharbhumi.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="text-orange-400 underline font-extrabold hover:text-orange-300 transition-colors">biharbhumi.bihar.gov.in</a> पर जाएँ।
+              Disclaimer (अस्वीकरण): यह वेबसाइट केवल शैक्षणिक, सूचनात्मक और उपयोगिता उद्देश्यों के लिए है। किसी भी कानूनी विवाद, संपत्ति खरीद या अधिकारिक सत्यापन के लिए हमेशा बिहार सरकार के राजस्व एवं भूमि सुधार विभाग के अधिकारिक पोर्टल <a href="https://biharbhumi.bihar.gov.in/Biharbhumi/" target="_blank" rel="noopener noreferrer" class="text-orange-400 underline font-extrabold hover:text-orange-300 transition-colors">biharbhumi.bihar.gov.in/Biharbhumi/</a> पर जाएँ।
             </p>
           </div>
           <div class="text-left md:text-right space-y-1 shrink-0">
             <p class="text-xs text-slate-500">
-              विकसित भारत - समृद्ध बिहार भूमि अभियान © 2025
+              विकसित भारत - समृद्ध बिहार भूमि अभियान © 2026
             </p>
             <p class="text-sm font-black text-orange-400 tracking-wider">
               BighaWala.com
@@ -865,13 +1067,11 @@
             <span class="text-slate-800">•</span>
             <a href="bigha-calculator.html" class="hover:text-orange-400 transition-colors">Calculator</a>
             <span class="text-slate-800">•</span>
-            <a href="disclaimer/index.html" class="hover:text-orange-400 transition-colors">Disclaimer (अस्वीकरण)</a>
+            <a href="jamabandi.html" class="hover:text-orange-400 transition-colors">जमाबंदी</a>
             <span class="text-slate-800">•</span>
-            <a href="privacy-policy/index.html" class="hover:text-orange-400 transition-colors">Privacy Policy (गोपनीयता नीति)</a>
+            <a href="registry-bihar.html" class="hover:text-orange-400 transition-colors">रजिस्ट्री गाइड</a>
             <span class="text-slate-800">•</span>
-            <a href="disclaimer/index.html#terms" class="hover:text-orange-400 transition-colors">Terms of Use</a>
-            <span class="text-slate-800">•</span>
-            <a href="disclaimer/index.html#about" class="hover:text-orange-400 transition-colors">About Us (हमारे बारे में)</a>
+            <a href="about.html" class="hover:text-orange-400 transition-colors">About Us (हमारे बारे में)</a>
           </div>
           <div class="text-slate-500">
             AdSense compliant & Secure SSL 🔒
@@ -880,7 +1080,7 @@
       </div>
     </footer>
 
-    <!-- INTERACTIVE ACCORDION & SHARE SCRIPT -->
+    <!-- INTERACTIVE ACCORDIONS & MENU JAVASCRIPT -->
     <script>
       // Sticky Menu and Mobile Drawer functionality
       const toggleBtn = document.getElementById('mobile-menu-toggle');
@@ -894,16 +1094,66 @@
         closeIcon.classList.toggle('hidden');
       });
 
-      // Accordion functionality
-      function toggleAccordion(element) {
-        element.classList.toggle('accordion-active');
+      // Section 7 - Error Accordions
+      function toggleErrorAccordion(num) {
+        const content = document.getElementById(`error-content-${num}`);
+        const icon = document.getElementById(`error-icon-${num}`);
+        const container = document.getElementById(`error-acc-${num}`);
+        
+        const isHidden = content.classList.contains('hidden');
+        
+        // Close other error accordions (Optional, for better UX)
+        for (let i = 1; i <= 4; i++) {
+          const c = document.getElementById(`error-content-${i}`);
+          const ic = document.getElementById(`error-icon-${i}`);
+          const co = document.getElementById(`error-acc-${i}`);
+          if (c && ic && co) {
+            c.classList.add('hidden');
+            ic.innerText = '▼';
+            co.classList.remove('border-emerald-500', 'shadow-sm');
+          }
+        }
+        
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.innerText = '▲';
+          container.classList.add('border-emerald-500', 'shadow-sm');
+        } else {
+          content.classList.add('hidden');
+          icon.innerText = '▼';
+          container.classList.remove('border-emerald-500', 'shadow-sm');
+        }
       }
 
-      // WhatsApp Share functionality
-      function shareOnWhatsApp() {
-        const shareText = "Bihar mein Jamabandi Nakal online kaise nikalen 2026 —\nPoori jankari: BighaWala.com/jamabandi";
-        const shareUrl = "https://wa.me/?text=" + encodeURIComponent(shareText);
-        window.open(shareUrl, '_blank');
+      // Section 10 - FAQ Accordions
+      function toggleFaqAccordion(num) {
+        const content = document.getElementById(`faq-content-${num}`);
+        const icon = document.getElementById(`faq-icon-${num}`);
+        const container = document.getElementById(`faq-acc-${num}`);
+        
+        const isHidden = content.classList.contains('hidden');
+        
+        // Close other FAQ accordions
+        for (let i = 1; i <= 12; i++) {
+          const c = document.getElementById(`faq-content-${i}`);
+          const ic = document.getElementById(`faq-icon-${i}`);
+          const co = document.getElementById(`faq-acc-${i}`);
+          if (c && ic && co) {
+            c.classList.add('hidden');
+            ic.innerText = '▼';
+            co.classList.remove('border-emerald-500', 'shadow-sm');
+          }
+        }
+        
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.innerText = '▲';
+          container.classList.add('border-emerald-500', 'shadow-sm');
+        } else {
+          content.classList.add('hidden');
+          icon.innerText = '▼';
+          container.classList.remove('border-emerald-500', 'shadow-sm');
+        }
       }
     </script>
   </body>
