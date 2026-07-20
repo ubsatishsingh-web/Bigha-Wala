@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zameen Comparison Tool Bihar | जमीन तुलना | BighaWala.com</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Bihar mein do zameen ko compare karein. Size, kimat, stamp duty, registry cost side by side. Free comparison tool 2026." />
+    <meta name="keywords" content="zameen comparison bihar, plot compare tool, land comparison calculator bihar, do zameen compare karo, property comparison bihar 2026" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.bighawala.com/zameen-comparison.html" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryGreen: '#2E7D32',
+              accentSaffron: '#FF6F00',
+              customGreenHover: '#1B5E20',
+              customSaffronHover: '#E65100',
+              whatsappGreen: '#25D366',
+              whatsappDark: '#128C7E',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'Noto Sans Devanagari', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .fade-in {
+        animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .slide-up {
+        animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      /* Custom Glassmorphism */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      /* Shimmer Effect for loading */
+      .shimmer {
+        background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+      }
+      @keyframes shimmer {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+      /* Print Friendly Styles */
+      @media print {
+        header, footer, .no-print, .action-buttons {
+          display: none !important;
+        }
+        body {
+          background-color: white !important;
+          color: black !important;
+        }
+        .print-full {
+          width: 100% !important;
+          max-width: 100% !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          box-shadow: none !important;
+          border: none !important;
+        }
+        .print-card {
+          border: 2px solid #2E7D32 !important;
+          box-shadow: none !important;
+          border-radius: 12px !important;
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col selection:bg-orange-100 selection:text-orange-900">
+
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200/80 shadow-sm backdrop-blur-md bg-white/95">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <!-- Logo and Tagline -->
+        <a href="index.html" class="flex items-center gap-3 group" id="logo-link">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 border-2 border-primaryGreen flex items-center justify-center text-2xl shadow-sm group-hover:scale-105 transition-transform">
+            🏡
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 flex items-center gap-1 leading-none">
+              <span class="text-accentSaffron">Bigha</span><span class="text-slate-800">Wala</span><span class="text-primaryGreen">.com</span>
+            </div>
+            <div class="text-[10px] text-primaryGreen font-black uppercase tracking-wider mt-1">
+              बिहार की जमीन की हर जानकारी
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1 font-bold lg:text-[11px] xl:text-[12px] 2xl:text-sm text-slate-600" id="desktop-nav">
+          <a href="index.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">मुख्य पृष्ठ (Home)</a>
+          <a href="apna-khata-dekhe.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">अपना खाता देखें</a>
+          <a href="bhulekh.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">भूलेख बिहार</a>
+          <a href="dakhil-kharij.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">दाखिल खारिज</a>
+          <a href="jamabandi.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">जमाबंदी</a>
+          <a href="land-rates.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">जमीन का रेट</a>
+          
+          <!-- Dropdown for Tools -->
+          <div class="relative group shrink-0">
+            <button class="text-primaryGreen bg-emerald-50 px-2 xl:px-2.5 py-1.5 rounded-xl transition-all font-black border border-emerald-100/50 flex items-center gap-1 focus:outline-none">
+              <span>विशेष टूल्स ⚡</span>
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="absolute right-0 mt-1 w-56 rounded-2xl bg-white border border-slate-200 shadow-xl py-2 hidden group-hover:block z-50 animate-fade-in">
+              <a href="bigha-calculator.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>🧮</span> <span>बीघा कैलकुलेटर</span>
+              </a>
+              <a href="zameen-moolyankan.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>💰</span> <span>ज़मीन मूल्यांकन</span>
+              </a>
+              <a href="zameen-comparison.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all bg-emerald-50 text-primaryGreen font-black">
+                <span>⚖️</span> <span>जमीन तुलना (Comparison)</span>
+              </a>
+              <a href="land-cost-calculator.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>📊</span> <span>लागत कैलकुलेटर (Cost)</span>
+              </a>
+              <a href="document-checker.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>📄</span> <span>दस्तावेज चेकर (AI Document)</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="ask-expert.html" class="ml-1 bg-accentSaffron hover:bg-customSaffronHover text-white px-2.5 py-1.5 xl:px-3.5 xl:py-2 rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-1 text-[11px] xl:text-xs shrink-0 font-bold">
+            <span>💬 Ask Expert 🤖</span>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Menu">
+          <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-drawer" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner animate-fade-in">
+        <div class="px-4 pt-3 pb-6 space-y-2 font-bold text-slate-700">
+          <a href="index.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">मुख्य पृष्ठ (Home)</a>
+          <a href="apna-khata-dekhe.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">अपना खाता देखें</a>
+          <a href="bigha-calculator.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">बीघा कैलकुलेटर (Bigha Converter)</a>
+          <a href="zameen-moolyankan.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">ज़मीन मूल्यांकन (Valuation)</a>
+          <a href="zameen-comparison.html" class="block px-4 py-3 rounded-xl text-primaryGreen bg-emerald-50 font-black">जमीन तुलना (Comparison) ⚖️</a>
+          <a href="document-checker.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">AI दस्तावेज चेकर 📄</a>
+          <a href="land-cost-calculator.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">लागत कैलकुलेटर (Cost)</a>
+          <a href="bhulekh.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">भूलेख बिहार</a>
+          <a href="dakhil-kharij.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">दाखिल खारिज</a>
+          <a href="jamabandi.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमाबंदी पंजी देखें</a>
+          <a href="ask-expert.html" class="block px-4 py-3 rounded-xl text-center bg-accentSaffron hover:bg-customSaffronHover text-white shadow-sm mt-4 font-black">
+            💬 Ask Expert 🤖
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-8 sm:py-12 space-y-12 w-full text-[16px]">
+      
+      <!-- PAGE H1 & SOCIAL PROOF BADGE -->
+      <div class="text-center space-y-3 fade-in">
+        <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+          ⚖️ Bihar Zameen Comparison Tool | दो जमीन की तुलना करें
+        </h1>
+        <div id="live-counter-badge" class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow-xs">
+          <span class="animate-pulse text-emerald-500">🔥</span>
+          <span id="live-counter-text">8,492 Plots Compared Side-by-Side in Bihar this week</span>
+        </div>
+      </div>
+
+      <!-- INTRO BOX (GREEN) -->
+      <div class="bg-emerald-50 border border-emerald-200/80 rounded-3xl p-6 sm:p-8 shadow-xs flex flex-col sm:flex-row items-center gap-5 sm:gap-6 fade-in">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-3xl shrink-0 shadow-xs">
+          ⚖️
+        </div>
+        <div class="space-y-1.5 text-center sm:text-left">
+          <p class="text-emerald-950 font-extrabold text-base sm:text-lg">
+            Do alag alag zameen ke beech confusion hai? Kaun sa plot sasta hai aur kiski legal status behtar hai?
+          </p>
+          <p class="text-emerald-800 text-sm font-medium">
+            Abhi side-by-side compare karein aur AI property expert se professional advice paye. Dono plots ki legal reliability, square feet ke rates aur registry cost ki poori report generate karein.
+          </p>
+        </div>
+      </div>
+
+      <!-- INPUT FORM SECTION (PLOT A / PLOT B) -->
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 no-print">
+        
+        <!-- COLUMN LEFT: PLOT A (GREEN) -->
+        <div class="bg-white border-t-8 border-primaryGreen border-x border-b border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6 relative hover:shadow-md transition-shadow">
+          <div class="absolute top-4 right-4 bg-emerald-100 text-primaryGreen font-black text-[10px] tracking-widest uppercase px-3 py-1.5 rounded-full">
+            💚 Plot A (हरा)
+          </div>
+          
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-xl font-black text-primaryGreen flex items-center gap-2">
+              <span>📍</span> Plot A की जानकारी
+            </h2>
+            <p class="text-xs text-slate-500 font-bold mt-0.5">पहले प्लॉट के सभी विवरण दर्ज करें।</p>
+          </div>
+
+          <!-- Input Fields Group -->
+          <div class="space-y-4">
+            <!-- Plot Name -->
+            <div class="space-y-1.5">
+              <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">प्लॉट का पहचान नाम (Plot Name):</label>
+              <input type="text" id="plotA-name" value="Plot Near Highway" placeholder="जैसे: बाईपास रोड प्लॉट, गाओं वाली ज़मीन" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primaryGreen/20 focus:border-primaryGreen focus:outline-none text-slate-800 font-bold text-sm bg-slate-50/50 hover:bg-white transition-all shadow-xs" />
+            </div>
+
+            <!-- District selection -->
+            <div class="space-y-1.5">
+              <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">जिला (District):</label>
+              <div class="relative">
+                <select id="plotA-district" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primaryGreen/20 focus:border-primaryGreen focus:outline-none text-slate-800 font-bold text-sm bg-slate-50/50 hover:bg-white transition-all appearance-none shadow-xs">
+                  <!-- Generated options dynamically in JS -->
+                </select>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-slate-500 text-xs">▼</div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Area Type -->
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">क्षेत्र प्रकार (Area Type):</label>
+                <select id="plotA-areaType" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primaryGreen/20 focus:border-primaryGreen focus:outline-none text-slate-800 font-bold text-sm bg-slate-50/50 hover:bg-white transition-all shadow-xs">
+                  <option value="city">City Center (शहर के अंदर)</option>
+                  <option value="outskirts" selected>Outskirts (शहर के बाहर)</option>
+                  <option value="town">Town/Kasba (कस्बा)</option>
+                  <option value="village">Village (ग्रामीण क्षेत्र)</option>
+                </select>
+              </div>
+              
+              <!-- Land Type -->
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">जमीन प्रकार (Land Type):</label>
+                <select id="plotA-landType" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primaryGreen/20 focus:border-primaryGreen focus:outline-none text-slate-800 font-bold text-sm bg-slate-50/50 hover:bg-white transition-all shadow-xs">
+                  <option value="agri">Agricultural (खेती योग्य)</option>
+                  <option value="res" selected>Residential (आवासीय)</option>
+                  <option value="comm">Commercial (व्यावसायिक)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Size Inputs in Bigha, Katha, Dhur -->
+            <div class="space-y-2 bg-slate-50/60 p-4.5 rounded-2xl border border-slate-100">
+              <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">जमीन का आकार (Land Size):</label>
+              <div class="grid grid-cols-3 gap-3">
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black text-slate-500 block">बीघा (Bigha)</span>
+                  <input type="number" id="plotA-bigha" min="0" value="0" class="w-full px-3 py-2 text-center border border-slate-200 rounded-lg text-slate-800 font-black focus:border-primaryGreen focus:outline-none text-sm bg-white" />
+                </div>
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black text-slate-500 block">कट्ठा (Katha)</span>
+                  <input type="number" id="plotA-katha" min="0" value="10" class="w-full px-3 py-2 text-center border border-slate-200 rounded-lg text-slate-800 font-black focus:border-primaryGreen focus:outline-none text-sm bg-white" />
+                </div>
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black text-slate-500 block">धुर (Dhur)</span>
+                  <input type="number" id="plotA-dhur" min="0" value="0" class="w-full px-3 py-2 text-center border border-slate-200 rounded-lg text-slate-800 font-black focus:border-primaryGreen focus:outline-none text-sm bg-white" />
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Asking Price -->
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">मांगी गई कीमत (Asking Price in ₹):</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 font-bold text-sm">₹</span>
+                  <input type="number" id="plotA-price" value="1200000" placeholder="0" class="w-full pl-7 pr-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primaryGreen/20 focus:border-primaryGreen focus:outline-none text-slate-800 font-black text-sm bg-slate-50/50 hover:bg-white transition-all shadow-xs" />
+                </div>
+              </div>
+              
+              <!-- Road Connectivity -->
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">रास्ता (Road Connectivity):</label>
+                <select id="plotA-road" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primaryGreen/20 focus:border-primaryGreen focus:outline-none text-slate-800 font-bold text-sm bg-slate-50/50 hover:bg-white transition-all shadow-xs">
+                  <option value="main" selected>Highway / Main Road (फोरलेन/पक्की सड़क)</option>
+                  <option value="colony">Colony Road (मोहल्ले की सड़क - 15-20 फीट)</option>
+                  <option value="village">Kaccha Lane (कच्चा/पतला रास्ता - <10 फीट)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Documents checklist (Score 0-10) -->
+            <div class="space-y-2.5 bg-slate-50/60 p-4.5 rounded-2xl border border-slate-100">
+              <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">कागजात विश्वसनीयता (Documents Checklist):</label>
+              <div class="space-y-2 text-xs font-bold text-slate-700">
+                <label class="flex items-center gap-2.5 cursor-pointer">
+                  <input type="checkbox" id="plotA-doc1" checked class="w-4 h-4 rounded text-primaryGreen focus:ring-primaryGreen border-slate-300" />
+                  <span>जमाबंदी दुरुस्त है (Register II updated)</span>
+                </label>
+                <label class="flex items-center gap-2.5 cursor-pointer">
+                  <input type="checkbox" id="plotA-doc2" checked class="w-4 h-4 rounded text-primaryGreen focus:ring-primaryGreen border-slate-300" />
+                  <span>दखल कब्ज़ा प्रमाण पत्र (LPC Available)</span>
+                </label>
+                <label class="flex items-center gap-2.5 cursor-pointer">
+                  <input type="checkbox" id="plotA-doc3" class="w-4 h-4 rounded text-primaryGreen focus:ring-primaryGreen border-slate-300" />
+                  <span>दाखिल खारिज पूर्ण है (Mutation Complete)</span>
+                </label>
+                <label class="flex items-center gap-2.5 cursor-pointer">
+                  <input type="checkbox" id="plotA-doc4" checked class="w-4 h-4 rounded text-primaryGreen focus:ring-primaryGreen border-slate-300" />
+                  <span>पक्की बाउंड्री की हुई है (Boundary Constructed)</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- COLUMN RIGHT: PLOT B (SAFFRON) -->
+        <div class="bg-white border-t-8 border-accentSaffron border-x border-b border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6 relative hover:shadow-md transition-shadow">
+          <div class="absolute top-4 right-4 bg-orange-50 text-accentSaffron font-black text-[10px] tracking-widest uppercase px-3 py-1.5 rounded-full">
+            🧡 Plot B (सफ्रॉन)
+          </div>
+          
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-xl font-black text-accentSaffron flex items-center gap-2">
+              <span>📍</span> Plot B की जानकारी
+            </h2>
+            <p class="text-xs text-slate-500 font-bold mt-0.5">दूसरे प्लॉट के सभी विवरण दर्ज करें।</p>
+          </div>
+
+          <!-- Input Fields Group -->
+          <div class="space-y-4">
+            <!-- Plot Name -->
+            <div class="space-y-1.5">
+              <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">प्लॉट का पहचान नाम (Plot Name):</label>
+              <input type="text" id="plotB-name" value="Village Boundary Plot" placeholder="जैसे: बाईपास रोड प्लॉट, गाओं वाली ज़मीन" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-accentSaffron/20 focus:border-accentSaffron focus:outline-none text-slate-800 font-bold text-sm bg-slate-50/50 hover:bg-white transition-all shadow-xs" />
+            </div>
+
+            <!-- District selection -->
+            <div class="space-y-1.5">
+              <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">जिला (District):</label>
+              <div class="relative">
+                <select id="plotB-district" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-accentSaffron/20 focus:border-accentSaffron focus:outline-none text-slate-800 font-bold text-sm bg-slate-50/50 hover:bg-white transition-all appearance-none shadow-xs">
+                  <!-- Generated options dynamically in JS -->
+                </select>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-slate-500 text-xs">▼</div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Area Type -->
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">क्षेत्र प्रकार (Area Type):</label>
+                <select id="plotB-areaType" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-accentSaffron/20 focus:border-accentSaffron focus:outline-none text-slate-800 font-bold text-sm bg-slate-50/50 hover:bg-white transition-all shadow-xs">
+                  <option value="city">City Center (शहर के अंदर)</option>
+                  <option value="outskirts">Outskirts (शहर के बाहर)</option>
+                  <option value="town">Town/Kasba (कस्बा)</option>
+                  <option value="village" selected>Village (ग्रामीण क्षेत्र)</option>
+                </select>
+              </div>
+              
+              <!-- Land Type -->
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">जमीन प्रकार (Land Type):</label>
+                <select id="plotB-landType" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-accentSaffron/20 focus:border-accentSaffron focus:outline-none text-slate-800 font-bold text-sm bg-slate-50/50 hover:bg-white transition-all shadow-xs">
+                  <option value="agri" selected>Agricultural (खेती योग्य)</option>
+                  <option value="res">Residential (आवासीय)</option>
+                  <option value="comm">Commercial (व्यावसायिक)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Size Inputs in Bigha, Katha, Dhur -->
+            <div class="space-y-2 bg-slate-50/60 p-4.5 rounded-2xl border border-slate-100">
+              <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">जमीन का आकार (Land Size):</label>
+              <div class="grid grid-cols-3 gap-3">
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black text-slate-500 block">बीघा (Bigha)</span>
+                  <input type="number" id="plotB-bigha" min="0" value="0" class="w-full px-3 py-2 text-center border border-slate-200 rounded-lg text-slate-800 font-black focus:border-accentSaffron focus:outline-none text-sm bg-white" />
+                </div>
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black text-slate-500 block">कट्ठा (Katha)</span>
+                  <input type="number" id="plotB-katha" min="0" value="15" class="w-full px-3 py-2 text-center border border-slate-200 rounded-lg text-slate-800 font-black focus:border-accentSaffron focus:outline-none text-sm bg-white" />
+                </div>
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black text-slate-500 block">धुर (Dhur)</span>
+                  <input type="number" id="plotB-dhur" min="0" value="0" class="w-full px-3 py-2 text-center border border-slate-200 rounded-lg text-slate-800 font-black focus:border-accentSaffron focus:outline-none text-sm bg-white" />
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Asking Price -->
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">मांगी गई कीमत (Asking Price in ₹):</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 font-bold text-sm">₹</span>
+                  <input type="number" id="plotB-price" value="900000" placeholder="0" class="w-full pl-7 pr-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-accentSaffron/20 focus:border-accentSaffron focus:outline-none text-slate-800 font-black text-sm bg-slate-50/50 hover:bg-white transition-all shadow-xs" />
+                </div>
+              </div>
+              
+              <!-- Road Connectivity -->
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">रास्ता (Road Connectivity):</label>
+                <select id="plotB-road" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-accentSaffron/20 focus:border-accentSaffron focus:outline-none text-slate-800 font-bold text-sm bg-slate-50/50 hover:bg-white transition-all shadow-xs">
+                  <option value="main">Highway / Main Road (फोरलेन/पक्की सड़क)</option>
+                  <option value="colony">Colony Road (मोहल्ले की सड़क - 15-20 फीट)</option>
+                  <option value="village" selected>Kaccha Lane (कच्चा/पतला रास्ता - <10 फीट)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Documents checklist (Score 0-10) -->
+            <div class="space-y-2.5 bg-slate-50/60 p-4.5 rounded-2xl border border-slate-100">
+              <label class="block text-xs font-black text-slate-700 uppercase tracking-wider">कागजात विश्वसनीयता (Documents Checklist):</label>
+              <div class="space-y-2 text-xs font-bold text-slate-700">
+                <label class="flex items-center gap-2.5 cursor-pointer">
+                  <input type="checkbox" id="plotB-doc1" checked class="w-4 h-4 rounded text-accentSaffron focus:ring-accentSaffron border-slate-300" />
+                  <span>जमाबंदी दुरुस्त है (Register II updated)</span>
+                </label>
+                <label class="flex items-center gap-2.5 cursor-pointer">
+                  <input type="checkbox" id="plotB-doc2" class="w-4 h-4 rounded text-accentSaffron focus:ring-accentSaffron border-slate-300" />
+                  <span>दखल कब्ज़ा प्रमाण पत्र (LPC Available)</span>
+                </label>
+                <label class="flex items-center gap-2.5 cursor-pointer">
+                  <input type="checkbox" id="plotB-doc3" class="w-4 h-4 rounded text-accentSaffron focus:ring-accentSaffron border-slate-300" />
+                  <span>दाखिल खारिज पूर्ण है (Mutation Complete)</span>
+                </label>
+                <label class="flex items-center gap-2.5 cursor-pointer">
+                  <input type="checkbox" id="plotB-doc4" class="w-4 h-4 rounded text-accentSaffron focus:ring-accentSaffron border-slate-300" />
+                  <span>पक्की बाउंड्री की हुई है (Boundary Constructed)</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- COMPARE BUTTON -->
+      <div class="text-center no-print">
+        <button onclick="calculateComparison()" class="relative inline-flex items-center justify-center gap-2.5 px-10 py-5 bg-gradient-to-r from-primaryGreen to-accentSaffron hover:from-customGreenHover hover:to-customSaffronHover text-white font-black text-lg sm:text-xl rounded-2xl shadow-lg transition-all transform hover:-translate-y-1 group">
+          <span>⚖️</span> Compare Plots & Find Winner
+        </button>
+      </div>
+
+      <!-- RESULTS DASHBOARD (HIDDEN UNTIL CLICKED) -->
+      <section id="results-dashboard" class="hidden space-y-10 print-full">
+        
+        <!-- WINNER ANNOUNCEMENT & VERDICT CARD -->
+        <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-emerald-500/30 slide-up print-card">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            
+            <div class="md:col-span-2 space-y-4">
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-400 font-extrabold text-xs uppercase tracking-widest">
+                🏆 Investment Verdict Report
+              </div>
+              
+              <h3 class="text-2xl sm:text-4xl font-black tracking-tight" id="verdict-heading">
+                Plot A is the Smartest Investment Deal!
+              </h3>
+              
+              <p class="text-slate-300 text-xs sm:text-sm font-semibold leading-relaxed" id="verdict-description">
+                Hamare mathematical score analysis ke mutabik, Plot A aapke liye paisa-vasool aur surakshit sauda hai. Isme category parameters jaise road access aur legal paperwork behtar mil raha hai.
+              </p>
+            </div>
+
+            <!-- Circular Medal Widget -->
+            <div class="text-center bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center space-y-2 shrink-0">
+              <span class="text-5xl" id="verdict-emoji">🏆</span>
+              <p class="text-xs font-black tracking-widest text-slate-400 uppercase">WINNER PLOT</p>
+              <p class="text-lg font-black text-emerald-400" id="winner-badge-name">Plot A</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- DETAILED SIDE-BY-SIDE TABLE -->
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden slide-up print-card">
+          
+          <!-- Table Header -->
+          <div class="bg-slate-50 border-b border-slate-100 px-6 py-5 flex items-center justify-between">
+            <div>
+              <h3 class="font-black text-slate-900 text-base sm:text-lg">📋 Side-By-Side comparison Table</h3>
+              <p class="text-xs text-slate-500 font-bold mt-0.5">Dono plots ke parameters ka aamne-saamne comparison.</p>
+            </div>
+            <div class="bg-amber-100 text-amber-800 font-extrabold text-[10px] sm:text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+              <span>🏆</span> <span>Category Winner Highlighted</span>
+            </div>
+          </div>
+
+          <!-- Table Container -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs sm:text-sm font-bold text-slate-700 min-w-[600px] border-collapse">
+              <thead>
+                <tr class="bg-slate-100/50 text-slate-500 uppercase text-[10px] font-black border-b border-slate-100">
+                  <th class="px-6 py-4.5 w-1/3">Parameters</th>
+                  <th class="px-6 py-4.5 w-1/3 text-primaryGreen border-l-4 border-primaryGreen bg-emerald-50/10">Plot A Details</th>
+                  <th class="px-6 py-4.5 w-1/3 text-accentSaffron border-l-4 border-accentSaffron bg-orange-50/10">Plot B Details</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <!-- Row: Plot Name -->
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="px-6 py-4 font-black text-slate-900">🏷️ Plot Name</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5 font-black text-slate-900" id="cell-A-name">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5 font-black text-slate-900" id="cell-B-name">-</td>
+                </tr>
+                <!-- Row: Location -->
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="px-6 py-4 font-black text-slate-900">📍 District & Area</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5" id="cell-A-location">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5" id="cell-B-location">-</td>
+                </tr>
+                <!-- Row: Land Type -->
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="px-6 py-4 font-black text-slate-900">🌾 Land Type</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5" id="cell-A-landType">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5" id="cell-B-landType">-</td>
+                </tr>
+                <!-- Row: Total Area -->
+                <tr class="hover:bg-slate-50/50 transition-colors" id="row-size">
+                  <td class="px-6 py-4 font-black text-slate-900">📏 Total Area (Size)</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5 text-sm" id="cell-A-size">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5 text-sm" id="cell-B-size">-</td>
+                </tr>
+                <!-- Row: Total Sq Ft -->
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="px-6 py-4 font-black text-slate-900">📐 Size in Sq.Ft.</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5" id="cell-A-sqft">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5" id="cell-B-sqft">-</td>
+                </tr>
+                <!-- Row: Asking Price -->
+                <tr class="hover:bg-slate-50/50 transition-colors" id="row-price">
+                  <td class="px-6 py-4 font-black text-slate-900">💰 Total Asking Price</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5 font-extrabold text-sm text-slate-900" id="cell-A-price">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5 font-extrabold text-sm text-slate-900" id="cell-B-price">-</td>
+                </tr>
+                <!-- Row: Price per Katha -->
+                <tr class="hover:bg-slate-50/50 transition-colors" id="row-rate">
+                  <td class="px-6 py-4 font-black text-slate-900">📉 Rate per Katha</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5 text-emerald-800 font-extrabold" id="cell-A-rate">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5 text-orange-800 font-extrabold" id="cell-B-rate">-</td>
+                </tr>
+                <!-- Row: Govt Value -->
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="px-6 py-4 font-black text-slate-900">🏛️ Govt MVR Value</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5" id="cell-A-govt">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5" id="cell-B-govt">-</td>
+                </tr>
+                <!-- Row: Road Connectivity -->
+                <tr class="hover:bg-slate-50/50 transition-colors" id="row-road">
+                  <td class="px-6 py-4 font-black text-slate-900">🛣️ Road Connectivity</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5" id="cell-A-road">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5" id="cell-B-road">-</td>
+                </tr>
+                <!-- Row: Document Reliability -->
+                <tr class="hover:bg-slate-50/50 transition-colors" id="row-docs">
+                  <td class="px-6 py-4 font-black text-slate-900">📋 Document Score</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5" id="cell-A-docs">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5" id="cell-B-docs">-</td>
+                </tr>
+                <!-- Row: Registry & Stamp Duty -->
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="px-6 py-4 font-black text-slate-900">📝 Estimated Registry Cost</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5" id="cell-A-registry">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5" id="cell-B-registry">-</td>
+                </tr>
+                <!-- Row: Bank Loan Eligibility -->
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="px-6 py-4 font-black text-slate-900">🏦 Max Bank Loan Limit</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5 text-emerald-800" id="cell-A-loan">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5 text-orange-800" id="cell-B-loan">-</td>
+                </tr>
+                <!-- Row: Value For Money -->
+                <tr class="hover:bg-slate-50/50 transition-colors" id="row-vfm">
+                  <td class="px-6 py-4 font-black text-slate-900">✨ Value For Money (VFM)</td>
+                  <td class="px-6 py-4 border-l-4 border-primaryGreen bg-emerald-50/5 text-emerald-800 font-extrabold" id="cell-A-vfm">-</td>
+                  <td class="px-6 py-4 border-l-4 border-accentSaffron bg-orange-50/5 text-orange-800 font-extrabold" id="cell-B-vfm">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- AI ADVICE & RECOMMENDATIONS -->
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden slide-up print-card" id="ai-recommendation-section">
+          
+          <div class="bg-gradient-to-r from-emerald-50 to-orange-50 border-b border-slate-100 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-white border border-emerald-100 flex items-center justify-center text-xl shadow-xs">
+                🤖
+              </div>
+              <div>
+                <h3 class="font-black text-slate-900 text-base sm:text-lg">🤖 AI Expert Property Recommendation</h3>
+                <p class="text-xs text-slate-500 font-bold mt-0.5">Let BighaWala AI evaluate the best financial deal for you.</p>
+              </div>
+            </div>
+            
+            <button onclick="getAIRecommendation()" id="ai-btn" class="px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-black text-xs sm:text-sm rounded-xl transition-all shadow-sm flex items-center justify-center gap-2">
+              <span>⚡</span> Get AI Expert Verdict (Free)
+            </button>
+          </div>
+
+          <div class="p-6 sm:p-8" id="ai-content-box">
+            <!-- Initial state -->
+            <div class="text-center py-6 space-y-3" id="ai-state-initial">
+              <span class="text-3xl">🤖</span>
+              <p class="text-xs sm:text-sm font-bold text-slate-600 max-w-lg mx-auto leading-relaxed">
+                Upar diye "Get AI Expert Verdict" button par click karein. Humara AI dono plots ke location, circle rate, stamp duty aur registry value ko verify karke perfect investment advice tayar karega.
+              </p>
+            </div>
+
+            <!-- Loading state -->
+            <div class="hidden py-8 space-y-4" id="ai-state-loading">
+              <div class="flex justify-center items-center">
+                <div class="animate-spin rounded-full h-10 w-10 border-4 border-primaryGreen border-t-transparent"></div>
+              </div>
+              <div class="text-center space-y-2">
+                <p class="text-sm font-black text-slate-900" id="ai-loading-message">Evaluating both properties...</p>
+                <p class="text-xs font-bold text-slate-500 tracking-wider">BighaWala AI Engine v3.5</p>
+              </div>
+              <!-- Shimmer lines -->
+              <div class="space-y-2.5 max-w-xl mx-auto pt-4">
+                <div class="h-4 w-full rounded-lg shimmer"></div>
+                <div class="h-4 w-[90%] rounded-lg shimmer"></div>
+                <div class="h-4 w-[75%] rounded-lg shimmer"></div>
+              </div>
+            </div>
+
+            <!-- Recommendation Output -->
+            <div class="hidden space-y-4 font-semibold" id="ai-state-success">
+              <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-3" id="ai-result-text">
+                <!-- Response injected here -->
+              </div>
+              <div class="text-[10px] text-slate-400 font-bold flex items-center justify-between border-t border-slate-100 pt-3">
+                <span>🛡️ AI advice is based on average district trends. Always perform physical verifications.</span>
+                <span>Powered by Gemini 3.5</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ACTION FLOATING BUTTONS -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 no-print">
+          <!-- WhatsApp Share -->
+          <button onclick="shareComparison()" class="flex items-center justify-center gap-2 px-5 py-4 bg-whatsappGreen hover:bg-whatsappDark text-white rounded-2xl font-black text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <span>📱</span> Share with Family
+          </button>
+          
+          <!-- Call Expert -->
+          <a href="ask-expert.html" class="flex items-center justify-center gap-2 px-5 py-4 bg-accentSaffron hover:bg-customSaffronHover text-white rounded-2xl font-black text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-center">
+            <span>💬</span> Ask Legal Expert
+          </a>
+
+          <!-- Print Report -->
+          <button onclick="window.print()" class="flex items-center justify-center gap-2 px-5 py-4 bg-slate-800 hover:bg-slate-900 text-white rounded-2xl font-black text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <span>🖨️</span> Print / Save PDF
+          </button>
+
+          <!-- Reset -->
+          <button onclick="resetComparison()" class="flex items-center justify-center gap-2 px-5 py-4 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-2xl font-black text-sm transition-all shadow-md hover:shadow">
+            <span>🔄</span> Reset Calculator
+          </button>
+        </div>
+
+      </section>
+
+      <!-- GUIDELINES SECTION (REDUCE FEAR & INCREASE TRUST) -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-xs space-y-8">
+        <div class="text-center space-y-2">
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900">
+            💡 बिहार जमीन खरीदी तुलना गाइडलाइन (Buyers Checklist)
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 font-bold max-w-2xl mx-auto">
+            दो जमीनों की तुलना करते समय इन महत्वपूर्ण बातों का अवश्य ध्यान रखें ताकि आपकी गाढ़ी कमाई सुरक्षित रहे।
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-semibold">
+          
+          <!-- Point 1 -->
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-emerald-50 text-primaryGreen border border-emerald-100 flex items-center justify-center text-base font-black shrink-0">
+              1
+            </div>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">जमाबंदी (Register II) ऑनलाइन चेक करें</h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                सुनिश्चित करें कि जमीन बेचने वाले का नाम बिहार भूमि पोर्टल पर 'जमाबंदी पंजी भाग 2' में सही दर्ज है। पुराना दाखिल-खारिज और रसीद कटी होनी चाहिए।
+              </p>
+            </div>
+          </div>
+
+          <!-- Point 2 -->
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-emerald-50 text-primaryGreen border border-emerald-100 flex items-center justify-center text-base font-black shrink-0">
+              2
+            </div>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">रास्ता और चौहद्दी (Boundary/Road Access)</h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                कागजों में दर्ज रास्ता और जमीन पर वास्तविक रास्ते का भौतिक मिलान करें। चारों दिशाओं (उत्तर, दक्षिण, पूर्व, पश्चिम) की चौहद्दी स्पष्ट होनी चाहिए।
+              </p>
+            </div>
+          </div>
+
+          <!-- Point 3 -->
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-emerald-50 text-primaryGreen border border-emerald-100 flex items-center justify-center text-base font-black shrink-0">
+              3
+            </div>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">सरकारी सर्किल रेट (MVR) की तुलना</h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                जिस जमीन का मार्केट भाव और सरकारी सर्किल रेट (MVR) में कम अंतर होता है, वह अधिक विश्वसनीय मानी जाती है। अत्यधिक ऊंचे मार्केट रेट वाली जमीनों पर एक्स्ट्रा स्टांप ड्यूटी लग सकती है।
+              </p>
+            </div>
+          </div>
+
+          <!-- Point 4 -->
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-emerald-50 text-primaryGreen border border-emerald-100 flex items-center justify-center text-base font-black shrink-0">
+              4
+            </div>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">भौतिक कब्ज़ा (LPC) और बाउंड्री</h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                बिना बाउंड्री वाली जमीन पर अवैध कब्जे का खतरा रहता है। हमेशा विक्रेता से LPC (Land Possession Certificate) मांगें और रजिस्ट्री से पहले पक्की बाउंड्री करवाएं।
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FAQ ACCORDION -->
+      <section class="max-w-4xl mx-auto space-y-6">
+        <h3 class="text-xl sm:text-2xl font-black text-slate-900 text-center">अक्सर पूछे जाने वाले सवाल (FAQ)</h3>
+        
+        <div class="space-y-3.5" id="faq-accordion">
+          
+          <!-- Q1 -->
+          <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
+            <button onclick="toggleFaq(1)" class="w-full px-5 py-4 text-left font-black text-slate-900 flex items-center justify-between gap-4 text-sm sm:text-base hover:bg-slate-50 transition-colors">
+              <span>Q: दो जमीन की तुलना करते वक्त सबसे जरूरी क्या देखना चाहिए?</span>
+              <svg id="faq-icon-1" class="w-4 h-4 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div id="faq-ans-1" class="hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 font-semibold border-t border-slate-100 pt-3 leading-relaxed">
+              Sabse zaroori zameen ki legal status (Jamabandi & LPC) aur road connectivity hai. Sasti zameen bhi bekaar hai agar rasta nahi hai ya legal dispute hai. Is comparison tool mein dono ko weightage diya jata hai.
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
+            <button onclick="toggleFaq(2)" class="w-full px-5 py-4 text-left font-black text-slate-900 flex items-center justify-between gap-4 text-sm sm:text-base hover:bg-slate-50 transition-colors">
+              <span>Q: Registry cost ki ganna kis value par hoti hai?</span>
+              <svg id="faq-icon-2" class="w-4 h-4 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div id="faq-ans-2" class="hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 font-semibold border-t border-slate-100 pt-3 leading-relaxed">
+              Bihar government ke niyam anusar, registry cost (Stamp Duty + Registration Fee) ya toh Govt MVR rate par nikali jayegi ya user ki asking value par, jo bhi adhik (higher) hoga.
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
+            <button onclick="toggleFaq(3)" class="w-full px-5 py-4 text-left font-black text-slate-900 flex items-center justify-between gap-4 text-sm sm:text-base hover:bg-slate-50 transition-colors">
+              <span>Q: Kya BighaWala AI recommendation report 100% accurate hai?</span>
+              <svg id="faq-icon-3" class="w-4 h-4 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div id="faq-ans-3" class="hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 font-semibold border-t border-slate-100 pt-3 leading-relaxed">
+              BighaWala AI statistical averages aur local trends par deep computation karta hai, jo property validation ke liye best recommendation deta hai. Lekin registry karne se pehle local lawyer ya registrar office se verify zaroor karein.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-12 px-4 mt-auto">
+      <div class="max-w-7xl mx-auto space-y-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-slate-800">
+          <div class="space-y-2 max-w-2xl">
+            <p class="text-white font-black text-xl flex items-center gap-2">
+              <span>🏡</span> BighaWala.com
+            </p>
+            <p class="text-xs leading-relaxed text-slate-500 font-bold">
+              Disclaimer (अस्वीकरण): यह वेबसाइट केवल शैक्षणिक, सूचनात्मक और उपयोगिता उद्देश्यों के लिए है। किसी भी कानूनी विवाद, संपत्ति खरीद या अधिकारिक सत्यापन के लिए हमेशा बिहार सरकार के राजस्व एवं भूमि सुधार विभाग के अधिकारिक पोर्टल <a href="https://biharbhumi.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="text-orange-400 underline font-extrabold hover:text-orange-300 transition-colors">biharbhumi.bihar.gov.in</a> पर जाएँ।
+            </p>
+          </div>
+          <div class="text-left md:text-right space-y-1 shrink-0">
+            <p class="text-xs text-slate-500 font-semibold">
+              विकसित भारत - समृद्ध बिहार भूमि अभियान © 2025
+            </p>
+            <p class="text-sm font-black text-orange-400 tracking-wider">
+              BighaWala.com
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-between items-center gap-4 text-xs font-bold">
+          <div class="flex flex-wrap gap-x-5 gap-y-2">
+            <a href="index.html" class="hover:text-orange-400 transition-colors">Home (मुख्य पृष्ठ)</a>
+            <span class="text-slate-800">•</span>
+            <a href="bigha-calculator.html" class="hover:text-orange-400 transition-colors">Calculator</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html" class="hover:text-orange-400 transition-colors">Disclaimer (अस्वीकरण)</a>
+            <span class="text-slate-800">•</span>
+            <a href="privacy-policy/index.html" class="hover:text-orange-400 transition-colors">Privacy Policy (गोपनीयता नीति)</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html#terms" class="hover:text-orange-400 transition-colors">Terms of Use</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html#about" class="hover:text-orange-400 transition-colors">About Us (हमारे बारे में)</a>
+          </div>
+          <div class="text-slate-500">
+            AdSense compliant & Secure SSL 🔒
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACTIVITY JAVASCRIPT -->
+    <script>
+      // Navigation drawer toggle
+      const toggleBtn = document.getElementById('mobile-menu-toggle');
+      const drawer = document.getElementById('mobile-drawer');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      toggleBtn.addEventListener('click', () => {
+        drawer.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      // FAQ Accordion
+      function toggleFaq(index) {
+        const ans = document.getElementById(`faq-ans-${index}`);
+        const icon = document.getElementById(`faq-icon-${index}`);
+        
+        if (ans.classList.contains('hidden')) {
+          ans.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        } else {
+          ans.classList.add('hidden');
+          icon.style.transform = 'rotate(0deg)';
+        }
+      }
+
+      // Bihar 38 Districts and Rates Database (Consistency with zameen-moolyankan.html)
+      const districtRates = {
+        "Patna (पटना)": { "city": 3200000, "outskirts": 1100000, "town": 600000, "village": 200000 },
+        "Gaya (गया)": { "city": 1300000, "outskirts": 520000, "town": 310000, "village": 110000 },
+        "Muzaffarpur (मुजफ्फरपुर)": { "city": 1600000, "outskirts": 620000, "town": 360000, "village": 130000 },
+        "Bhagalpur (भागलपुर)": { "city": 1200000, "outskirts": 470000, "town": 260000, "village": 95000 },
+        "Darbhanga (दरभंगा)": { "city": 1100000, "outskirts": 420000, "town": 230000, "village": 85000 },
+        "Purnia (पूर्णिया)": { "city": 950000, "outskirts": 370000, "town": 210000, "village": 75000 },
+        "Ara (Bhojpur) (आरा)": { "city": 1100000, "outskirts": 420000, "town": 230000, "village": 85000 },
+        "Biharsharif (Nalanda) (बिहारशरीफ)": { "city": 1200000, "outskirts": 470000, "town": 260000, "village": 95000 },
+        "Begusarai (बेगूसराय)": { "city": 1000000, "outskirts": 400000, "town": 220000, "village": 80000 },
+        "Katihar (कटिहार)": { "city": 850000, "outskirts": 320000, "town": 190000, "village": 70000 },
+        "Munger (मुंगेर)": { "city": 950000, "outskirts": 370000, "town": 210000, "village": 75000 },
+        "Chhapra (Saran) (छपरा)": { "city": 1100000, "outskirts": 420000, "town": 230000, "village": 85000 },
+        "Bettiah (West Champaran) (बेतिया)": { "city": 900000, "outskirts": 340000, "town": 200000, "village": 72000 },
+        "Motihari (East Champaran) (मोतिहारी)": { "city": 950000, "outskirts": 370000, "town": 210000, "village": 75000 },
+        "Saharsa (सहरसा)": { "city": 850000, "outskirts": 320000, "town": 190000, "village": 70000 },
+        "Hajipur (Vaishali) (हाजीपुर)": { "city": 1500000, "outskirts": 580000, "town": 330000, "village": 120000 },
+        "Araria (अररिया)": { "city": 800000, "outskirts": 300000, "town": 170000, "village": 65000 },
+        "Arwal (अरवल)": { "city": 750000, "outskirts": 270000, "town": 160000, "village": 60000 },
+        "Aurangabad (औरंगाबाद)": { "city": 900000, "outskirts": 340000, "town": 200000, "village": 72000 },
+        "Banka (बांका)": { "city": 750000, "outskirts": 270000, "town": 160000, "village": 60000 },
+        "Buxar (बक्सर)": { "city": 950000, "outskirts": 370000, "town": 210000, "village": 80000 },
+        "Gopalganj (गोपालगंज)": { "city": 900000, "outskirts": 340000, "town": 200000, "village": 72000 },
+        "Jamui (जमुई)": { "city": 800000, "outskirts": 300000, "town": 170000, "village": 65000 },
+        "Jehanabad (जहानाबाद)": { "city": 850000, "outskirts": 320000, "town": 190000, "village": 70000 },
+        "Kaimur (Bhabua) (भभुआ)": { "city": 850000, "outskirts": 320000, "town": 190000, "village": 70000 },
+        "Khagaria (खगड़िया)": { "city": 800000, "outskirts": 300000, "town": 170000, "village": 65000 },
+        "Kishanganj (किशनगंज)": { "city": 800000, "outskirts": 300000, "town": 170000, "village": 65000 },
+        "Lakhisarai (लखीसराय)": { "city": 830000, "outskirts": 310000, "town": 180000, "village": 67000 },
+        "Madhepura (मधेपुरा)": { "city": 800000, "outskirts": 300000, "town": 170000, "village": 65000 },
+        "Madhubani (मधुबनी)": { "city": 900000, "outskirts": 340000, "town": 200000, "village": 72000 },
+        "Nawada (नवादा)": { "city": 850000, "outskirts": 320000, "town": 190000, "village": 70000 },
+        "Rohtas (Sasaram) (सासाराम)": { "city": 1000000, "outskirts": 400000, "town": 220000, "village": 80000 },
+        "Samastipur (समस्तीपुर)": { "city": 1100000, "outskirts": 420000, "town": 230000, "village": 85000 },
+        "Sheohar (शिवहर)": { "city": 700000, "outskirts": 240000, "town": 140000, "village": 55000 },
+        "Sheikhpura (शेखपुरा)": { "city": 750000, "outskirts": 270000, "town": 160000, "village": 60000 },
+        "Sitamarhi (सीतामढ़ी)": { "city": 900000, "outskirts": 340000, "town": 200000, "village": 72000 },
+        "Siwan (सीवान)": { "city": 1000000, "outskirts": 400000, "town": 220000, "village": 80000 },
+        "Supaul (सुपौल)": { "city": 800000, "outskirts": 300000, "town": 170000, "village": 65000 }
+      };
+
+      // Populate Districts on Load
+      window.addEventListener('DOMContentLoaded', () => {
+        const sortedDistricts = Object.keys(districtRates).sort();
+        ['plotA-district', 'plotB-district'].forEach(selectId => {
+          const selectElem = document.getElementById(selectId);
+          sortedDistricts.forEach(dist => {
+            const opt = document.createElement('option');
+            opt.value = dist;
+            opt.innerText = dist;
+            if (dist.includes("Patna")) {
+              opt.selected = true;
+            }
+            selectElem.appendChild(opt);
+          });
+        });
+
+        // Counter dynamic updates
+        let count = parseInt(sessionStorage.getItem('liveComparedCount'));
+        if (!count || isNaN(count)) {
+          count = Math.floor(Math.random() * (10000 - 8000 + 1)) + 8000;
+          sessionStorage.setItem('liveComparedCount', count);
+        }
+        document.getElementById('live-counter-text').innerText = `${count.toLocaleString('en-IN')} Plots Compared Side-by-Side in Bihar this week`;
+
+        setInterval(() => {
+          let cur = parseInt(sessionStorage.getItem('liveComparedCount')) || 8492;
+          cur += Math.floor(Math.random() * 2);
+          sessionStorage.setItem('liveComparedCount', cur);
+          document.getElementById('live-counter-text').innerText = `${cur.toLocaleString('en-IN')} Plots Compared Side-by-Side in Bihar this week`;
+        }, 9000);
+      });
+
+      // Global comparison state to pass to AI endpoint
+      let globalPlotA = null;
+      let globalPlotB = null;
+
+      // 1 Katha = 1361.25 sq ft
+      const SQFT_PER_KATHA = 1361.25;
+
+      // Calculate logic
+      function calculateComparison() {
+        // Collect Plot A values
+        const nameA = document.getElementById('plotA-name').value || "Plot A";
+        const distA = document.getElementById('plotA-district').value;
+        const areaTypeA = document.getElementById('plotA-areaType').value;
+        const landTypeA = document.getElementById('plotA-landType').value;
+        const bighaA = parseFloat(document.getElementById('plotA-bigha').value) || 0;
+        const kathaA = parseFloat(document.getElementById('plotA-katha').value) || 0;
+        const dhurA = parseFloat(document.getElementById('plotA-dhur').value) || 0;
+        const priceA = parseFloat(document.getElementById('plotA-price').value) || 0;
+        const roadA = document.getElementById('plotA-road').value;
+
+        let docsCheckedA = 0;
+        if (document.getElementById('plotA-doc1').checked) docsCheckedA++;
+        if (document.getElementById('plotA-doc2').checked) docsCheckedA++;
+        if (document.getElementById('plotA-doc3').checked) docsCheckedA++;
+        if (document.getElementById('plotA-doc4').checked) docsCheckedA++;
+
+        // Collect Plot B values
+        const nameB = document.getElementById('plotB-name').value || "Plot B";
+        const distB = document.getElementById('plotB-district').value;
+        const areaTypeB = document.getElementById('plotB-areaType').value;
+        const landTypeB = document.getElementById('plotB-landType').value;
+        const bighaB = parseFloat(document.getElementById('plotB-bigha').value) || 0;
+        const kathaB = parseFloat(document.getElementById('plotB-katha').value) || 0;
+        const dhurB = parseFloat(document.getElementById('plotB-dhur').value) || 0;
+        const priceB = parseFloat(document.getElementById('plotB-price').value) || 0;
+        const roadB = document.getElementById('plotB-road').value;
+
+        let docsCheckedB = 0;
+        if (document.getElementById('plotB-doc1').checked) docsCheckedB++;
+        if (document.getElementById('plotB-doc2').checked) docsCheckedB++;
+        if (document.getElementById('plotB-doc3').checked) docsCheckedB++;
+        if (document.getElementById('plotB-doc4').checked) docsCheckedB++;
+
+        // Calculation variables
+        const totalKathaA = (bighaA * 20) + kathaA + (dhurA * 0.05);
+        const totalKathaB = (bighaB * 20) + kathaB + (dhurB * 0.05);
+
+        if (totalKathaA <= 0 || totalKathaB <= 0) {
+          alert("कृपया दोनों प्लॉटों का सही क्षेत्रफल (Size) दर्ज करें। (Please enter valid land sizes for both plots.)");
+          return;
+        }
+
+        if (priceA <= 0 || priceB <= 0) {
+          alert("कृपया दोनों प्लॉटों की मांगी गई कीमत दर्ज करें। (Please enter valid price for both plots.)");
+          return;
+        }
+
+        const sqftA = totalKathaA * SQFT_PER_KATHA;
+        const sqftB = totalKathaB * SQFT_PER_KATHA;
+
+        // Price per Katha
+        const ratePerKathaA = priceA / totalKathaA;
+        const ratePerKathaB = priceB / totalKathaB;
+
+        // Look up govt rate per Katha
+        const baseGovtRateA = districtRates[distA][areaTypeA];
+        const baseGovtRateB = districtRates[distB][areaTypeB];
+
+        const govtValA = totalKathaA * baseGovtRateA;
+        const govtValB = totalKathaB * baseGovtRateB;
+
+        // VFM ratio = total sqft / price
+        const vfmRatioA = sqftA / priceA;
+        const vfmRatioB = sqftB / priceB;
+
+        // Road Scores: main(10), colony(7), village(4)
+        const roadScoreMap = { 'main': 10, 'colony': 7, 'village': 4 };
+        const roadScoreA = roadScoreMap[roadA] || 7;
+        const roadScoreB = roadScoreMap[roadB] || 7;
+
+        // Doc Scores
+        const docScoreA = docsCheckedA * 2.5;
+        const docScoreB = docsCheckedB * 2.5;
+
+        // Registry & Stamp Duty: typically approx 8% of higher of Govt Value or Asking Price
+        const registryBasisValA = Math.max(govtValA, priceA);
+        const registryBasisValB = Math.max(govtValB, priceB);
+        const registryA = registryBasisValA * 0.08;
+        const registryB = registryBasisValB * 0.08;
+
+        // Bank Loan: typically 70% of lower of Govt Value or Asking Price
+        const loanBasisValA = Math.min(govtValA, priceA);
+        const loanBasisValB = Math.min(govtValB, priceB);
+        const loanA = loanBasisValA * 0.70;
+        const loanB = loanBasisValB * 0.70;
+
+        // Map human readable area and land types
+        const areaTypeMap = { 'city': 'City Center', 'outskirts': 'Outskirts', 'town': 'Town/Kasba', 'village': 'Village' };
+        const landTypeMap = { 'agri': 'Agricultural 🌾', 'res': 'Residential 🏠', 'comm': 'Commercial 🏪' };
+        const roadTypeMap = { 'main': 'Highway/Main Road 🛣️', 'colony': 'Colony Road 🏘️', 'village': 'Kaccha Lane 🚜' };
+
+        // Inject into global comparisons state
+        globalPlotA = {
+          name: nameA, district: distA, areaType: areaTypeMap[areaTypeA], landType: landTypeMap[landTypeA],
+          sizeBigha: bighaA, sizeKatha: kathaA, sizeDhur: dhurA, totalKatha: totalKathaA, sqft: sqftA,
+          askingPrice: priceA, ratePerKatha: ratePerKathaA, govtVal: govtValA, road: roadTypeMap[roadA],
+          roadScore: roadScoreA, docScore: docScoreA, registry: registryA, loan: loanA, vfm: vfmRatioA
+        };
+
+        globalPlotB = {
+          name: nameB, district: distB, areaType: areaTypeMap[areaTypeB], landType: landTypeMap[landTypeB],
+          sizeBigha: bighaB, sizeKatha: kathaB, sizeDhur: dhurB, totalKatha: totalKathaB, sqft: sqftB,
+          askingPrice: priceB, ratePerKatha: ratePerKathaB, govtVal: govtValB, road: roadTypeMap[roadB],
+          roadScore: roadScoreB, docScore: docScoreB, registry: registryB, loan: loanB, vfm: vfmRatioB
+        };
+
+        // Populate Table cells
+        document.getElementById('cell-A-name').innerText = nameA;
+        document.getElementById('cell-B-name').innerText = nameB;
+
+        document.getElementById('cell-A-location').innerText = `${distA} (${areaTypeMap[areaTypeA]})`;
+        document.getElementById('cell-B-location').innerText = `${distB} (${areaTypeMap[areaTypeB]})`;
+
+        document.getElementById('cell-A-landType').innerText = landTypeMap[landTypeA];
+        document.getElementById('cell-B-landType').innerText = landTypeMap[landTypeB];
+
+        document.getElementById('cell-A-size').innerText = `${bighaA} Bigha, ${kathaA} Katha, ${dhurA} Dhur (${totalKathaA.toFixed(2)} Katha)`;
+        document.getElementById('cell-B-size').innerText = `${bighaB} Bigha, ${kathaB} Katha, ${dhurB} Dhur (${totalKathaB.toFixed(2)} Katha)`;
+
+        document.getElementById('cell-A-sqft').innerText = `${Math.round(sqftA).toLocaleString('en-IN')} Sq.Ft.`;
+        document.getElementById('cell-B-sqft').innerText = `${Math.round(sqftB).toLocaleString('en-IN')} Sq.Ft.`;
+
+        document.getElementById('cell-A-price').innerText = `₹${priceA.toLocaleString('en-IN')}`;
+        document.getElementById('cell-B-price').innerText = `₹${priceB.toLocaleString('en-IN')}`;
+
+        document.getElementById('cell-A-rate').innerText = `₹${Math.round(ratePerKathaA).toLocaleString('en-IN')} / Katha`;
+        document.getElementById('cell-B-rate').innerText = `₹${Math.round(ratePerKathaB).toLocaleString('en-IN')} / Katha`;
+
+        document.getElementById('cell-A-govt').innerText = `₹${Math.round(govtValA).toLocaleString('en-IN')} (MVR)`;
+        document.getElementById('cell-B-govt').innerText = `₹${Math.round(govtValB).toLocaleString('en-IN')} (MVR)`;
+
+        document.getElementById('cell-A-road').innerText = `${roadTypeMap[roadA]} (Score: ${roadScoreA}/10)`;
+        document.getElementById('cell-B-road').innerText = `${roadTypeMap[roadB]} (Score: ${roadScoreB}/10)`;
+
+        document.getElementById('cell-A-docs').innerText = `🛡️ ${docScoreA}/10 (${docsCheckedA}/4 checked)`;
+        document.getElementById('cell-B-docs').innerText = `🛡️ ${docScoreB}/10 (${docsCheckedB}/4 checked)`;
+
+        document.getElementById('cell-A-registry').innerText = `₹${Math.round(registryA).toLocaleString('en-IN')} (Est.)`;
+        document.getElementById('cell-B-registry').innerText = `₹${Math.round(registryB).toLocaleString('en-IN')} (Est.)`;
+
+        document.getElementById('cell-A-loan').innerText = `₹${Math.round(loanA).toLocaleString('en-IN')} (Approx.)`;
+        document.getElementById('cell-B-loan').innerText = `₹${Math.round(loanB).toLocaleString('en-IN')} (Approx.)`;
+
+        // We can display VFM as a neat index (VFM value scaled)
+        // Let's show: sqft per rupee, formatted elegantly
+        const vfmDisplayA = (sqftA / priceA * 10000).toFixed(3);
+        const vfmDisplayB = (sqftB / priceB * 10000).toFixed(3);
+        document.getElementById('cell-A-vfm').innerText = `${vfmDisplayA} Sq.Ft. per ₹10,000`;
+        document.getElementById('cell-B-vfm').innerText = `${vfmDisplayB} Sq.Ft. per ₹10,000`;
+
+        // Clear previous winner decorations
+        const winRows = ['row-size', 'row-price', 'row-rate', 'row-road', 'row-docs', 'row-vfm'];
+        winRows.forEach(rowId => {
+          const r = document.getElementById(rowId);
+          if (r) {
+            r.children[1].className = r.children[1].className.replace(" font-black text-emerald-800 bg-emerald-100/30", "");
+            r.children[2].className = r.children[2].className.replace(" font-black text-emerald-800 bg-emerald-100/30", "");
+            
+            // Remove any trailing 🏆 in strings
+            r.children[1].innerHTML = r.children[1].innerHTML.replace(" 🏆", "");
+            r.children[2].innerHTML = r.children[2].innerHTML.replace(" 🏆", "");
+          }
+        });
+
+        // Compute wins
+        let winsA = 0;
+        let winsB = 0;
+
+        // size comparison (higher is better)
+        if (sqftA > sqftB) { decorateWin('row-size', 1); winsA++; }
+        else if (sqftB > sqftA) { decorateWin('row-size', 2); winsB++; }
+
+        // price comparison (lower is better)
+        if (priceA < priceB) { decorateWin('row-price', 1); winsA++; }
+        else if (priceB < priceA) { decorateWin('row-price', 2); winsB++; }
+
+        // rate per katha comparison (lower rate is better)
+        if (ratePerKathaA < ratePerKathaB) { decorateWin('row-rate', 1); winsA++; }
+        else if (ratePerKathaB < ratePerKathaA) { decorateWin('row-rate', 2); winsB++; }
+
+        // road score (higher is better)
+        if (roadScoreA > roadScoreB) { decorateWin('row-road', 1); winsA++; }
+        else if (roadScoreB > roadScoreA) { decorateWin('row-road', 2); winsB++; }
+
+        // doc reliability (higher is better)
+        if (docScoreA > docScoreB) { decorateWin('row-docs', 1); winsA++; }
+        else if (docScoreB > docScoreA) { decorateWin('row-docs', 2); winsB++; }
+
+        // value for money ratio (higher VFM is better)
+        if (vfmRatioA > vfmRatioB) { decorateWin('row-vfm', 1); winsA++; }
+        else if (vfmRatioB > vfmRatioA) { decorateWin('row-vfm', 2); winsB++; }
+
+        // Final winner verdict
+        let finalWinnerName = "";
+        let finalWinnerColor = "";
+        let verdictDesc = "";
+        let verdictEmoji = "🏆";
+
+        if (winsA > winsB) {
+          finalWinnerName = nameA;
+          finalWinnerColor = "text-primaryGreen";
+          verdictEmoji = "🏆";
+          document.getElementById('verdict-heading').innerText = `🏆 Smart Choice: ${nameA} is a Better Deal!`;
+          document.getElementById('verdict-heading').className = "text-2xl sm:text-4xl font-black tracking-tight text-emerald-400";
+          verdictDesc = `Mathematical evaluation ke anusar, <strong>${nameA}</strong> ne total comparison categories mein <strong>${winsA} wins</strong> haasil kiye hain (balki ${nameB} ko sirf ${winsB} mil sake). Iski value for money aur reliability sanyukt roop se behtar hai.`;
+        } else if (winsB > winsA) {
+          finalWinnerName = nameB;
+          finalWinnerColor = "text-accentSaffron";
+          verdictEmoji = "🏆";
+          document.getElementById('verdict-heading').innerText = `🏆 Smart Choice: ${nameB} is a Better Deal!`;
+          document.getElementById('verdict-heading').className = "text-2xl sm:text-4xl font-black tracking-tight text-orange-400";
+          verdictDesc = `Mathematical evaluation ke anusar, <strong>${nameB}</strong> ne total comparison categories mein <strong>${winsB} wins</strong> haasil kiye hain (balki ${nameA} ko sirf ${winsA} mil sake). Iski value for money aur rates sanyukt roop se behtar hain.`;
+        } else {
+          finalWinnerName = "Tied Deal ⚖️";
+          finalWinnerColor = "text-amber-400";
+          verdictEmoji = "⚖️";
+          document.getElementById('verdict-heading').innerText = `⚖️ Both Deals are Tied!`;
+          document.getElementById('verdict-heading').className = "text-2xl sm:text-4xl font-black tracking-tight text-amber-400";
+          verdictDesc = `Dono plots ne equal categories mein wins haasil kiye hain. Is sthiti mein final chunav aapki connectivity aur budget prashastha par nirbhar karta hai. AI Recommendation ka upyog karein expert verdict paane ke liye.`;
+        }
+
+        document.getElementById('verdict-description').innerHTML = verdictDesc;
+        document.getElementById('winner-badge-name').innerText = finalWinnerName;
+        document.getElementById('winner-badge-name').className = `text-lg font-black ${finalWinnerColor}`;
+        document.getElementById('verdict-emoji').innerText = verdictEmoji;
+
+        // Reset AI advice card to initial state
+        document.getElementById('ai-state-initial').classList.remove('hidden');
+        document.getElementById('ai-state-loading').classList.add('hidden');
+        document.getElementById('ai-state-success').classList.add('hidden');
+        document.getElementById('ai-btn').classList.remove('opacity-50', 'cursor-not-allowed');
+
+        // Show Dashboard
+        const db = document.getElementById('results-dashboard');
+        db.classList.remove('hidden');
+        db.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      function decorateWin(rowId, colIdx) {
+        const row = document.getElementById(rowId);
+        if (row) {
+          const cell = row.children[colIdx];
+          cell.className += " font-black text-emerald-800 bg-emerald-100/30";
+          cell.innerHTML += " 🏆";
+        }
+      }
+
+      // Reset
+      function resetComparison() {
+        document.getElementById('plotA-name').value = "Plot Near Highway";
+        document.getElementById('plotB-name').value = "Village Boundary Plot";
+        document.getElementById('plotA-district').selectedIndex = 0;
+        document.getElementById('plotB-district').selectedIndex = 0;
+        document.getElementById('plotA-bigha').value = 0;
+        document.getElementById('plotA-katha').value = 10;
+        document.getElementById('plotA-dhur').value = 0;
+        document.getElementById('plotB-bigha').value = 0;
+        document.getElementById('plotB-katha').value = 15;
+        document.getElementById('plotB-dhur').value = 0;
+        document.getElementById('plotA-price').value = 1200000;
+        document.getElementById('plotB-price').value = 900000;
+        document.getElementById('plotA-doc3').checked = false;
+        document.getElementById('plotB-doc2').checked = false;
+        document.getElementById('plotB-doc3').checked = false;
+        document.getElementById('plotB-doc4').checked = false;
+
+        document.getElementById('results-dashboard').classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Live micro messages for loader
+      const LOADER_MSGS = [
+        "Evaluating circle rates and location values...",
+        "Checking mutation logs and Register II details...",
+        "Calculating Value for Money ratios...",
+        "Comparing stamp duty and registry cost structures...",
+        "Preparing final expert recommendation statement..."
+      ];
+
+      // Call Gemini API server route for AI Recommendation
+      async function getAIRecommendation() {
+        if (!globalPlotA || !globalPlotB) return;
+
+        // Show loading state
+        document.getElementById('ai-state-initial').classList.add('hidden');
+        document.getElementById('ai-state-success').classList.add('hidden');
+        document.getElementById('ai-state-loading').classList.remove('hidden');
+        document.getElementById('ai-btn').classList.add('opacity-50', 'cursor-not-allowed');
+
+        // Animate loading text
+        let msgIdx = 0;
+        const msgInterval = setInterval(() => {
+          document.getElementById('ai-loading-message').innerText = LOADER_MSGS[msgIdx % LOADER_MSGS.length];
+          msgIdx++;
+        }, 1800);
+
+        try {
+          const response = await fetch('/api/compare-plots', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              plotA: {
+                name: globalPlotA.name,
+                district: globalPlotA.district,
+                areaType: globalPlotA.areaType,
+                landType: globalPlotA.landType,
+                sizeBigha: globalPlotA.sizeBigha,
+                sizeKatha: globalPlotA.sizeKatha,
+                sizeDhur: globalPlotA.sizeDhur,
+                askingPrice: globalPlotA.askingPrice,
+                road: globalPlotA.road,
+                docScore: globalPlotA.docScore
+              },
+              plotB: {
+                name: globalPlotB.name,
+                district: globalPlotB.district,
+                areaType: globalPlotB.areaType,
+                landType: globalPlotB.landType,
+                sizeBigha: globalPlotB.sizeBigha,
+                sizeKatha: globalPlotB.sizeKatha,
+                sizeDhur: globalPlotB.sizeDhur,
+                askingPrice: globalPlotB.askingPrice,
+                road: globalPlotB.road,
+                docScore: globalPlotB.docScore
+              }
+            })
+          });
+
+          const data = await response.json();
+          clearInterval(msgInterval);
+
+          if (data.recommendation) {
+            // Success
+            // Format markdown-like bullet points nicely if returned, replacing line breaks with paragraphs
+            const formattedRec = data.recommendation.replace(/\n/g, '<br/>');
+            document.getElementById('ai-result-text').innerHTML = formattedRec;
+            
+            document.getElementById('ai-state-loading').classList.add('hidden');
+            document.getElementById('ai-state-success').classList.remove('hidden');
+          } else {
+            throw new Error("Invalid response format");
+          }
+
+        } catch (err) {
+          console.error(err);
+          clearInterval(msgInterval);
+          document.getElementById('ai-result-text').innerHTML = "माफ़ी चाहते हैं, AI सिमुलेशन प्रक्रिया में त्रुटि हुई। कृपया पुनः प्रयास करें। <br/><span class='text-xs text-rose-600'>(" + (err.message || "Failed to fetch response") + ")</span>";
+          document.getElementById('ai-state-loading').classList.add('hidden');
+          document.getElementById('ai-state-success').classList.remove('hidden');
+        } finally {
+          document.getElementById('ai-btn').classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+      }
+
+      // Share on WhatsApp
+      function shareComparison() {
+        if (!globalPlotA || !globalPlotB) return;
+        const msg = `*BighaWala Land Comparison Tool 2026* ⚖️\n\nMain do plots compare kar raha hoon:\n\n🟢 *Plot A:* ${globalPlotA.name} (${globalPlotA.district})\n- Size: ${globalPlotA.totalKatha.toFixed(2)} Katha\n- Price: ₹${globalPlotA.askingPrice.toLocaleString('en-IN')}\n- Docs Score: ${globalPlotA.docScore}/10\n\n🟠 *Plot B:* ${globalPlotB.name} (${globalPlotB.district})\n- Size: ${globalPlotB.totalKatha.toFixed(2)} Katha\n- Price: ₹${globalPlotB.askingPrice.toLocaleString('en-IN')}\n- Docs Score: ${globalPlotB.docScore}/10\n\nCompare details aur AI expert recommendation dekhne ke liye is link par jayein:\nhttps://www.bighawala.com/zameen-comparison.html`;
+        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`;
+        window.open(url, '_blank');
+      }
+    </script>
+  </body>
+</html>

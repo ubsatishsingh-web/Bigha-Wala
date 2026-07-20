@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bihar Land Quiz 2026 | बिहार जमीन क्विज | BighaWala.com</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Bihar ki zameen ke baare mein aap kitna jaante hain? Free quiz test karein aur score share karein. 10 sawaal Hindi mein." />
+    <meta name="keywords" content="bihar land quiz, zameen quiz bihar, bihar bhumi quiz, bigha katha quiz, bihar land knowledge test 2026" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.bighawala.com/bihar-land-quiz.html" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryGreen: '#2E7D32',
+              accentSaffron: '#FF6F00',
+              customGreenHover: '#1B5E20',
+              customSaffronHover: '#E65100',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'Noto Sans Devanagari', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .fade-in {
+        animation: fadeIn 0.4s ease-out forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      /* Custom confetti styles */
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        opacity: 0.85;
+        border-radius: 50%;
+        animation: fall 3s linear infinite;
+        z-index: 100;
+        pointer-events: none;
+      }
+      @keyframes fall {
+        0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col selection:bg-orange-100 selection:text-orange-900">
+
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200/80 shadow-sm backdrop-blur-md bg-white/95">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <!-- Logo and Tagline -->
+        <a href="index.html" class="flex items-center gap-3 group" id="logo-link">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 border-2 border-primaryGreen flex items-center justify-center text-2xl shadow-sm group-hover:scale-105 transition-transform">
+            🏡
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 flex items-center gap-1 leading-none">
+              <span class="text-accentSaffron">Bigha</span><span class="text-slate-800">Wala</span><span class="text-primaryGreen">.com</span>
+            </div>
+            <div class="text-[10px] text-primaryGreen font-black uppercase tracking-wider mt-1">
+              बिहार की जमीन की हर जानकारी
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1 font-bold lg:text-[11px] xl:text-[12px] 2xl:text-sm text-slate-600" id="desktop-nav">
+          <a href="index.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">मुख्य पृष्ठ (Home)</a>
+          <a href="apna-khata-dekhe.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">अपना खाता देखें</a>
+          <a href="bhulekh.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">भूलेख बिहार</a>
+          <a href="dakhil-kharij.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">दाखिल खारिज</a>
+          <a href="jamabandi.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">जमाबंदी</a>
+          <a href="land-rates.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">जमीन का रेट</a>
+          
+          <!-- Beautiful Dropdown for Tools -->
+          <div class="relative group shrink-0">
+            <button class="text-primaryGreen bg-emerald-50 px-2 xl:px-2.5 py-1.5 rounded-xl transition-all font-black border border-emerald-100/50 flex items-center gap-1 focus:outline-none">
+              <span>विशेष टूल्स ⚡</span>
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="absolute right-0 mt-1 w-56 rounded-2xl bg-white border border-slate-200 shadow-xl py-2 hidden group-hover:block z-50 animate-fade-in">
+              <a href="bigha-calculator.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>🧮</span> <span>बीघा कैलकुलेटर</span>
+              </a>
+              <a href="zameen-moolyankan.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>💰</span> <span>ज़मीन मूल्यांकन</span>
+              </a>
+              <a href="land-cost-calculator.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>📊</span> <span>लागत कैलकुलेटर (Cost)</span>
+              </a>
+              <a href="bihar-land-quiz.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all bg-emerald-50 text-primaryGreen font-black">
+                <span>🎯</span> <span>बिहार लैंड क्विज़</span>
+              </a>
+              <a href="lpc-bihar.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>📄</span> <span>LPC Bihar</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="ask-expert.html" class="ml-1 bg-accentSaffron hover:bg-customSaffronHover text-white px-2.5 py-1.5 xl:px-3.5 xl:py-2 rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-1 text-[11px] xl:text-xs shrink-0 font-bold">
+            <span>💬 Ask Expert 🤖</span>
+          </a>
+        </nav>
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Menu">
+          <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-drawer" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner animate-fade-in">
+        <div class="px-4 pt-3 pb-6 space-y-2 font-bold text-slate-700">
+          <a href="index.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">मुख्य पृष्ठ (Home)</a>
+          <a href="apna-khata-dekhe.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">अपना खाता देखें (Apna Khata)</a>
+          <a href="bigha-calculator.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">बीघा कैलकुलेटर (Bigha Calculator)</a>
+          <a href="zameen-moolyankan.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">ज़मीन मूल्यांकन (Zameen Valuation) 💰</a>
+          <a href="land-cost-calculator.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">लागत कैलकुलेटर (Land Cost Calculator) 📊</a>
+          <a href="bihar-land-quiz.html" class="block px-4 py-3 rounded-xl text-primaryGreen bg-emerald-50 font-black">बिहार लैंड क्विज़ (Bihar Land Quiz) 🎯</a>
+          <a href="bhulekh.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">भूलेख बिहार (Bhulekh Bihar)</a>
+          <a href="dakhil-kharij.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">दाखिल खारिज (Mutation Guide)</a>
+          <a href="jamabandi.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमाबंदी पंजी देखें (Jamabandi)</a>
+          <a href="lpc-bihar.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">LPC Bihar (LPC Guide)</a>
+          <a href="land-rates.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमीन का रेट (Land Rates)</a>
+          <a href="ask-expert.html" class="block px-4 py-3 rounded-xl text-center bg-accentSaffron hover:bg-customSaffronHover text-white shadow-sm mt-4 font-black">
+            💬 Ask Expert 🤖
+          </a>
+        </div>
+      </div>
+      </header>
+
+    <!-- MAIN BODY -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-8 sm:py-12 space-y-12 w-full text-[16px]">
+      
+      <!-- PAGE H1 -->
+      <div class="text-center space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+          🎯 Bihar Land Quiz | बिहार जमीन क्विज
+        </h1>
+        <p class="text-sm text-slate-500 font-bold">
+          बिहार की जमीन के बारे में अपनी जानकारी का परीक्षण करें और दोस्तों को चुनौती दें!
+        </p>
+      </div>
+
+      <!-- QUIZ CONTAINER -->
+      <section class="relative bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden min-h-[450px] flex flex-col">
+        
+        <!-- START SCREEN -->
+        <div id="start-screen" class="p-6 sm:p-10 flex flex-col justify-between flex-grow space-y-8">
+          <!-- Intro Box -->
+          <div class="bg-gradient-to-br from-emerald-700 to-emerald-900 text-white rounded-2xl p-6 sm:p-8 space-y-4 shadow-md text-center sm:text-left relative overflow-hidden">
+            <div class="absolute right-0 bottom-0 opacity-10 text-9xl pointer-events-none select-none">🏆</div>
+            <h2 class="text-2xl sm:text-3xl font-black leading-tight">
+              🏆 Bihar Ki Zameen Ke Baare Mein Aap Kitna Jaante Hain?
+            </h2>
+            <p class="text-sm sm:text-base text-emerald-100 font-medium">
+              10 Sawaalon Ka Quick Quiz — Hindi Mein. Apna Score Dekhen aur WhatsApp par Share Karein!
+            </p>
+            <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-xl text-xs sm:text-sm font-black border border-white/20">
+              ⚡ Average Score: <strong class="text-orange-300">6/10</strong> — Kya aap beat kar sakte hain?
+            </div>
+          </div>
+
+          <!-- High Score & Info Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div id="high-score-box" class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex items-center gap-4">
+              <span class="text-3xl">🏅</span>
+              <div>
+                <span class="text-xs text-slate-400 font-black uppercase tracking-wider block">Aapka Best Score</span>
+                <span id="best-score-text" class="text-lg font-black text-slate-800">No score recorded yet</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex items-center gap-4">
+              <span class="text-3xl">⏱️</span>
+              <div>
+                <span class="text-xs text-slate-400 font-black uppercase tracking-wider block">Rules & Limits</span>
+                <span class="text-sm font-bold text-slate-700">30 seconds per question • 10 Questions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Start Button -->
+          <div class="text-center pt-4">
+            <button onclick="startQuiz()" class="w-full sm:w-auto bg-accentSaffron hover:bg-customSaffronHover text-white font-extrabold text-xl px-12 py-5 rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2.5">
+              <span>Quiz Shuru Karein 🚀</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ACTIVE QUIZ SCREEN -->
+        <div id="quiz-screen" class="hidden flex-col flex-grow">
+          
+          <!-- Top Progress and Timer Bar -->
+          <div class="bg-slate-50 border-b border-slate-100 px-6 py-4 flex flex-col gap-3">
+            <div class="flex items-center justify-between text-xs sm:text-sm font-black text-slate-500">
+              <span id="question-progress" class="text-primaryGreen uppercase tracking-wider">Q1/10</span>
+              <div class="flex items-center gap-1.5 bg-rose-50 border border-rose-200/80 text-rose-700 px-3 py-1 rounded-full font-mono font-black" id="timer-text-container">
+                ⏱️ <span id="timer-seconds">30s</span>
+              </div>
+            </div>
+            
+            <!-- Question progress bar -->
+            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+              <div id="question-progress-bar" class="h-full bg-primaryGreen transition-all duration-300" style="width: 10%;"></div>
+            </div>
+
+            <!-- Countdown red timer bar -->
+            <div class="w-full bg-slate-200 h-1 rounded-full overflow-hidden">
+              <div id="timer-bar" class="h-full bg-rose-500 transition-all duration-100" style="width: 100%;"></div>
+            </div>
+          </div>
+
+          <!-- Question Content Card -->
+          <div class="p-6 sm:p-10 flex-grow flex flex-col justify-between space-y-8">
+            <div class="space-y-4">
+              <h3 id="question-title" class="text-lg sm:text-2xl font-black text-slate-900 leading-snug">
+                <!-- Question goes here -->
+              </h3>
+
+              <!-- Options Grid -->
+              <div id="options-container" class="grid grid-cols-1 gap-3 pt-2">
+                <!-- Options go here dynamically -->
+              </div>
+            </div>
+
+            <!-- Feedback & Explanation Panel -->
+            <div id="feedback-panel" class="hidden bg-emerald-50 border border-emerald-200/60 rounded-2xl p-5 space-y-2.5 transition-all">
+              <div class="flex items-center gap-2 text-primaryGreen font-black text-base sm:text-lg">
+                <span id="feedback-icon" class="text-xl">✅</span>
+                <span id="feedback-title">Sahi Uttar!</span>
+              </div>
+              <p id="feedback-explanation" class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+                <!-- Explanation goes here -->
+              </p>
+            </div>
+
+            <!-- Next Button Section -->
+            <div id="next-button-container" class="hidden justify-end pt-4">
+              <button onclick="nextQuestion()" class="w-full sm:w-auto bg-primaryGreen hover:bg-customGreenHover text-white font-extrabold text-base px-8 py-4 rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center gap-2">
+                <span>Agla Sawaal →</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS SCREEN -->
+        <div id="results-screen" class="hidden flex-col flex-grow p-6 sm:p-10 space-y-8">
+          
+          <!-- Premium Certificate Look Card -->
+          <div class="bg-white border-2 border-primaryGreen/30 rounded-2xl shadow-lg overflow-hidden relative">
+            <div class="absolute inset-0 bg-[radial-gradient(#2E7D32_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.02] pointer-events-none"></div>
+            
+            <div class="bg-gradient-to-r from-emerald-800 to-emerald-950 text-white p-6 text-center space-y-1">
+              <span class="text-3xl">🏆</span>
+              <h3 class="text-lg sm:text-xl font-black tracking-wider uppercase">QUIZ COMPLETE!</h3>
+              <p class="text-[10px] text-emerald-200 font-bold tracking-widest uppercase">BIGHA WALA KNOWLEDGE CERTIFICATE</p>
+            </div>
+
+            <div class="p-6 text-center space-y-6">
+              <div class="space-y-1">
+                <span class="text-xs text-slate-400 font-bold uppercase tracking-widest">Aapka Score</span>
+                <div class="text-5xl sm:text-6xl font-black text-primaryGreen" id="result-score-display">0/10</div>
+                <p class="text-sm font-bold text-slate-500" id="result-time-display">Total Time: 0s</p>
+              </div>
+
+              <div class="bg-slate-50 border border-slate-100 rounded-xl p-5 max-w-lg mx-auto space-y-2">
+                <h4 id="result-badge-title" class="text-lg sm:text-xl font-black text-slate-900">
+                  <!-- Custom Badge -->
+                </h4>
+                <p id="result-badge-desc" class="text-xs sm:text-sm text-slate-500 font-bold">
+                  <!-- Custom Description -->
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prominent Action Buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <!-- Share WhatsApp -->
+            <button onclick="shareWhatsAppScore()" class="w-full sm:col-span-1 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm sm:text-base py-4 rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center gap-2">
+              <span>📱 WhatsApp par Share</span>
+            </button>
+            
+            <!-- Restart -->
+            <button onclick="restartQuiz()" class="w-full bg-accentSaffron hover:bg-customSaffronHover text-white font-black text-sm sm:text-base py-4 rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center gap-2">
+              <span>🔄 Quiz Dobara Do</span>
+            </button>
+
+            <!-- Improve Score -->
+            <button onclick="scrollToGuides()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black text-sm sm:text-base py-4 rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center gap-2">
+              <span>📚 Score Improve Karein</span>
+            </button>
+          </div>
+
+          <!-- Question-wise score breakdown -->
+          <div class="border-t border-slate-100 pt-6 space-y-4">
+            <h4 class="text-lg font-black text-slate-900 flex items-center gap-2">
+              🔍 Sawaalon Ke Sahi Uttar (Answers Key)
+            </h4>
+            <div id="answers-breakdown-container" class="space-y-3">
+              <!-- Dynamically populated review items -->
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- LEADERBOARD SECTION -->
+      <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-orange-50 text-accentSaffron text-2xl flex items-center justify-center">🏆</div>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900">आज के टॉप स्कोरर (Today's Leaderboard)</h2>
+            <p class="text-xs sm:text-sm text-slate-500 font-bold">क्या आप टॉप स्कोरर लिस्ट में आ सकते हैं? अभी क्विज खेलें!</p>
+          </div>
+        </div>
+
+        <div class="border border-slate-100 rounded-2xl overflow-hidden divide-y divide-slate-100 font-bold text-sm text-slate-700">
+          <!-- Row 1 -->
+          <div class="bg-amber-50/40 px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3.5">
+              <span class="w-6 text-center text-base">🥇</span>
+              <span class="text-slate-900 font-black">Ramesh Kumar (Patna)</span>
+            </div>
+            <span class="bg-emerald-100 text-emerald-800 border border-emerald-200/60 px-3 py-1 rounded-full text-xs font-black">10/10 ⭐</span>
+          </div>
+          <!-- Row 2 -->
+          <div class="px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3.5">
+              <span class="w-6 text-center text-base">🥈</span>
+              <span class="text-slate-900">Sunita Devi (Gaya)</span>
+            </div>
+            <span class="bg-emerald-50 text-primaryGreen border border-emerald-100 px-3 py-1 rounded-full text-xs font-black">9/10</span>
+          </div>
+          <!-- Row 3 -->
+          <div class="px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3.5">
+              <span class="w-6 text-center text-base">🥉</span>
+              <span class="text-slate-900">Amit Singh (Muzaffarpur)</span>
+            </div>
+            <span class="bg-emerald-50 text-primaryGreen border border-emerald-100 px-3 py-1 rounded-full text-xs font-black">9/10</span>
+          </div>
+          <!-- Row 4 -->
+          <div class="px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3.5">
+              <span class="w-6 text-center text-slate-400">4.</span>
+              <span>Priya Kumari (Darbhanga)</span>
+            </div>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs">8/10</span>
+          </div>
+          <!-- Row 5 -->
+          <div class="px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3.5">
+              <span class="w-6 text-center text-slate-400">5.</span>
+              <span>Raju Prasad (Bhagalpur)</span>
+            </div>
+            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs">8/10</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- KNOWLEDGE GUIDE SECTION -->
+      <section id="guides-section" class="space-y-6">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 text-center">
+          📚 जमीन की जानकारी बढ़ाएं और एक्सपर्ट बनें!
+        </h2>
+        <p class="text-center text-slate-500 font-bold -mt-4 text-xs sm:text-sm">
+          Quiz mein acha score nahi aaya? Koi baat nahi! Yahan se seekhen:
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Card 1 -->
+          <a href="bigha-calculator.html" class="bg-white border border-slate-200 hover:border-emerald-300 rounded-2xl p-5 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all group flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="text-3xl">📏</div>
+              <h3 class="text-sm sm:text-base font-black text-slate-900 group-hover:text-primaryGreen transition-colors">Bigha Calculator</h3>
+              <p class="text-[11px] text-slate-400 leading-relaxed font-bold">बीघा, कट्ठा, धुर और डिसमिल कनवर्टर</p>
+            </div>
+          </a>
+          <!-- Card 2 -->
+          <a href="dakhil-kharij.html" class="bg-white border border-slate-200 hover:border-emerald-300 rounded-2xl p-5 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all group flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="text-3xl">📋</div>
+              <h3 class="text-sm sm:text-base font-black text-slate-900 group-hover:text-primaryGreen transition-colors">Dakhil Kharij Guide</h3>
+              <p class="text-[11px] text-slate-400 leading-relaxed font-bold">दाखिल खारिज म्यूटेशन करने की गाइड</p>
+            </div>
+          </a>
+          <!-- Card 3 -->
+          <a href="apna-khata-dekhe.html" class="bg-white border border-slate-200 hover:border-emerald-300 rounded-2xl p-5 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all group flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="text-3xl">🗺️</div>
+              <h3 class="text-sm sm:text-base font-black text-slate-900 group-hover:text-primaryGreen transition-colors">Apna Khata Dekhe</h3>
+              <p class="text-[11px] text-slate-400 leading-relaxed font-bold">अपना खाता और खतियान ऑनलाइन खोजें</p>
+            </div>
+          </a>
+          <!-- Card 4 -->
+          <a href="land-rates.html" class="bg-white border border-slate-200 hover:border-emerald-300 rounded-2xl p-5 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all group flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="text-3xl">💰</div>
+              <h3 class="text-sm sm:text-base font-black text-slate-900 group-hover:text-primaryGreen transition-colors">Zameen Ka Rate</h3>
+              <p class="text-[11px] text-slate-400 leading-relaxed font-bold">बिहार के सभी जिलों का सरकारी सर्किल रेट</p>
+            </div>
+          </a>
+          <!-- Card 5 -->
+          <a href="lpc-bihar.html" class="bg-white border border-slate-200 hover:border-emerald-300 rounded-2xl p-5 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all group flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="text-3xl">📄</div>
+              <h3 class="text-sm sm:text-base font-black text-slate-900 group-hover:text-primaryGreen transition-colors">LPC Guide</h3>
+              <p class="text-[11px] text-slate-400 leading-relaxed font-bold">लैंड पजेशन सर्टिफिकेट कैसे प्राप्त करें</p>
+            </div>
+          </a>
+          <!-- Card 6 -->
+          <a href="ask-expert.html" class="bg-white border border-slate-200 hover:border-emerald-300 rounded-2xl p-5 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all group flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="text-3xl">🤖</div>
+              <h3 class="text-sm sm:text-base font-black text-slate-900 group-hover:text-primaryGreen transition-colors">AI Expert</h3>
+              <p class="text-[11px] text-slate-400 leading-relaxed font-bold">बिहार जमीन नियम के सवाल हिंदी में पूछें</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- PROMINENT CHALLENGE SHARE BOX -->
+      <section class="bg-orange-50 border-2 border-accentSaffron/30 rounded-3xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
+        <div class="absolute right-0 top-0 opacity-10 text-9xl pointer-events-none select-none">🔥</div>
+        <div class="max-w-xl space-y-5">
+          <span class="bg-accentSaffron text-white text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-full inline-block">
+            Challenge Your Friends! ⚡
+          </span>
+          <h2 class="text-xl sm:text-3xl font-black text-slate-900">
+            🔥 Apne Dosto Ko Challenge Karein!
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 font-bold leading-relaxed">
+            Kya aapke doston ko Bihar ki zameen ki jankari hai? Unhe bhi quiz do aur check karo kisko kitna gyaan hai!
+          </p>
+
+          <div class="bg-white border border-orange-100 rounded-xl p-4 text-xs font-mono font-bold text-slate-600 select-all cursor-pointer" title="Click to select all">
+            "Kya tum Bihar Land Quiz mein 10/10 kar sakte ho? Try karo: BighaWala.com/bihar-land-quiz 🎯"
+          </div>
+
+          <button onclick="shareWhatsAppChallenge()" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm sm:text-base px-6 py-4 rounded-xl shadow-xs hover:shadow transition-all flex items-center justify-center gap-2">
+            <span>WhatsApp par Share Karein 📱</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- WHATSAPP EXPERT HELP BOX -->
+      <section class="bg-emerald-50 border border-emerald-200 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
+          <div class="w-14 h-14 rounded-2xl bg-white border border-emerald-200 flex items-center justify-center text-3xl shrink-0 shadow-xs">
+            💬
+          </div>
+          <div class="space-y-1">
+            <h3 class="text-base sm:text-lg font-black text-slate-900">Bihar zameen ke baare mein aur sawaal hain?</h3>
+            <p class="text-xs sm:text-sm text-slate-600 font-bold">WhatsApp Expert se seedha sahi aur satik paramarsh paye: <strong class="text-emerald-950 font-black text-sm sm:text-base">9835102324</strong></p>
+          </div>
+        </div>
+        <a href="https://wa.me/919835102324?text=Hamse%20seedha%20baat%20karein%20zameen%20ki%20sahi%20jankari%20ke%20liye" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-accentSaffron hover:bg-customSaffronHover text-white px-6 py-4 rounded-xl text-sm font-black tracking-wide shadow-xs hover:shadow transition-all text-center shrink-0">
+          Expert Se Poochein 💬
+        </a>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-12 px-4 sm:px-6 lg:px-8 mt-auto">
+      <div class="max-w-7xl mx-auto space-y-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-slate-800">
+          <div class="space-y-2 max-w-2xl">
+            <p class="text-white font-black text-xl flex items-center gap-2">
+              <span>🏡</span> BighaWala.com
+            </p>
+            <p class="text-xs leading-relaxed text-slate-500">
+              Disclaimer (अस्वीकरण): यह वेबसाइट केवल शैक्षणिक, सूचनात्मक और उपयोगिता उद्देश्यों के लिए है। किसी भी कानूनी विवाद, संपत्ति खरीद या अधिकारिक सत्यापन के लिए हमेशा बिहार सरकार के राजस्व एवं भूमि सुधार विभाग के अधिकारिक पोर्टल <a href="https://biharbhumi.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="text-orange-400 underline font-extrabold hover:text-orange-300 transition-colors">biharbhumi.bihar.gov.in</a> पर जाएँ।
+            </p>
+          </div>
+          <div class="text-left md:text-right space-y-1 shrink-0">
+            <p class="text-xs text-slate-500">
+              विकसित भारत - समृद्ध बिहार भूमि अभियान © 2026
+            </p>
+            <p class="text-sm font-black text-orange-400 tracking-wider">
+              BighaWala.com
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-between items-center gap-4 text-xs font-bold">
+          <div class="flex flex-wrap gap-x-5 gap-y-2">
+            <a href="index.html" class="hover:text-orange-400 transition-colors">Home (मुख्य पृष्ठ)</a>
+            <span class="text-slate-800">•</span>
+            <a href="bigha-calculator.html" class="hover:text-orange-400 transition-colors">Calculator</a>
+            <span class="text-slate-800">•</span>
+            <a href="jamabandi.html" class="hover:text-orange-400 transition-colors">जमाबंदी</a>
+            <span class="text-slate-800">•</span>
+            <a href="registry-bihar.html" class="hover:text-orange-400 transition-colors">रजिस्ट्री गाइड</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html" class="hover:text-orange-400 transition-colors">Disclaimer (अस्वीकरण)</a>
+            <span class="text-slate-800">•</span>
+            <a href="privacy-policy/index.html" class="hover:text-orange-400 transition-colors">Privacy Policy (गोपनीयता नीति)</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html#terms" class="hover:text-orange-400 transition-colors">Terms of Use</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html#about" class="hover:text-orange-400 transition-colors">About Us (हमारे बारे में)</a>
+          </div>
+          <div class="text-slate-500">
+            AdSense compliant & Secure SSL 🔒
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- QUIZ ENGINE JAVASCRIPT -->
+    <script>
+      // The 10 Questions Array
+      const originalQuestions = [
+        {
+          id: 1,
+          q: "Bihar mein 1 Bigha mein kitne Katha hote hain?",
+          options: [
+            { text: "10 Katha", val: "A" },
+            { text: "16 Katha", val: "B" },
+            { text: "20 Katha", val: "C", isCorrect: true },
+            { text: "25 Katha", val: "D" }
+          ],
+          explanation: "Bihar mein 1 Bigha = 20 Katha hota hai. Yeh Bihar ka standard measurement hai."
+        },
+        {
+          id: 2,
+          q: "Dakhil Kharij kya hota hai?",
+          options: [
+            { text: "Zameen ki registry", val: "A" },
+            { text: "Zameen ke record mein naye malik ka naam daalna", val: "B", isCorrect: true },
+            { text: "Zameen ka naksha", val: "C" },
+            { text: "Bank loan ka process", val: "D" }
+          ],
+          explanation: "Dakhil Kharij (Mutation) se sarkari record mein naya malik ka naam update hota hai. Registry ke baad yeh zaroori step hai."
+        },
+        {
+          id: 3,
+          q: "LPC ka full form kya hai?",
+          options: [
+            { text: "Land Purchase Certificate", val: "A" },
+            { text: "Land Possession Certificate", val: "B", isCorrect: true },
+            { text: "Land Property Certificate", val: "C" },
+            { text: "Land Payment Certificate", val: "D" }
+          ],
+          explanation: "LPC = Land Possession Certificate. Yeh prove karta hai ki aap zameen par physically present hain. Bank loan ke liye zaroori hai."
+        },
+        {
+          id: 4,
+          q: "Bihar mein apna Khatyan dekhne ki official website kaunsi hai?",
+          options: [
+            { text: "bhulekh.bihar.gov.in", val: "A" },
+            { text: "biharbhumi.bihar.gov.in", val: "B" },
+            { text: "land.bihar.gov.in/Ror2025/RoR.aspx", val: "C", isCorrect: true },
+            { text: "biharland.gov.in", val: "D" }
+          ],
+          explanation: "Apna Khata/Khatyan dekhne ke liye sahi website hai: land.bihar.gov.in/Ror2025/RoR.aspx Yeh bilkul free sarkari service hai."
+        },
+        {
+          id: 5,
+          q: "Bihar mein stamp duty kitni lagti hai male buyer ke liye 2026 mein?",
+          options: [
+            { text: "4%", val: "A" },
+            { text: "5%", val: "B" },
+            { text: "6%", val: "C", isCorrect: true },
+            { text: "8%", val: "D" }
+          ],
+          explanation: "Bihar mein male buyer ke liye stamp duty 6% lagti hai property ki circle rate value par. Female ke liye 5.7% lagti hai — 0.3% ki choot milti hai!"
+        },
+        {
+          id: 6,
+          q: "1 Katha mein kitne square feet hote hain Bihar mein?",
+          options: [
+            { text: "1000 sqft", val: "A" },
+            { text: "1361 sqft", val: "B", isCorrect: true },
+            { text: "1500 sqft", val: "C" },
+            { text: "2000 sqft", val: "D" }
+          ],
+          explanation: "Bihar mein 1 Katha = 1,361 square feet hota hai. Yeh Bihar ka standard measurement hai. 1 Bigha = 27,220 square feet."
+        },
+        {
+          id: 7,
+          q: "MVR ka matlab kya hai?",
+          options: [
+            { text: "Market Value Rate", val: "A" },
+            { text: "Maximum Value Rate", val: "B" },
+            { text: "Minimum Valuation Rate", val: "C", isCorrect: true },
+            { text: "Municipal Value Rate", val: "D" }
+          ],
+          explanation: "MVR = Minimum Valuation Rate. Isse Circle Rate ya Sarkari Rate bhi kehte hain. Stamp duty isi rate par calculate hoti hai."
+        },
+        {
+          id: 8,
+          q: "Kisan Credit Card par effective interest rate kitna hai 2026 mein?",
+          options: [
+            { text: "7%", val: "A" },
+            { text: "4%", val: "B", isCorrect: true },
+            { text: "9%", val: "C" },
+            { text: "12%", val: "D" }
+          ],
+          explanation: "KCC par nominal rate 7% is par government 3% subsidy deti hai isliye effective rate sirf 4% per year hota hai!"
+        },
+        {
+          id: 9,
+          q: "Dakhil Kharij ke liye official portal kaunsa hai Bihar mein?",
+          options: [
+            { text: "land.bihar.gov.in", val: "A" },
+            { text: "biharbhumi.bihar.gov.in/Biharbhumi/", val: "B", isCorrect: true },
+            { text: "nibandhan.bihar.gov.in", val: "C" },
+            { text: "biharportal.gov.in", val: "D" }
+          ],
+          explanation: "Dakhil Kharij, LPC, Jamabandi — sabhi ke liye sahi portal hai: biharbhumi.bihar.gov.in/Biharbhumi/ Yeh bilkul free hai!"
+        },
+        {
+          id: 10,
+          q: "Bihar mein 1 Bigha mein kitne square feet hote hain?",
+          options: [
+            { text: "20,000 sqft", val: "A" },
+            { text: "25,000 sqft", val: "B" },
+            { text: "27,220 sqft", val: "C", isCorrect: true },
+            { text: "30,000 sqft", val: "D" }
+          ],
+          explanation: "Bihar mein 1 Bigha = 27,220 square feet = 20 Katha = 1,600 Dhur = 0.625 Acre. Yeh Bihar ka official standard measurement hai."
+        }
+      ];
+
+      let questions = [];
+      let currentIdx = 0;
+      let score = 0;
+      let quizStartTime = null;
+      let questionTimer = null;
+      let timeLeft = 30; // 30 seconds
+      let questionTimesTaken = []; // track time spent on each question
+      let selectedAnswersLog = []; // tracks user selections for result breakdown
+
+      // Load high score on boot
+      window.addEventListener('DOMContentLoaded', () => {
+        const stored = localStorage.getItem('bihar_land_quiz_best_score');
+        const bestScoreText = document.getElementById('best-score-text');
+        if (stored) {
+          bestScoreText.innerText = `${stored} / 10 Sawaal`;
+        } else {
+          bestScoreText.innerText = "Abhi tak koi score nahi hai";
+        }
+      });
+
+      // Fisher-Yates Shuffle Algorithm to randomize questions
+      function shuffle(array) {
+        let currentIndex = array.length, randomIndex;
+        while (currentIndex != 0) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+        return array;
+      }
+
+      function startQuiz() {
+        // Shuffle and copy questions array
+        questions = JSON.parse(JSON.stringify(originalQuestions));
+        shuffle(questions);
+
+        currentIdx = 0;
+        score = 0;
+        questionTimesTaken = [];
+        selectedAnswersLog = [];
+        quizStartTime = Date.now();
+
+        document.getElementById('start-screen').classList.add('hidden');
+        document.getElementById('results-screen').classList.add('hidden');
+        document.getElementById('quiz-screen').classList.remove('hidden');
+        document.getElementById('quiz-screen').classList.add('flex');
+
+        loadQuestion();
+      }
+
+      function loadQuestion() {
+        // Reset feedback and panels
+        document.getElementById('feedback-panel').classList.add('hidden');
+        document.getElementById('next-button-container').classList.add('hidden');
+        
+        const qData = questions[currentIdx];
+        
+        // Update header info
+        document.getElementById('question-progress').innerText = `Sawaal ${currentIdx + 1} of 10`;
+        const percentage = ((currentIdx + 1) / 10) * 100;
+        document.getElementById('question-progress-bar').style.width = `${percentage}%`;
+
+        // Load title
+        document.getElementById('question-title').innerText = qData.q;
+
+        // Render Options
+        const optContainer = document.getElementById('options-container');
+        optContainer.innerHTML = '';
+        
+        qData.options.forEach((opt, index) => {
+          const btn = document.createElement('button');
+          btn.className = "w-full text-left p-4 sm:p-5 border-2 border-slate-200 hover:border-primaryGreen hover:bg-slate-50 rounded-xl font-bold text-slate-700 transition-all flex items-center justify-between group active:scale-[0.99] focus:outline-none";
+          btn.id = `opt-btn-${index}`;
+          btn.onclick = () => selectOption(index);
+          btn.innerHTML = `
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-lg bg-slate-100 border border-slate-200 text-slate-500 flex items-center justify-center font-bold text-xs uppercase group-hover:bg-primaryGreen group-hover:text-white transition-colors">${opt.val}</span>
+              <span class="text-sm sm:text-base text-slate-800">${opt.text}</span>
+            </div>
+            <span class="status-marker font-mono text-xl hidden"></span>
+          `;
+          optContainer.appendChild(btn);
+        });
+
+        // Start 30 seconds countdown timer
+        timeLeft = 30;
+        document.getElementById('timer-seconds').innerText = `${timeLeft}s`;
+        document.getElementById('timer-bar').style.width = "100%";
+        document.getElementById('timer-bar').className = "h-full bg-rose-500 transition-all duration-100";
+        
+        if (questionTimer) clearInterval(questionTimer);
+        
+        const qStartTimestamp = Date.now();
+        
+        questionTimer = setInterval(() => {
+          timeLeft--;
+          document.getElementById('timer-seconds').innerText = `${timeLeft}s`;
+          const barWidth = (timeLeft / 30) * 100;
+          document.getElementById('timer-bar').style.width = `${barWidth}%`;
+          
+          if (timeLeft <= 5) {
+            document.getElementById('timer-bar').className = "h-full bg-red-600 animate-pulse transition-all duration-100";
+          }
+
+          if (timeLeft <= 0) {
+            clearInterval(questionTimer);
+            // Handle timeout - auto mark as wrong
+            autoFailQuestion(qStartTimestamp);
+          }
+        }, 1000);
+      }
+
+      function selectOption(selectedIdx) {
+        if (questionTimer) clearInterval(questionTimer);
+        
+        const qData = questions[currentIdx];
+        const selectedOpt = qData.options[selectedIdx];
+        const isCorrect = !!selectedOpt.isCorrect;
+
+        // Log result
+        selectedAnswersLog.push({
+          qTitle: qData.q,
+          isCorrect: isCorrect,
+          selectedText: selectedOpt.text,
+          correctText: qData.options.find(o => o.isCorrect).text
+        });
+
+        if (isCorrect) score++;
+
+        // Disable all buttons and show colors
+        qData.options.forEach((opt, idx) => {
+          const btn = document.getElementById(`opt-btn-${idx}`);
+          btn.disabled = true;
+          const marker = btn.querySelector('.status-marker');
+          
+          if (opt.isCorrect) {
+            btn.className = "w-full text-left p-4 sm:p-5 border-2 border-emerald-500 bg-emerald-50 rounded-xl font-bold text-emerald-800 transition-all flex items-center justify-between group";
+            marker.innerText = "✅";
+            marker.classList.remove('hidden');
+          } else if (idx === selectedIdx) {
+            btn.className = "w-full text-left p-4 sm:p-5 border-2 border-rose-500 bg-rose-50 rounded-xl font-bold text-rose-800 transition-all flex items-center justify-between group";
+            marker.innerText = "❌";
+            marker.classList.remove('hidden');
+          } else {
+            btn.className = "w-full text-left p-4 sm:p-5 border-2 border-slate-100 bg-slate-50 rounded-xl font-bold text-slate-300 opacity-60 transition-all flex items-center justify-between group";
+          }
+        });
+
+        // Show explanation
+        const feedbackPanel = document.getElementById('feedback-panel');
+        const feedbackTitle = document.getElementById('feedback-title');
+        const feedbackIcon = document.getElementById('feedback-icon');
+        const feedbackExplanation = document.getElementById('feedback-explanation');
+
+        if (isCorrect) {
+          feedbackPanel.className = "bg-emerald-50 border border-emerald-200/80 rounded-2xl p-5 space-y-2.5 fade-in";
+          feedbackTitle.innerText = "Sahi Uttar!";
+          feedbackTitle.className = "text-emerald-800 font-extrabold text-base sm:text-lg";
+          feedbackIcon.innerText = "✅";
+        } else {
+          feedbackPanel.className = "bg-rose-50 border border-rose-200/80 rounded-2xl p-5 space-y-2.5 fade-in";
+          feedbackTitle.innerText = "Galat Uttar!";
+          feedbackTitle.className = "text-rose-800 font-extrabold text-base sm:text-lg";
+          feedbackIcon.innerText = "❌";
+        }
+
+        feedbackExplanation.innerText = qData.explanation;
+        feedbackPanel.classList.remove('hidden');
+        
+        // Show next button
+        document.getElementById('next-button-container').classList.remove('hidden');
+        document.getElementById('next-button-container').classList.add('flex');
+      }
+
+      function autoFailQuestion(startTimestamp) {
+        const qData = questions[currentIdx];
+        
+        selectedAnswersLog.push({
+          qTitle: qData.q,
+          isCorrect: false,
+          selectedText: "Time Ran Out ⏱️",
+          correctText: qData.options.find(o => o.isCorrect).text
+        });
+
+        // Disable options
+        qData.options.forEach((opt, idx) => {
+          const btn = document.getElementById(`opt-btn-${idx}`);
+          btn.disabled = true;
+          const marker = btn.querySelector('.status-marker');
+          
+          if (opt.isCorrect) {
+            btn.className = "w-full text-left p-4 sm:p-5 border-2 border-emerald-500 bg-emerald-50 rounded-xl font-bold text-emerald-800 transition-all flex items-center justify-between group";
+            marker.innerText = "✅";
+            marker.classList.remove('hidden');
+          } else {
+            btn.className = "w-full text-left p-4 sm:p-5 border-2 border-slate-100 bg-slate-50 rounded-xl font-bold text-slate-300 opacity-60 transition-all flex items-center justify-between group";
+          }
+        });
+
+        // Explanation panel
+        const feedbackPanel = document.getElementById('feedback-panel');
+        const feedbackTitle = document.getElementById('feedback-title');
+        const feedbackIcon = document.getElementById('feedback-icon');
+        const feedbackExplanation = document.getElementById('feedback-explanation');
+
+        feedbackPanel.className = "bg-amber-50 border border-amber-200/80 rounded-2xl p-5 space-y-2.5 fade-in";
+        feedbackTitle.innerText = "Samay Samapt (Time Out)!";
+        feedbackTitle.className = "text-amber-800 font-extrabold text-base sm:text-lg";
+        feedbackIcon.innerText = "⏱️";
+        feedbackExplanation.innerText = qData.explanation;
+        feedbackPanel.classList.remove('hidden');
+
+        document.getElementById('next-button-container').classList.remove('hidden');
+        document.getElementById('next-button-container').classList.add('flex');
+      }
+
+      function nextQuestion() {
+        currentIdx++;
+        if (currentIdx < 10) {
+          loadQuestion();
+        } else {
+          showResults();
+        }
+      }
+
+      function showResults() {
+        if (questionTimer) clearInterval(questionTimer);
+        
+        const totalDuration = Math.round((Date.now() - quizStartTime) / 1000);
+
+        // Hide active quiz & show result
+        document.getElementById('quiz-screen').classList.add('hidden');
+        document.getElementById('quiz-screen').classList.remove('flex');
+        document.getElementById('results-screen').classList.remove('hidden');
+        document.getElementById('results-screen').classList.add('flex');
+
+        // Update display score
+        document.getElementById('result-score-display').innerText = `${score}/10`;
+        document.getElementById('result-time-display').innerText = `Khel Ka Kul Samay: ${totalDuration} Seconds`;
+
+        // Update High Score if better
+        const storedBest = localStorage.getItem('bihar_land_quiz_best_score') || 0;
+        if (score > storedBest) {
+          localStorage.setItem('bihar_land_quiz_best_score', score);
+          document.getElementById('best-score-text').innerText = `${score} / 10 Sawaal`;
+        }
+
+        // Custom Score Title & Description
+        let badgeTitle = "";
+        let badgeDesc = "";
+
+        if (score === 10) {
+          badgeTitle = "🥇 Bihar Land Expert! Aap toh Master hain!";
+          badgeDesc = "Adhabhut! Aapko Bihar ke bhoomi kanoon aur mapi ka poora gyaan hai.";
+          triggerConfetti();
+        } else if (score >= 8) {
+          badgeTitle = "🥈 Bahut Accha! Aap Bihar land ke jaankar hain!";
+          badgeDesc = "Shaandar pradarshan! Aap bhoomi upchar aur circle rates se acchi tarah parichit hain.";
+          triggerConfetti();
+        } else if (score >= 6) {
+          badgeTitle = "🥉 Theek Hai! Thodi aur practice karein";
+          badgeDesc = "Aapka gyaan average se behtar hai, thodi aur study se aap expert ban sakte hain.";
+        } else if (score >= 4) {
+          badgeTitle = "📚 Average Score. Hamare guides padhen!";
+          badgeDesc = "Dakhil kharij aur registry ke niyam complex hain. Hamare simplified guides se seekhein.";
+        } else {
+          badgeTitle = "🌱 Ghabrayein nahi! BighaWala.com se seekhen";
+          badgeDesc = "Har shuruat choti hoti hai. Hamari free calculators aur guides se apni land knowledge badhayein!";
+        }
+
+        document.getElementById('result-badge-title').innerText = badgeTitle;
+        document.getElementById('result-badge-desc').innerText = badgeDesc;
+
+        // Render Answer Breakdown list
+        const breakdownContainer = document.getElementById('answers-breakdown-container');
+        breakdownContainer.innerHTML = '';
+
+        selectedAnswersLog.forEach((log, index) => {
+          const item = document.createElement('div');
+          item.className = `p-4 rounded-xl border ${log.isCorrect ? 'bg-emerald-50/50 border-emerald-100' : 'bg-rose-50/50 border-rose-100'} space-y-1.5`;
+          item.innerHTML = `
+            <div class="flex items-start gap-2.5">
+              <span class="text-base select-none mt-0.5">${log.isCorrect ? '✅' : '❌'}</span>
+              <div class="space-y-1">
+                <p class="font-extrabold text-slate-900 text-sm sm:text-base">Sawaal ${index + 1}: ${log.qTitle}</p>
+                <p class="text-xs text-slate-500 font-bold">Aapka jawab: <span class="${log.isCorrect ? 'text-emerald-700' : 'text-rose-600'}">${log.selectedText}</span></p>
+                ${!log.isCorrect ? `<p class="text-xs text-primaryGreen font-black">Sahi Uttar: ${log.correctText}</p>` : ''}
+              </div>
+            </div>
+          `;
+          breakdownContainer.appendChild(item);
+        });
+
+        // Scroll gracefully to result top
+        document.getElementById('results-screen').scrollIntoView({ behavior: 'smooth' });
+      }
+
+      function shareWhatsAppScore() {
+        const message = `Maine Bihar Land Quiz mein ${score}/10 score kiya! 🎯\nKya aap mujhse zyada score kar sakte hain?\n\nQuiz do: https://www.bighawala.com/bihar-land-quiz\n#BiharLandQuiz #BighaWala`;
+        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+      }
+
+      function shareWhatsAppChallenge() {
+        const message = `Kya tum Bihar Land Quiz mein 10/10 kar sakte ho? Try karo:\nhttps://www.bighawala.com/bihar-land-quiz 🎯`;
+        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+      }
+
+      function restartQuiz() {
+        startQuiz();
+      }
+
+      function scrollToGuides() {
+        document.getElementById('guides-section').scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Elegant Custom Confetti Shower
+      function triggerConfetti() {
+        const colors = ['#2E7D32', '#FF6F00', '#4CAF50', '#FF9800', '#2196F3', '#E91E63'];
+        for (let i = 0; i < 60; i++) {
+          const div = document.createElement('div');
+          div.className = 'confetti';
+          div.style.left = Math.random() * 100 + 'vw';
+          div.style.top = -Math.random() * 20 + 'px';
+          div.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          div.style.transform = `scale(${Math.random() * 0.8 + 0.5})`;
+          div.style.animationDuration = Math.random() * 2 + 1.5 + 's';
+          div.style.animationDelay = Math.random() * 0.5 + 's';
+          document.body.appendChild(div);
+
+          // Cleanup particle
+          setTimeout(() => {
+            div.remove();
+          }, 3500);
+        }
+      }
+
+      // Mobile Menu Drawer Handler
+      const toggleBtn = document.getElementById('mobile-menu-toggle');
+      const drawer = document.getElementById('mobile-drawer');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      toggleBtn.addEventListener('click', () => {
+        drawer.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

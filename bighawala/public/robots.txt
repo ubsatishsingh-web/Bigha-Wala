@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bighawala.com/sitemap.xml

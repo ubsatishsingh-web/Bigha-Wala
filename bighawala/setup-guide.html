@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Setup Guide | Search Console, Analytics & AdSense | BighaWala.com</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A complete step-by-step bilingual (Hindi + English) setup guide for Google Search Console, Google Analytics 4, and Google AdSense on BighaWala.com. Easy to follow." />
+    <meta name="keywords" content="google search console bihar, google analytics 4 bihar, google adsense setup, bighawala guide" />
+    <meta name="robots" content="noindex, nofollow" /> <!-- Internal tool guide -->
+
+    <!-- Google Fonts: Noto Sans Devanagari, Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryGreen: '#2E7D32',
+              accentSaffron: '#FF6F00',
+              customGreenHover: '#1B5E20',
+              customSaffronHover: '#E65100',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'Noto Sans Devanagari', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577953323229534"
+     crossorigin="anonymous"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Custom custom peer styling for checklist items */
+      .checklist-checkbox:checked + label {
+        text-decoration: line-through;
+        color: #94a3b8;
+      }
+      .checklist-checkbox:checked ~ .step-indicator {
+        background-color: #d1fae5;
+        color: #065f46;
+        border-color: #34d399;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col selection:bg-orange-100 selection:text-orange-900">
+
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200/80 shadow-sm backdrop-blur-md bg-white/95">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <!-- Logo and Tagline -->
+        <a href="index.html" class="flex items-center gap-3 group" id="logo-link">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 border-2 border-primaryGreen flex items-center justify-center text-2xl shadow-sm group-hover:scale-105 transition-transform">
+            🏡
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 flex items-center gap-1 leading-none">
+              <span class="text-accentSaffron">Bigha</span><span class="text-slate-800">Wala</span><span class="text-primaryGreen">.com</span>
+            </div>
+            <div class="text-[10px] text-primaryGreen font-black uppercase tracking-wider mt-1">
+              बिहार की जमीन की हर जानकारी
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1 font-bold lg:text-[11px] xl:text-[12px] 2xl:text-sm text-slate-600" id="desktop-nav">
+          <a href="index.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">मुख्य पृष्ठ (Home)</a>
+          <a href="apna-khata-dekhe.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">अपना खाता देखें</a>
+          <a href="bhulekh.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">भूलेख बिहार</a>
+          <a href="dakhil-kharij.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">दाखिल खारिज</a>
+          <a href="jamabandi.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">जमाबंदी</a>
+          <a href="land-rates.html" class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all shrink-0">जमीन का रेट</a>
+          
+          <!-- Beautiful Dropdown for Tools -->
+          <div class="relative group shrink-0">
+            <button class="px-2 xl:px-2.5 py-1.5 rounded-xl hover:text-primaryGreen hover:bg-slate-50 transition-all font-bold flex items-center gap-1 focus:outline-none">
+              <span>विशेष टूल्स ⚡</span>
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="absolute right-0 mt-1 w-56 rounded-2xl bg-white border border-slate-200 shadow-xl py-2 hidden group-hover:block z-50 animate-fade-in">
+              <a href="bigha-calculator.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>🧮</span> <span>बीघा कैलकुलेटर</span>
+              </a>
+              <a href="zameen-moolyankan.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>💰</span> <span>ज़मीन मूल्यांकन</span>
+              </a>
+              <a href="land-cost-calculator.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>📊</span> <span>लागत कैलकुलेटर (Cost)</span>
+              </a>
+              <a href="bihar-land-quiz.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>🎯</span> <span>बिहार लैंड क्विज़</span>
+              </a>
+              <a href="lpc-bihar.html" class="flex items-center gap-2 px-4 py-2.5 text-[12px] transition-all hover:bg-emerald-50 hover:text-primaryGreen text-slate-700 font-bold">
+                <span>📄</span> <span>LPC Bihar</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="ask-expert.html" class="ml-1 bg-accentSaffron hover:bg-customSaffronHover text-white px-2.5 py-1.5 xl:px-3.5 xl:py-2 rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-1 text-[11px] xl:text-xs shrink-0 font-bold">
+            <span>💬 Ask Expert 🤖</span>
+          </a>
+        </nav>
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Menu">
+          <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-drawer" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner animate-fade-in">
+        <div class="px-4 pt-3 pb-6 space-y-2 font-bold text-slate-700">
+          <a href="index.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">मुख्य पृष्ठ (Home)</a>
+          <a href="apna-khata-dekhe.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">अपना खाता देखें (Apna Khata)</a>
+          <a href="bigha-calculator.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">बीघा कैलकुलेटर (Bigha Calculator)</a>
+          <a href="zameen-moolyankan.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">ज़मीन मूल्यांकन (Zameen Valuation) 💰</a>
+          <a href="land-cost-calculator.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">लागत कैलकुलेटर (Land Cost Calculator) 📊</a>
+          <a href="bihar-land-quiz.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">बिहार लैंड क्विज़ (Bihar Land Quiz) 🎯</a>
+          <a href="bhulekh.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">भूलेख बिहार (Bhulekh Bihar)</a>
+          <a href="dakhil-kharij.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">दाखिल खारिज (Mutation Guide)</a>
+          <a href="jamabandi.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमाबंदी पंजी देखें (Jamabandi)</a>
+          <a href="lpc-bihar.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">LPC Bihar (LPC Guide)</a>
+          <a href="land-rates.html" class="block px-4 py-3 rounded-xl hover:text-primaryGreen hover:bg-slate-50">जमीन का रेट (Land Rates)</a>
+          <a href="ask-expert.html" class="block px-4 py-3 rounded-xl text-center bg-accentSaffron hover:bg-customSaffronHover text-white shadow-sm mt-4 font-black">
+            💬 Ask Expert 🤖
+          </a>
+        </div>
+      </div>
+      </header>
+
+    <!-- FLOATING TAB / NAV SUB-HEADER -->
+    <div class="bg-slate-900 text-white py-4 sticky top-20 z-40 shadow-md">
+      <div class="max-w-7xl mx-auto px-4 flex flex-wrap gap-3 items-center justify-between text-xs sm:text-sm font-bold">
+        <span class="text-orange-400">⚡ QUICK NAVIGATION / त्वरित नेविगेशन:</span>
+        <div class="flex flex-wrap gap-2">
+          <a href="#search-console" class="bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 transition-all">🔍 1. Search Console</a>
+          <a href="#analytics" class="bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 transition-all">📊 2. Analytics 4</a>
+          <a href="#adsense" class="bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 transition-all">💰 3. AdSense</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 py-8 space-y-12">
+      
+      <!-- HERO BANNER -->
+      <section class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-700 relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-10 text-[180px] select-none pointer-events-none">🛠️</div>
+        <div class="space-y-4 max-w-3xl relative z-10">
+          <div class="inline-flex items-center gap-1.5 bg-orange-500/20 border border-orange-500/30 text-orange-400 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">
+            ⚙️ Step-by-Step Practical Masterclass
+          </div>
+          <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-tight">
+            Google Setup Guide for <span class="text-orange-400">BighaWala.com</span>
+          </h1>
+          <p class="text-slate-300 text-xs sm:text-base leading-relaxed font-medium">
+            यह गाइड विशेष रूप से गैर-तकनीकी (Non-Technical) उपयोगकर्ताओं के लिए बनाई गई है। नीचे दिए गए तीनों Google टूल्स को अपने वेबसाइट से जोड़ने के लिए स्टेप-बाय-स्टेप निर्देशों का पालन करें।
+          </p>
+          <div class="p-4 bg-slate-800/80 border-l-4 border-emerald-500 rounded-r-xl text-xs text-emerald-400 font-mono leading-relaxed">
+            💡 <strong>Bilingual Layout:</strong> Every step includes both Hindi 🇮🇳 and English 🇬🇧 explanations. Mark steps as done using green checkboxes!
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 1: GOOGLE SEARCH CONSOLE -->
+      <section id="search-console" class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden scroll-mt-36">
+        <!-- Header banner -->
+        <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 md:p-8">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div class="space-y-1">
+              <span class="text-xs font-black bg-blue-500/40 text-blue-100 px-2.5 py-1 rounded-md uppercase tracking-wider">PART 1 / भाग 1</span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">🔍 Google Search Console Setup</h2>
+            </div>
+            <div class="text-xs font-mono bg-blue-900/40 border border-blue-400/30 text-blue-100 px-3.5 py-2 rounded-xl">
+              URL: search.google.com
+            </div>
+          </div>
+          <p class="text-blue-100 text-xs sm:text-sm mt-3 leading-relaxed">
+            गूगल सर्च कंसोल आपकी वेबसाइट को गूगल सर्च रिजल्ट्स में लाने, एरर्स सुधारने और ऑर्गेनिक रीच बढ़ाने में मदद करता है।
+          </p>
+        </div>
+
+        <div class="p-6 md:p-8 space-y-6">
+          <!-- Step 1 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="gsc-step-1" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="gsc-step-1" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 1: Open Search Console Website (सर्च कंसोल वेबसाइट खोलें)
+              </span>
+              अपने वेब ब्राउज़र में <a href="https://search.google.com/search-console" target="_blank" class="text-blue-600 font-bold underline hover:text-blue-800">search.google.com/search-console</a> खोलें और <strong class="text-blue-600">"Start now"</strong> (नीले रंग का बटन जो स्क्रीन के बीच में या ऊपर दाएं कोने में होता है) पर क्लिक करें। <br/>
+              <span class="text-slate-500 font-medium">Open the search console link and click the blue <strong>"Start Now"</strong> button. Sign in with your primary Gmail account.</span>
+            </label>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="gsc-step-2" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="gsc-step-2" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 2: Add New Property (नई प्रॉपर्टी जोड़ें)
+              </span>
+              लॉग इन करने के बाद, आपको दो विकल्प मिलेंगे: "Domain" और "URL Prefix"। आपको दाएं तरफ वाले <strong class="text-slate-900 font-extrabold">"URL prefix"</strong> वाले बॉक्स में अपनी वेबसाइट का पूरा पता डालना है:<br/>
+              <code class="block my-2 p-2 bg-slate-100 text-rose-600 rounded-lg font-mono text-center select-all">https://www.bighawala.com/</code>
+              फिर नीचे दिए गए <strong class="text-blue-600 font-extrabold">"Continue"</strong> (नीले रंग के) बटन पर क्लिक करें।<br/>
+              <span class="text-slate-500 font-medium">Under the right-side box labeled "URL prefix", enter the complete URL of your website and click the blue <strong>"Continue"</strong> button.</span>
+            </label>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="gsc-step-3" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="gsc-step-3" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 3: Verification with HTML Tag (HTML टैग से स्वामित्व सत्यापित करें)
+              </span>
+              स्वामित्व सत्यापन (Verification) स्क्रीन पर, <strong class="text-slate-900 font-extrabold">"Other verification methods"</strong> की सूची में जाकर <strong class="text-orange-600 font-extrabold">"HTML tag"</strong> विकल्प पर क्लिक करें। <br/>
+              वहां आपको एक कोड दिखाई देगा जो इस प्रकार का होगा:<br/>
+              <code class="block my-2 p-2.5 bg-slate-900 text-emerald-400 rounded-lg font-mono text-xs overflow-x-auto select-all">&lt;meta name="google-site-verification" content="YOUR_UNIQUE_CODE_HERE" /&gt;</code>
+              इस कोड के ठीक बगल में स्थित <strong class="text-slate-900 font-black">"Copy"</strong> बटन पर क्लिक करके इसे कॉपी कर लें।<br/>
+              <span class="text-slate-500 font-medium">Select the "HTML Tag" option from the list of verification methods, and copy the meta code provided.</span>
+            </label>
+          </div>
+
+          <!-- WARNING BOX -->
+          <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-950 p-4.5 rounded-r-xl text-xs sm:text-sm font-medium leading-relaxed">
+            ⚠️ <strong>मेटा टैग कहाँ पेस्ट करें? (Where to paste this Meta Tag?)</strong><br/>
+            आपको इस कॉपी किए गए कोड को अपनी वेबसाइट की मुख्य HTML फ़ाइलों के सबसे ऊपरी भाग में मौजूद <code class="bg-amber-100 px-1 py-0.5 rounded font-mono font-bold text-rose-700">&lt;head&gt;</code> टैग के तुरंत बाद पेस्ट करना है। <br/>
+            <strong>उदाहरण स्वरूप (Example):</strong><br/>
+            <pre class="bg-slate-900 text-slate-300 text-xs p-3.5 rounded-xl font-mono mt-2 overflow-x-auto select-none">&lt;!DOCTYPE html&gt;
+&lt;html lang="hi"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    <span class="text-emerald-400">&lt;!-- इस जगह पर पेस्ट करें (Paste Here!) --&gt;
+    &lt;meta name="google-site-verification" content="YOUR_UNIQUE_CODE_HERE" /&gt;</span>
+    &lt;title&gt;Dakhil Kharij...&lt;/title&gt;</pre>
+            पेस्ट करने के बाद फ़ाइल को सेव करें और Google Search Console में वापस आकर हरे रंग के <strong class="text-emerald-700">"Verify"</strong> बटन पर क्लिक करें।
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="gsc-step-4" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="gsc-step-4" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 4: Submit Sitemap (साइटमैप जमा करें)
+              </span>
+              एक बार सत्यापन होने पर, बाएँ हाथ के मेनू बार (Left Sidebar) में <strong class="text-slate-900 font-extrabold">"Sitemaps"</strong> पर क्लिक करें।<br/>
+              वहाँ <strong class="text-slate-950">"Add a new sitemap"</strong> बॉक्स में, निम्नलिखित नाम दर्ज करें और <strong class="text-blue-600">"Submit"</strong> पर क्लिक करें:<br/>
+              <code class="inline-block my-1 px-3 py-1 bg-slate-100 text-slate-900 rounded-md font-mono select-all">sitemap.xml</code><br/>
+              <span class="text-slate-500 font-medium">Click "Sitemaps" in the left-hand menu, enter "sitemap.xml" in the submission field, and click submit to index your site structure.</span>
+            </label>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="gsc-step-5" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="gsc-step-5" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 5: Request Indexing for Key Pages (मुख्य पेजों के लिए इंडेक्सिंग का अनुरोध करें)
+              </span>
+              गूगल के रोबोट्स को तुरंत बुलाने के लिए, ऊपर बने लंबे सर्च बॉक्स (<strong class="text-slate-900">"Inspect any URL"</strong>) में नीचे दिए गए सभी 8 पेजों के लिंक एक-एक करके दर्ज करें और हर बार <strong class="text-blue-600">"Request Indexing"</strong> पर क्लिक करें:<br/>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3 text-xs font-mono text-blue-600">
+                <a href="https://www.bighawala.com/" target="_blank" class="p-2 bg-slate-50 rounded border border-slate-100 hover:bg-slate-100">🔗 https://www.bighawala.com/</a>
+                <a href="https://www.bighawala.com/bigha-calculator.html" target="_blank" class="p-2 bg-slate-50 rounded border border-slate-100 hover:bg-slate-100">🔗 .../bigha-calculator.html</a>
+                <a href="https://www.bighawala.com/dakhil-kharij.html" target="_blank" class="p-2 bg-slate-50 rounded border border-slate-100 hover:bg-slate-100">🔗 .../dakhil-kharij.html</a>
+                <a href="https://www.bighawala.com/bhulekh.html" target="_blank" class="p-2 bg-slate-50 rounded border border-slate-100 hover:bg-slate-100">🔗 .../bhulekh.html</a>
+                <a href="https://www.bighawala.com/land-rates.html" target="_blank" class="p-2 bg-slate-50 rounded border border-slate-100 hover:bg-slate-100">🔗 .../land-rates.html</a>
+                <a href="https://www.bighawala.com/lpc-bihar.html" target="_blank" class="p-2 bg-slate-50 rounded border border-slate-100 hover:bg-slate-100">🔗 .../lpc-bihar.html</a>
+                <a href="https://www.bighawala.com/ask-expert.html" target="_blank" class="p-2 bg-slate-50 rounded border border-slate-100 hover:bg-slate-100">🔗 .../ask-expert.html</a>
+                <a href="https://www.bighawala.com/disclaimer/index.html" target="_blank" class="p-2 bg-slate-50 rounded border border-slate-100 hover:bg-slate-100">🔗 .../disclaimer/index.html</a>
+              </div>
+              <span class="text-slate-500 font-medium mt-2 block">Inspect each of the above URLs in the top search bar and click "Request Indexing" to alert Google spider crawlers immediately.</span>
+            </label>
+          </div>
+
+          <!-- SUCCESS BOX -->
+          <div class="bg-emerald-50 border-l-4 border-emerald-500 text-emerald-950 p-4 rounded-r-xl text-xs sm:text-sm font-semibold">
+            🎉 <strong>बधाई हो! (Success):</strong> आपके सारे पेजों का गूगल इंडेक्सिंग सबमिट हो चुका है। कुछ ही दिनों में आपके लेख सीधे गूगल सर्च में आने लगेंगे।
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: GOOGLE ANALYTICS 4 -->
+      <section id="analytics" class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden scroll-mt-36">
+        <div class="bg-gradient-to-r from-orange-500 to-amber-600 text-white p-6 md:p-8">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div class="space-y-1">
+              <span class="text-xs font-black bg-orange-400/40 text-orange-100 px-2.5 py-1 rounded-md uppercase tracking-wider">PART 2 / भाग 2</span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">📊 Google Analytics 4 Setup</h2>
+            </div>
+            <div class="text-xs font-mono bg-orange-950/40 border border-orange-400/30 text-orange-100 px-3.5 py-2 rounded-xl">
+              URL: analytics.google.com
+            </div>
+          </div>
+          <p class="text-orange-100 text-xs sm:text-sm mt-3 leading-relaxed">
+            यह टूल आपको दिखाता है कि आपकी वेबसाइट पर रोज़ाना कितने लोग आ रहे हैं, किस पेज को पढ़ रहे हैं, और किस जिले से हैं।
+          </p>
+        </div>
+
+        <div class="p-6 md:p-8 space-y-6">
+          <!-- Step 1 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="ga-step-1" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="ga-step-1" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 1: Sign in & Create Account (साइन इन और नया खाता बनाएं)
+              </span>
+              वेब ब्राउज़र में <a href="https://analytics.google.com" target="_blank" class="text-blue-600 font-bold underline hover:text-blue-800">analytics.google.com</a> पर जाएं। <br/>
+              स्क्रीन के मध्य में स्थित <strong class="text-orange-600">"Start measuring"</strong> (नीले/सफेद रंग के) बटन पर क्लिक करें। <br/>
+              खाते का नाम (Account Name) में <strong class="text-slate-950 font-extrabold">"BighaWala"</strong> भरें और सबसे नीचे "Next" पर क्लिक करें।<br/>
+              <span class="text-slate-500 font-medium">Click "Start measuring", type "BighaWala" as the account name, and click Next.</span>
+            </label>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="ga-step-2" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="ga-step-2" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 2: Property Settings (प्रॉपर्टी विवरण सेट करें)
+              </span>
+              <ul class="list-disc pl-5 space-y-1.5 mt-2">
+                <li><strong>Property Name:</strong> <code class="bg-slate-100 px-1 py-0.5 rounded font-bold text-slate-800">BighaWala.com Web</code></li>
+                <li><strong>Reporting Time Zone:</strong> "India" (समय क्षेत्र को भारत में बदलें)।</li>
+                <li><strong>Currency (मुद्रा):</strong> "Indian Rupee (INR)" चुनें और नीचे <strong class="text-slate-950">"Next"</strong> पर क्लिक करें।</li>
+              </ul>
+              <span class="text-slate-500 font-medium mt-1 block">Set timezone to India, currency to INR, and property name as "BighaWala.com Web".</span>
+            </label>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="ga-step-3" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="ga-step-3" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 3: Choose Platform - Web (वेब प्लेटफॉर्म चुनें)
+              </span>
+              बिजनेस के विवरण में कोई भी बुनियादी जानकारी टिक करके "Next" करें। इसके बाद, आपके सामने <strong class="text-slate-950 font-extrabold">"Choose a platform"</strong> का विकल्प आएगा। <br/>
+              वहाँ <strong class="text-slate-900">"Web"</strong> बटन पर क्लिक करें। <br/>
+              अब निम्नलिखित विवरण दर्ज करें:<br/>
+              <ul class="list-disc pl-5 space-y-1.5 mt-2">
+                <li><strong>Website URL:</strong> <code class="bg-slate-100 px-1 py-0.5 rounded text-blue-600 font-bold">www.bighawala.com</code></li>
+                <li><strong>Stream Name:</strong> <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-800 font-bold">BighaWala Stream</code></li>
+              </ul>
+              अब सबसे नीचे स्थित <strong class="text-blue-600 font-extrabold">"Create stream"</strong> बटन पर क्लिक करें।<br/>
+              <span class="text-slate-500 font-medium mt-1 block">Select "Web", fill in your website domain as "www.bighawala.com" and click "Create Stream".</span>
+            </label>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="ga-step-4" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="ga-step-4" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 4: Get Measurement ID & Tracking Tag (ट्रैकिंग कोड प्राप्त करें)
+              </span>
+              सफलतापूर्वक स्ट्रीम बनने के बाद, आपके सामने <strong class="text-slate-950 font-extrabold">"MEASUREMENT ID"</strong> (जैसे <code class="bg-rose-50 text-rose-700 font-mono font-bold px-1 py-0.5 rounded">G-Z1T8BNYBTE</code>) दिखाई देगा। <br/>
+              इसके नीचे <strong class="text-slate-900">"View tag instructions"</strong> पर क्लिक करें और <strong class="text-blue-600">"Install manually"</strong> टैब चुनें। वहाँ आपको यह कोड मिलेगा:<br/>
+              <pre class="bg-slate-900 text-slate-300 text-xs p-3.5 rounded-xl font-mono mt-2 overflow-x-auto select-all">&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1T8BNYBTE"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z1T8BNYBTE');
+&lt;/script&gt;</pre>
+              इसे कॉपी बटन पर क्लिक करके तुरंत कॉपी कर लें।<br/>
+              <span class="text-slate-500 font-medium mt-1 block">Copy the global site tag (gtag.js) JavaScript snippet from the "Install manually" tab.</span>
+            </label>
+          </div>
+
+          <!-- CAUTION BOX -->
+          <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-950 p-4.5 rounded-r-xl text-xs sm:text-sm font-medium leading-relaxed">
+            ⚠️ <strong>सभी पेजों पर पेस्ट करना आवश्यक है! (Paste on Every Page!)</strong><br/>
+            आपको इस ट्रैकिंग कोड को अपनी वेबसाइट के सभी <strong>HTML पेजों</strong> (जैसे: <code class="font-mono bg-amber-100 p-0.5 rounded text-rose-700">index.html</code>, <code class="font-mono bg-amber-100 p-0.5 rounded text-rose-700">ask-expert.html</code>, <code class="font-mono bg-amber-100 p-0.5 rounded text-rose-700">bigha-calculator.html</code> आदि) के <code class="font-mono font-bold text-rose-700">&lt;head&gt;</code> टैग के तुरंत बाद पहली या दूसरी पंक्ति में पेस्ट करना होगा। <br/>
+            यदि कोई नया पेज बनाएं, तो उसमें भी इसे डालना न भूलें।
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="ga-step-5" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="ga-step-5" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 5: Verify if Tracking is Active (ट्रैकिंग एक्टिव है या नहीं, जांचें)
+              </span>
+              कोड डालने के बाद, अपने फ़ोन या कंप्यूटर पर <a href="https://www.bighawala.com" target="_blank" class="text-blue-600 font-bold underline">bighawala.com</a> वेबसाइट को खोलें। <br/>
+              Google Analytics डैशबोर्ड में वापस आएं और बायीं ओर बने <strong class="text-slate-950">"Reports"</strong> आइकन पर क्लिक करें, फिर <strong class="text-orange-600">"Realtime"</strong> रिपोर्ट खोलें। <br/>
+              वहाँ आपको <strong class="text-emerald-600 font-bold">"Users in last 30 minutes"</strong> कार्ड में कम से कम <code class="bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded">"1"</code> यूजर लाइव दिखाई देना चाहिए। यदि यूजर दिख गया, तो आपका सेटअप 100% सही है!<br/>
+              <span class="text-slate-500 font-medium">Visit your live site, then check the "Realtime" report in Google Analytics to see yourself as an active user.</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: GOOGLE ADSENSE APPLICATION -->
+      <section id="adsense" class="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden scroll-mt-36">
+        <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-6 md:p-8">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div class="space-y-1">
+              <span class="text-xs font-black bg-emerald-500/40 text-emerald-100 px-2.5 py-1 rounded-md uppercase tracking-wider">PART 3 / भाग 3</span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">💰 Google AdSense Application</h2>
+            </div>
+            <div class="text-xs font-mono bg-emerald-950/40 border border-emerald-400/30 text-emerald-100 px-3.5 py-2 rounded-xl">
+              URL: adsense.google.com
+            </div>
+          </div>
+          <p class="text-emerald-100 text-xs sm:text-sm mt-3 leading-relaxed">
+            गूगल एडसेंस के द्वारा आपकी वेबसाइट पर विज्ञापन (Ads) प्रदर्शित होंगे जिससे आपको डॉलर (USD) में कमाई (Revenue) प्राप्त होगी।
+          </p>
+        </div>
+
+        <div class="p-6 md:p-8 space-y-6">
+          <!-- Step 1 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="ads-step-1" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="ads-step-1" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 1: Sign up on AdSense (एडसेंस पर रजिस्टर करें)
+              </span>
+              वेब ब्राउज़र में <a href="https://adsense.google.com" target="_blank" class="text-blue-600 font-bold underline hover:text-blue-800">adsense.google.com</a> खोलें। <br/>
+              ऊपर दाईं ओर या बीच में स्थित नीले रंग के <strong class="text-blue-600">"Get started"</strong> बटन पर क्लिक करें। <br/>
+              अपनी उसी Gmail आईडी से लॉगिन करें जिससे आपने सर्च कंसोल और एनालिटिक्स बनाया है।<br/>
+              <span class="text-slate-500 font-medium">Click "Get started" on AdSense and log in using your primary Gmail account.</span>
+            </label>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="ads-step-2" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="ads-step-2" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 2: Enter Site & Payment Information (वेबसाइट और भुगतान जानकारी दर्ज करें)
+              </span>
+              रजिस्ट्रेशन फॉर्म में निम्नलिखित सही जानकारी भरें:<br/>
+              <ul class="list-disc pl-5 space-y-1.5 mt-2">
+                <li><strong>Your Site URL:</strong> <code class="bg-slate-100 px-1 py-0.5 rounded text-blue-600 font-bold">bighawala.com</code></li>
+                <li><strong>Payment Country/Territory:</strong> "India" (भारत चुनें)।</li>
+                <li><strong>Payment Profile:</strong> अपना पूरा कानूनी नाम (बैंक खाता अनुसार) और सही पता (Pin Code सहित) लिखें। इसे गलत न करें, क्योंकि इसी पते पर एडसेंस पिन लेटर भेजा जाएगा!</li>
+              </ul>
+              <span class="text-slate-500 font-medium mt-1 block">Input bighawala.com as site URL, choose India as territory, and fill in your exact banking name and residential address.</span>
+            </label>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="ads-step-3" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="ads-step-3" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 3: Embed AdSense Auto-Ads Code (एडसेंस कोड वेबसाइट में लगाएं)
+              </span>
+              आवेदन प्रक्रिया के दौरान आपको <strong class="text-emerald-700 font-extrabold">"Let's connect your site"</strong> अनुभाग मिलेगा। <br/>
+              वहां दिए गए विज्ञापन कोड को कॉपी करें। कोड कुछ इस तरह दिखेगा:<br/>
+              <pre class="bg-slate-900 text-slate-300 text-xs p-3.5 rounded-xl font-mono mt-2 overflow-x-auto select-all">&lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+              इस कोड को कॉपी करके अपनी वेबसाइट के सभी <strong>HTML पेजों</strong> के <code class="font-mono text-rose-700 font-bold bg-slate-100 px-1 py-0.5 rounded">&lt;head&gt;</code> टैग के अंदर पेस्ट करें। इसके बाद AdSense डैशबोर्ड में आकर <strong class="text-slate-950">"I have pasted the code"</strong> पर टिक करके <strong class="text-blue-600 font-bold">"Request review"</strong> पर क्लिक करें।<br/>
+              <span class="text-slate-500 font-medium mt-1 block">Paste the auto-ads script in the head section of all HTML pages of BighaWala, and click "Request review" on AdSense dashboard.</span>
+            </label>
+          </div>
+
+          <!-- WHAT ADSENSE LOOKS FOR (IMPORTANT CHECKLIST) -->
+          <div class="bg-emerald-50 border-l-4 border-emerald-500 text-slate-800 p-5 rounded-r-xl text-xs sm:text-sm font-medium leading-relaxed space-y-2">
+            <span class="font-black text-emerald-900 text-base block">📋 एडसेंस पास करने के लिए क्या जरूरी है? (What AdSense Looks For):</span>
+            <p>गूगल एडसेंस अप्रूवल देने से पहले आपकी वेबसाइट की गुणवत्ता की जांच करता है। सुनिश्चित करें कि:</p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>महत्वपूर्ण कानूनी पेज मौजूद हों (Legal Pages):</strong> आपकी साइट पर <a href="privacy-policy/index.html" class="text-emerald-700 font-extrabold underline hover:text-emerald-900">Privacy Policy (गोपनीयता नीति)</a> और <a href="disclaimer/index.html" class="text-emerald-700 font-extrabold underline hover:text-emerald-900">Disclaimer (अस्वीकरण)</a> पेज अनिवार्य रूप से मौजूद हों। (यह पहले से ही BighaWala पर सेट है!)</li>
+              <li><strong>उच्च गुणवत्ता कंटेंट (Original High-Value Content):</strong> कम से कम 10 से 15 ओरिजिनल बड़े लेख होने चाहिए (जैसे दाखिल खारिज कैसे करें, पटना जमीन रेट आदि)।</li>
+              <li><strong>साफ़ नेविगेशन (Simple Navigation Menu):</strong> उपयोगकर्ता आसानी से एक पेज से दूसरे पेज पर जा सके।</li>
+              <li><strong>जीरो कॉपीराइट उल्लंघन (No Pirated Content):</strong> कहीं से कॉपी-पेस्ट किया हुआ डेटा या अवांछित लिंक साइट पर न हों।</li>
+            </ul>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="ads-step-4" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="ads-step-4" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 4: Keep Patiently Waiting for Approval (अप्रूवल की प्रतीक्षा करें)
+              </span>
+              सबमिट करने के बाद, गूगल एडसेंस की टीम आपकी वेबसाइट की समीक्षा (Manual Review) करेगी। <br/>
+              यह समीक्षा प्रक्रिया आमतौर पर <strong class="text-slate-950">2 से 14 दिनों (2 to 14 Days)</strong> का समय लेती है। कभी-कभी ट्रैफिक और लोड के कारण इसमें 3 से 4 हफ्ते भी लग सकते हैं। <br/>
+              जब अप्रूवल हो जाएगा, तो आपको ईमेल द्वारा एक <strong class="text-emerald-600 font-black">"Good news! Your site is now ready to show AdSense ads"</strong> का मेल आएगा।<br/>
+              <span class="text-slate-500 font-medium">AdSense approval process takes around 2 to 14 days. You will receive an email confirmation once approved.</span>
+            </label>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors relative border border-slate-100">
+            <input type="checkbox" id="ads-step-5" class="checklist-checkbox w-6 h-6 rounded-md border-slate-300 text-primaryGreen focus:ring-primaryGreen shrink-0 mt-1 cursor-pointer" />
+            <label for="ads-step-5" class="block text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed cursor-pointer select-none">
+              <span class="block text-base font-black text-slate-900 mb-1">
+                Step 5: What to do while waiting for Approval? (वेटिंग पीरियड में क्या करें?)
+              </span>
+              समीक्षा अवधि (Waiting Period) के दौरान ये काम बिल्कुल न रोकें:<br/>
+              <ul class="list-disc pl-5 space-y-1.5 mt-1.5">
+                <li>वेबसाइट पर नए-नए लेख (Articles) हफ़्ते में कम से कम 2 बार लिखते रहें।</li>
+                <li>अपनी साइट पर ऑर्गेनिक ट्रैफ़िक बढ़ाने के लिए सोशल मीडिया पर शेयर करें।</li>
+                <li><strong>चेतावनी (Warning):</strong> समीक्षा के दौरान कोड को बार-बार न निकालें और न ही बदलें, वरना रिव्यू रिजेक्ट हो सकता है।</li>
+              </ul>
+              <span class="text-slate-500 font-medium mt-1 block">Keep publishing fresh articles regularly and avoid editing the verification code during the review process.</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- CRISIS MANAGEMENT / WHAT IF SOMETHING GOES WRONG -->
+      <section class="bg-rose-50 border border-rose-200 rounded-3xl p-6 md:p-8 space-y-4">
+        <h3 class="text-lg md:text-xl font-black text-rose-950 flex items-center gap-2">
+          <span>🆘</span> समस्या निवारण (What if something goes wrong / Troubleshooting)
+        </h3>
+        <p class="text-xs sm:text-sm text-rose-900 leading-relaxed font-semibold">
+          अगर काम करते समय कोई त्रुटि (Error) आती है, तो बिना घबराए निम्नलिखित समाधानों को अपनाएं:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-700">
+          <div class="bg-white p-4 rounded-xl border border-rose-100 space-y-1.5 col-span-1 md:col-span-2">
+            <strong class="text-rose-700 text-sm sm:text-base flex items-center gap-1 block">
+              <span>🌐</span> ❌ DNS_PROBE_FINISHED_NXDOMAIN / This site can't be reached:
+            </strong>
+            <p class="leading-relaxed">
+              <strong>कारण (Why this happens):</strong> इसका मतलब है कि आपने डोमेन <code class="font-mono bg-slate-100 text-rose-600 px-1 rounded">bighawala.com</code> तो खरीद लिया है, लेकिन इंटरनेट के DNS सर्वर को यह नहीं पता कि इसे किस सर्वर से जोड़ना है। डोमेन का नाम और होस्टिंग सर्वर अभी आपस में जुड़े नहीं हैं।<br/>
+              <span class="text-slate-500 font-medium italic">Your domain is purchased, but the DNS records (A / CNAME) are not configured at your Domain Registrar, so the internet doesn't know where your hosting server is located.</span>
+            </p>
+            <p class="leading-relaxed mt-2 font-semibold text-slate-800">
+              <strong>समाधान स्टेप-बाय-स्टेप (Step-by-Step Solution):</strong>
+            </p>
+            <ol class="list-decimal pl-5 space-y-1.5 mt-1 text-xs">
+              <li>
+                <strong>Go to Domain Registrar:</strong> जहां से आपने डोमेन खरीदा है (जैसे GoDaddy, Hostinger, Namecheap, Google Domains/Squarespace) वहाँ लॉगिन करें।
+              </li>
+              <li>
+                <strong>Open DNS Settings / Zone Editor:</strong> अपने डोमेन के सामने दिए गए "DNS" या "Manage DNS" विकल्प पर क्लिक करें।
+              </li>
+              <li>
+                <strong>Add DNS Records (A & CNAME):</strong> गूगल क्लाउड द्वारा दिए गए DNS रिकॉर्ड्स को जोड़ें:
+                <ul class="list-disc pl-5 mt-1 space-y-1 text-slate-600">
+                  <li><strong>A Record:</strong> Name को <code class="font-mono bg-slate-100 text-slate-900 px-0.5 rounded">@</code> रखें और Points to में गूगल क्लाउड का दिए गए IP एड्रेस (जैसे: <code class="font-mono bg-slate-100 text-slate-900 px-0.5 rounded">216.239.32.21</code> या जो भी क्लाउड कंसोल में दिखे) डालें।</li>
+                  <li><strong>CNAME Record:</strong> Name को <code class="font-mono bg-slate-100 text-slate-900 px-0.5 rounded">www</code> रखें और Points to में <code class="font-mono bg-slate-100 text-slate-900 px-0.5 rounded">ghs.googlehosted.com.</code> डालें।</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Wait for Propagation (प्रतीक्षा करें):</strong> ये रिकॉर्ड जोड़ने के बाद 10 मिनट से लेकर 24 घंटे तक का समय लग सकता है। इसके बाद आपकी वेबसाइट चालू हो जाएगी!
+              </li>
+            </ol>
+            <p class="text-xs text-slate-500 italic mt-2">
+              💡 <strong>Note:</strong> जब तक आपका डोमेन चालू नहीं होता, तब तक आप AI Studio द्वारा दी गई अस्थाई लिंक (Development URL) का उपयोग करके अपनी वेबसाइट और एडमिन सेटअप गाइड खोल सकते हैं!
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-rose-100 space-y-1.5">
+            <strong class="text-rose-700 block">❌ Search Console "Verification Failed":</strong>
+            <p class="leading-relaxed">
+              <strong>कारण:</strong> कोड सेव नहीं हुआ है या गलत जगह लगा है।<br/>
+              <strong>समाधान:</strong> कोड को <code class="font-mono bg-slate-100 text-rose-600 px-1 rounded">&lt;head&gt;</code> के तुरंत बाद ही पेस्ट करें। ब्राउज़र का कैश (Cache) डिलीट करें और दोबारा जांचें।
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-rose-100 space-y-1.5">
+            <strong class="text-rose-700 block">❌ Analytics Realtime showing "0" Users:</strong>
+            <p class="leading-relaxed">
+              <strong>कारण:</strong> एड-ब्लॉकर (Ad-blocker) चालू हो सकता है या कोड गलत है।<br/>
+              <strong>समाधान:</strong> अपने ब्राउज़र का एड-ब्लॉकर बंद करें या अपने फ़ोन पर मोबाइल डेटा का उपयोग करके वेबसाइट खोलकर देखें।
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-rose-100 space-y-1.5 col-span-1 md:col-span-2">
+            <strong class="text-rose-700 block">❌ AdSense Rejected showing "Low Value Content":</strong>
+            <p class="leading-relaxed">
+              <strong>कारण:</strong> आपकी वेबसाइट पर बहुत कम शब्द हैं या लेखों की संख्या कम है।<br/>
+              <strong>समाधान:</strong> कम से कम 10 नए विस्तृत पोस्ट लिखें (प्रत्येक पोस्ट 800+ शब्दों का होना चाहिए), होमपेज पर लेआउट को और साफ़ करें और 15 दिन बाद फिर से अप्लाई करें।
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-12 px-4 mt-auto">
+      <div class="max-w-7xl mx-auto space-y-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-slate-800">
+          <div class="space-y-2 max-w-2xl">
+            <p class="text-white font-black text-xl flex items-center gap-2">
+              <span>🏡</span> BighaWala.com
+            </p>
+            <p class="text-xs leading-relaxed text-slate-500">
+              Disclaimer (अस्वीकरण): यह वेबसाइट केवल शैक्षणिक, सूचनात्मक और उपयोगिता उद्देश्यों के लिए है। किसी भी कानूनी विवाद, संपत्ति खरीद या अधिकारिक सत्यापन के लिए हमेशा बिहार सरकार के राजस्व एवं भूमि सुधार विभाग के अधिकारिक पोर्टल <a href="https://biharbhumi.bihar.gov.in" target="_blank" rel="noopener noreferrer" class="text-orange-400 underline font-extrabold hover:text-orange-300 transition-colors">biharbhumi.bihar.gov.in</a> पर जाएँ।
+            </p>
+          </div>
+          <div class="text-left md:text-right space-y-1 shrink-0">
+            <p class="text-xs text-slate-500">
+              विकसित भारत - समृद्ध बिहार भूमि अभियान © 2025
+            </p>
+            <p class="text-sm font-black text-orange-400 tracking-wider">
+              BighaWala.com
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-between items-center gap-4 text-xs font-bold">
+          <div class="flex flex-wrap gap-x-5 gap-y-2">
+            <a href="index.html" class="hover:text-orange-400 transition-colors">Home (मुख्य पृष्ठ)</a>
+            <span class="text-slate-800">•</span>
+            <a href="bigha-calculator.html" class="hover:text-orange-400 transition-colors">Calculator</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html" class="hover:text-orange-400 transition-colors">Disclaimer (अस्वीकरण)</a>
+            <span class="text-slate-800">•</span>
+            <a href="privacy-policy/index.html" class="hover:text-orange-400 transition-colors">Privacy Policy (गोपनीयता नीति)</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html#terms" class="hover:text-orange-400 transition-colors">Terms of Use</a>
+            <span class="text-slate-800">•</span>
+            <a href="disclaimer/index.html#about" class="hover:text-orange-400 transition-colors">About Us (हमारे बारे में)</a>
+          </div>
+          <div class="text-slate-500">
+            AdSense compliant & Secure SSL 🔒
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MOBILE NAVIGATION MENU JAVASCRIPT -->
+    <script>
+      const toggleBtn = document.getElementById('mobile-menu-toggle');
+      const drawer = document.getElementById('mobile-drawer');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      toggleBtn.addEventListener('click', () => {
+        drawer.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
