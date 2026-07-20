@@ -130,6 +130,77 @@ Always use simple, compassionate, and trustworthy language. Write in a friendly 
   }
 });
 
+app.post("/api/check-document", async (req, res) => {
+  try {
+    const { documentType, documentText } = req.body;
+    if (!documentText || typeof documentText !== "string" || !documentText.trim()) {
+      return res.status(400).json({ error: "कृपया जांचने के लिए दस्तावेज का पाठ (text) प्रदान करें। (Please provide land document text to analyze.)" });
+    }
+
+    const ai = getGeminiClient();
+    const prompt = `DOCUMENT TYPE SELECTED: ${documentType || 'Not Specified'}
+PASTED DOCUMENT TEXT:
+"""
+${documentText}
+"""
+
+कृपया इस दस्तावेज का विश्लेषण करें और रिपोर्ट तैयार करें।`;
+
+    const SYSTEM_PROMPT = `You are BighaWala Document Expert — specialist in Bihar land documents.
+The user has pasted text from a Bihar land document of type "${documentType || 'Any Land Document'}". Analyze it completely and provide a structured report in Hindi+English mix.
+
+Your analysis MUST include these sections:
+
+1. DOCUMENT KA NAAM AUR PRAKAR:
+   (What type of document is this)
+
+2. MALIK KI JANKARI:
+   (Owner details found in document)
+
+3. ZAMEEN KI JANKARI:
+   (Land details — size, location, type)
+
+4. IMPORTANT NUMBERS:
+   (Khata, Khesra, Certificate numbers etc)
+
+5. DOCUMENT KI VALIDITY:
+   (Is it valid? Any concerns?)
+
+6. KYA SAHI HAI — KYA GALAT HAI:
+   (Any issues or inconsistencies found)
+
+7. AAGE KYA KAREIN:
+   (What should the owner do next)
+
+8. IMPORTANT WARNING (if any):
+   (Any red flags or concerns)
+
+Format with clear Hindi headings.
+Use simple language — village level user.
+Be practical and helpful.
+If document seems problematic — warn clearly.
+If document is fine — reassure the user.
+End with: 'Koi sawaal ho toh BighaWala Expert se poochein: 9835102324'`;
+
+    const response = await generateContentWithFallback(ai, {
+      contents: prompt,
+      config: {
+        systemInstruction: SYSTEM_PROMPT,
+        temperature: 0.2,
+      },
+    });
+
+    const explanation = response.text || "दस्तावेज का विश्लेषण नहीं किया जा सका। कृपया पुनः प्रयास करें।";
+    return res.json({ explanation });
+  } catch (error: any) {
+    console.error("Document Checker API Error:", error);
+    return res.status(500).json({
+      error: error.message || "Internal Server Error during Land Document analysis.",
+      isConfigMissing: !process.env.GEMINI_API_KEY,
+    });
+  }
+});
+
 app.post("/api/chat", async (req, res) => {
   try {
     const { messages } = req.body;
@@ -165,11 +236,112 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
+app.post("/api/compare-plots", async (req, res) => {
+  try {
+    const { plotA, plotB } = req.body;
+    if (!plotA || !plotB) {
+      return res.status(400).json({ error: "Plot A and Plot B details are required." });
+    }
+
+    const ai = getGeminiClient();
+    const systemPrompt = "You are BighaWala Property Expert. User is comparing two plots in Bihar. Based on these details give a brief practical recommendation in Hindi+English. In 100 words tell which is better deal and why. Be practical and honest. Consider: location, value for money, document status, connectivity.";
+    
+    const prompt = `Please compare these two plots of land and recommend the best choice.
+Plot A Details:
+- Name: ${plotA.name || "N/A"}
+- District: ${plotA.district}
+- Area Type: ${plotA.areaType}
+- Land Type: ${plotA.landType}
+- Size: ${plotA.sizeBigha} Bigha, ${plotA.sizeKatha} Katha, ${plotA.sizeDhur} Dhur
+- Asking Price: ₹${plotA.askingPrice}
+- Road: ${plotA.road}
+- Documents Score: ${plotA.docScore}/10
+
+Plot B Details:
+- Name: ${plotB.name || "N/A"}
+- District: ${plotB.district}
+- Area Type: ${plotB.areaType}
+- Land Type: ${plotB.landType}
+- Size: ${plotB.sizeBigha} Bigha, ${plotB.sizeKatha} Katha, ${plotB.sizeDhur} Dhur
+- Asking Price: ₹${plotB.askingPrice}
+- Road: ${plotB.road}
+- Documents Score: ${plotB.docScore}/10
+
+Give your final expert verdict clearly in simple Hindi+English. Keep it around 100-120 words.`;
+
+    const response = await generateContentWithFallback(ai, {
+      contents: [{ role: "user", parts: [{ text: prompt }] }],
+      config: {
+        systemInstruction: systemPrompt,
+        temperature: 0.7,
+      },
+    });
+
+    const recommendation = response.text || "दोनों प्लॉटों की तुलना अभी उपलब्ध नहीं है। कृपया पुनः प्रयास करें।";
+    return res.json({ recommendation });
+  } catch (error: any) {
+    console.error("Compare Plots API Error:", error);
+    return res.status(500).json({
+      error: error.message || "Internal Server Error during Land Comparison.",
+      isConfigMissing: !process.env.GEMINI_API_KEY,
+    });
+  }
+});
+
+app.post("/api/generate-land-news", async (req, res) => {
+  try {
+    const { topic } = req.body;
+    if (!topic || typeof topic !== "string" || !topic.trim()) {
+      return res.status(400).json({ error: "कृपया कोई विषय (topic) प्रदान करें।" });
+    }
+
+    const ai = getGeminiClient();
+    const systemPrompt = `You are Bihar Land News Expert for BighaWala.com. Generate a helpful news summary in Hindi+English about the Bihar land topic the user asks.
+
+Format your response as:
+📰 HEADLINE: [catchy Hindi headline]
+📅 RELEVANT TO: 2026
+━━━━━━━━━━━━━━
+SUMMARY: [150 word summary in Hinglish]
+━━━━━━━━━━━━━━
+KEY POINTS:
+- [Point 1]
+- [Point 2]
+- [Point 3]
+- [Point 4]
+━━━━━━━━━━━━━━
+AAPKO KYA KARNA CHAHIYE:
+[Practical action in 2-3 lines]
+━━━━━━━━━━━━━━
+OFFICIAL PORTAL:
+[Relevant government link]
+
+Use only factual information about Bihar land system. If specific latest news not known — provide general guidance on the topic.`;
+
+    const response = await generateContentWithFallback(ai, {
+      contents: [{ role: "user", parts: [{ text: `Generate news/update about this topic: ${topic}` }] }],
+      config: {
+        systemInstruction: systemPrompt,
+        temperature: 0.7,
+      },
+    });
+
+    const news = response.text || "न्यूज जनरेट नहीं हो सकी। कृपया पुनः प्रयास करें।";
+    return res.json({ news });
+  } catch (error: any) {
+    console.error("Generate Land News API Error:", error);
+    return res.status(500).json({
+      error: error.message || "Internal Server Error during Land News Generation.",
+      isConfigMissing: !process.env.GEMINI_API_KEY,
+    });
+  }
+});
+
 // Serve robots.txt dynamically with correct content type
 app.get("/robots.txt", (req, res) => {
   res.type("text/plain");
   res.send(
-    `User-agent: *\nAllow: /\n\nSitemap: https://www.bighawala.com/sitemap.xml`
+    `User-agent: *\nAllow: /\n\nSitemap: https://bighawala.com/sitemap.xml`
   );
 });
 
@@ -178,95 +350,170 @@ app.get("/sitemap.xml", (req, res) => {
   res.type("application/xml");
   res.send(`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- MAIN PAGES (Priority 1.0) -->
   <url>
-    <loc>https://www.bighawala.com/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://bighawala.com/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.bighawala.com/bigha-calculator/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://bighawala.com/apna-khata-dekhe.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
+
+  <!-- TOOL PAGES (Priority 0.9) -->
   <url>
-    <loc>https://www.bighawala.com/dakhil-kharij-bihar/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/land-rate-patna/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/land-rates.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/bhulekh-bihar/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/lpc-bihar/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/privacy-policy/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/disclaimer/</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/circle-rate-bihar.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/mvr-rate-bihar.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/kisan-credit-card-bihar.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/pm-awas-yojana-bihar.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/jamin-ka-rate-bihar.html</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.bighawala.com/apna-khata-dekhe.html</loc>
+    <loc>https://bighawala.com/bigha-calculator.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/zameen-moolyankan.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/land-cost-calculator.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/zameen-comparison.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/bihar-land-quiz.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/document-checker.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/ask-expert.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- GUIDE PAGES (Priority 0.8) -->
+  <url>
+    <loc>https://bighawala.com/bhulekh.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/dakhil-kharij.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/jamabandi.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/lpc-bihar.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/registry-bihar.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/land-rates.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/mvr-rate-bihar.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/jamin-ka-rate-bihar.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/circle-rate-bihar.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/kisan-credit-card-bihar.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/pm-awas-yojana-bihar.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ENGAGEMENT PAGES (Priority 0.7) -->
+  <url>
+    <loc>https://bighawala.com/bihar-land-news.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/community-qa.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/whatsapp-alerts.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- INFORMATION PAGES (Priority 0.6) -->
+  <url>
+    <loc>https://bighawala.com/about.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/contact.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bighawala.com/disclaimer.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>`);
 });
@@ -368,6 +615,14 @@ app.get(["/bhulekh", "/bhulekh/", "/bhulekh.html", "/bhulekh-bihar", "/bhulekh-b
 
 app.get(["/lpc-bihar", "/lpc-bihar/", "/lpc-bihar.html"], (req, res) => {
   serveHtmlPage(req, res, "lpc-bihar.html");
+});
+
+app.get(["/land-cost-calculator", "/land-cost-calculator/", "/land-cost-calculator.html"], (req, res) => {
+  serveHtmlPage(req, res, "land-cost-calculator.html");
+});
+
+app.get(["/community-qa", "/community-qa/", "/community-qa.html"], (req, res) => {
+  serveHtmlPage(req, res, "community-qa.html");
 });
 
 app.get(["/ask-expert", "/ask-expert/", "/ask-expert.html"], (req, res) => {

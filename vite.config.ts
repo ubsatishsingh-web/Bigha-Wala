@@ -36,6 +36,8 @@ export default defineConfig(() => {
           apnaKhataDekhe: path.resolve(__dirname, 'apna-khata-dekhe.html'),
           zameenMoolyankan: path.resolve(__dirname, 'zameen-moolyankan.html'),
           biharLandQuiz: path.resolve(__dirname, 'bihar-land-quiz.html'),
+          landCostCalculator: path.resolve(__dirname, 'land-cost-calculator.html'),
+          communityQa: path.resolve(__dirname, 'community-qa.html'),
         }
       }
     },
